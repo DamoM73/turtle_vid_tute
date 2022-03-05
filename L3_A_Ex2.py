@@ -1,8 +1,12 @@
 import turtle
 
+#################################################
+## Change the variable values to draw a circle ##
+#################################################
+
 screen = 500
-sides = 6
-length = 100
+sides = 1
+length = 1
 
 window = turtle.Screen()
 window.setup(screen, screen)

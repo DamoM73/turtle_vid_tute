@@ -1,11 +1,10 @@
-
 ## Draw a Triangle with the Turtle ##
 
 import turtle
 
-wn = turtle.Screen()
-wn.setup(500, 500)
+window = turtle.Screen()
+window.setup(500, 500)
 
-myTtl = turtle.Turtle()
+myttl = turtle.Turtle()
 
 ## Write your code below this line ##

@@ -121,5 +121,3 @@ for number in range(1,101):
     my_ttl.backward(100)
     my_ttl.left(3)
 ```
-
-

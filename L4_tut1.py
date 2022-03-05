@@ -1,13 +1,21 @@
 import turtle
 
-screen = 500
-sides = int(input("Number of sides> "))
-length = int(input("Length of sides> "))
+def draw_shape(sides,length):
+    # draw a shape with given sides and given length
+    for i in range(sides):
+        my_ttl.forward(length)
+        my_ttl.left(360/sides)
 
+# screen settings
+screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
-my_ttl = turtle.Turtle()
 
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+# create turtle instance
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
+
+draw_shape(6,100)
+draw_shape(4,100)
+draw_shape(3,100)
+ 

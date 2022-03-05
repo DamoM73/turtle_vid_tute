@@ -1,5 +1,9 @@
 import turtle
 
+#################################################
+## Change the variable values to draw a circle ##
+#################################################
+
 screen = 500
 sides = 6
 length = 100
