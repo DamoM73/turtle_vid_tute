@@ -24,7 +24,7 @@ for i in range(4):
     my_ttl.forward(200)
     my_ttl.right(90)
 
-# draw rectangle
+# draw triangle
 for i in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)

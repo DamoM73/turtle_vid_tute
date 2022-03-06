@@ -100,13 +100,13 @@ L3_Ex1
 
 L3_Ex2
 
-L3_Ex2
+L3_Ex3
 
 ## Tutorial 2: Coordinates
 
-Tidyup
+Tidy-up
 
-Shoiw Coordiantes example
+Show Coordinates example
 
 Draw boarder
 
@@ -175,3 +175,4 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
+L3Ex_4

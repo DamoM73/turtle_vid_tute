@@ -118,4 +118,4 @@ my_ttl.forward(100)
 
 ## Exercises
 
-Complete Ex2_A, Ex2_B, Ex_2_C
+L1_Ex1, L1_Ex2, L1_Ex3

@@ -4,63 +4,80 @@
 
 Functions
 
-Do a bit of tidying up
+My solution for L3_Ex4
 
 ```python
 import turtle
 
-# screen settings
+# set up screen
 screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
 
 # create turtle instance
 my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+my_ttl.shape("arrow")
 
-# shape parameters
-sides = 6
-length = 100
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-```
+# move pen
+my_ttl.penup()
+my_ttl.goto(-100,0)
+my_ttl.pendown()
 
-Draw more than one shape?
+# draw square
+for i in range(4):
+    my_ttl.forward(200)
+    my_ttl.right(90)
 
-Hexagon plus square
+# draw rectangle
+for i in range(3):
+    my_ttl.forward(200)
+    my_ttl.left(120)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(-25,-200)
+my_ttl.pendown()
 
-```python
-import turtle
+# draw rectangle
+for i in range(2):
+    my_ttl.forward(50)
+    my_ttl.left(90)
+    my_ttl.forward(100)
+    my_ttl.left(90)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(-80,-100)
+my_ttl.pendown()
 
-# screen settings
-screen = 500
-window = turtle.Screen()
-window.setup(screen, screen)
+# draw square
+for i in range(4):
+    my_ttl.forward(35)
+    my_ttl.right(90)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(45,-100)
+my_ttl.pendown()
 
-# create turtle instance
-my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+# draw square
+for i in range(4):
+    my_ttl.forward(35)
+    my_ttl.right(90)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(15,-150)
+my_ttl.pendown()
 
-# shape parameters
-sides = 6
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-
-# shape parameters
-sides = 4
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+# draw circle
+my_ttl.circle(5)
+my_ttl.hideturtle()
 ```
 
 plus triangle

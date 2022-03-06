@@ -4,7 +4,7 @@ Create a new file
 
 ## To date
 
-Writting out commands sequenctially 
+Writing out commands sequentially 
 
 ```python
 print("Hello Hunter")
@@ -121,3 +121,5 @@ for number in range(1,101):
     my_ttl.backward(100)
     my_ttl.left(3)
 ```
+
+Complete: L2_Ex_1, L2_Ex_2, L2_Ex3, L2_Ex4, L2_Ex5
