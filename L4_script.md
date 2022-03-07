@@ -33,7 +33,7 @@ for i in range(4):
     my_ttl.forward(200)
     my_ttl.right(90)
 
-# draw rectangle
+# draw triangle
 for i in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
@@ -80,313 +80,335 @@ my_ttl.circle(5)
 my_ttl.hideturtle()
 ```
 
-plus triangle
+Can we identify the repetition:
+
+- move pen
+- draw shapes
+
+Take all the move pen code and consolidate that in one spot.
 
 ```python
 import turtle
 
-# screen settings
+def move_pen():
+    my_ttl.penup()
+    my_ttl.goto(-100,0)
+    my_ttl.pendown()
+
+# set up screen
 screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
 
 # create turtle instance
 my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+my_ttl.shape("arrow")
 
-# shape parameters
-sides = 6
-length = 100
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+move_pen()
 
-# shape parameters
-sides = 4
-length = 100
+# draw square
+for i in range(4):
+    my_ttl.forward(200)
+    my_ttl.right(90)
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+# draw triangle
+for i in range(3):
+    my_ttl.forward(200)
+    my_ttl.left(120)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(-25,-200)
+my_ttl.pendown()
 
-# shape parameters
-sides = 3
-length = 100
+# draw rectangle
+for i in range(2):
+    my_ttl.forward(50)
+    my_ttl.left(90)
+    my_ttl.forward(100)
+    my_ttl.left(90)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(-80,-100)
+my_ttl.pendown()
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+# draw square
+for i in range(4):
+    my_ttl.forward(35)
+    my_ttl.right(90)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(45,-100)
+my_ttl.pendown()
+
+# draw square
+for i in range(4):
+    my_ttl.forward(35)
+    my_ttl.right(90)
+    
+# move pen
+my_ttl.penup()
+my_ttl.goto(15,-150)
+my_ttl.pendown()
+
+# draw circle
+my_ttl.circle(5)
+my_ttl.hideturtle()
 ```
 
-Problem: **DRY**
-
-Unnecssary reassignment of `length`
+Ok for one movement. How can we adjust this to use of every pen movement?
 
 ```python
 import turtle
 
-# screen settings
+def move_pen(x,y):
+    my_ttl.penup()
+    my_ttl.goto(x,y)
+    my_ttl.pendown()
+
+# set up screen
 screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
 
 # create turtle instance
 my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+my_ttl.shape("arrow")
 
-# shape parameters
-sides = 6
-length = 100
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+move_pen(-100,0)
 
-# shape parameters
-sides = 4
+# draw square
+for i in range(4):
+    my_ttl.forward(200)
+    my_ttl.right(90)
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+# draw triangle
+for i in range(3):
+    my_ttl.forward(200)
+    my_ttl.left(120)
+    
+move_pen(-25,-200)
 
-# shape parameters
-sides = 3
+# draw rectangle
+for i in range(2):
+    my_ttl.forward(50)
+    my_ttl.left(90)
+    my_ttl.forward(100)
+    my_ttl.left(90)
+    
+move_pen(-80,-100)
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+# draw square
+for i in range(4):
+    my_ttl.forward(35)
+    my_ttl.right(90)
+
+move_pen(45,-100)
+
+# draw square
+for i in range(4):
+    my_ttl.forward(35)
+    my_ttl.right(90)
+    
+move_pen(15,-150)
+
+# draw circle
+my_ttl.circle(5)
+my_ttl.hideturtle()
 ```
 
-Repeition of the `for` loop
+- From 71 lines to 61 lines
+- No errors in t=move pen, so I know the code is correct
 
-Create functions
+Is there more repetition?
+
+Squares
 
 ```python
 import turtle
 
-def draw_shape(sides,length):
-    # draw a shape with given sides and given length
-    for i in range(sides):
+def move_pen(x,y):
+    my_ttl.penup()
+    my_ttl.goto(x,y)
+    my_ttl.pendown()
+    
+def draw_square(length):
+    for i in range(4):
         my_ttl.forward(length)
-        my_ttl.left(360/sides)
+        my_ttl.right(90)
 
-# screen settings
+# set up screen
 screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
 
 # create turtle instance
 my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+my_ttl.shape("arrow")
 
-draw_shape(6,100)
-my_ttl.penup
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
 
-draw_shape(4,100)
-draw_shape(3,100)
+move_pen(-100,0)
+draw_square(200)
+
+# draw triangle
+for i in range(3):
+    my_ttl.forward(200)
+    my_ttl.left(120)
+    
+move_pen(-25,-200)
+
+# draw rectangle
+for i in range(2):
+    my_ttl.forward(50)
+    my_ttl.left(90)
+    my_ttl.forward(100)
+    my_ttl.left(90)
+    
+move_pen(-80,-100)
+draw_square(35)
+move_pen(45,-100)
+draw_square(35)
+move_pen(15,-150)
+
+# draw circle
+my_ttl.circle(5)
+my_ttl.hideturtle()
 ```
 
-Problem: **DRY**
+Down to 52 lines
 
-Unnecssary reassignment of `length`
+Now the code is more readable. So let's extend that.
 
 ```python
 import turtle
 
-# screen settings
-screen = 500
-window = turtle.Screen()
-window.setup(screen, screen)
-
-# create turtle instance
-my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
-
-# shape parameters
-sides = 6
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-
-# shape parameters
-sides = 4
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-
-# shape parameters
-sides = 3
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-```
-
-Repeition of the `for` loop
-
-Create functions
-
-```python
-import turtle
-
-def draw_shape(sides,length):
-    # draw a shape with given sides and given length
-    for i in range(sides):
+def move_pen(x,y):
+    my_ttl.penup()
+    my_ttl.goto(x,y)
+    my_ttl.pendown()
+    
+def draw_square(length):
+    for i in range(4):
         my_ttl.forward(length)
-        my_ttl.left(360/sides)
+        my_ttl.right(90)
+        
+def draw_triangle(length):
+    for i in range(3):
+        my_ttl.forward(length)
+        my_ttl.left(120)
 
-# screen settings
+# set up screen
 screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
 
 # create turtle instance
 my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+my_ttl.shape("arrow")
 
-draw_shape(6,100)
-my_ttl.penup
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
 
-draw_shape(4,100)
-draw_shape(3,100)
+move_pen(-100,0)
+draw_square(200)
+draw_triangle(200)
+move_pen(-25,-200)
+
+# draw rectangle
+for i in range(2):
+    my_ttl.forward(50)
+    my_ttl.left(90)
+    my_ttl.forward(100)
+    my_ttl.left(90)
+    
+move_pen(-80,-100)
+draw_square(35)
+move_pen(45,-100)
+draw_square(35)
+move_pen(15,-150)
+
+# draw circle
+my_ttl.circle(5)
+my_ttl.hideturtle()
 ```
 
-## Tutorial 2 User input
+Still 52 lines
 
-Now that we have labels, we can ask the user for their value
+Lets finish this.
 
 ```python
 import turtle
 
-screen = 500
-sides = input("Number of sides> ")
-length = input("Length of sides> ")
+def move_pen(x,y):
+    my_ttl.penup()
+    my_ttl.goto(x,y)
+    my_ttl.pendown()
+    
+def draw_square(length):
+    for i in range(4):
+        my_ttl.forward(length)
+        my_ttl.right(90)
+        
+def draw_triangle(length):
+    for i in range(3):
+        my_ttl.forward(length)
+        my_ttl.left(120)
 
-window = turtle.Screen()
-window.setup(screen, screen)
-my_ttl = turtle.Turtle()
+def draw_rectangle(long, short):
+    for i in range(2):
+        my_ttl.forward(short)
+        my_ttl.left(90)
+        my_ttl.forward(long)
+        my_ttl.left(90)
+        
+def draw_circle(rad):
+    my_ttl.circle(rad)
 
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-```
-
-> TypeError: 'str' object cannot be interpreted as an integer
-
-Why the error. `input` accepts values as strings, but we need numbers.
-
-Functions
-
-Do a bit of tidying up
-
-```python
-import turtle
-
-# screen settings
-screen = 500
-window = turtle.Screen()
-window.setup(screen, screen)
-
-# create turtle instance
-my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
-
-# shape parameters
-sides = 6
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-```
-
-Draw more than one shape?
-
-Hexagon plus square
-
-```python
-import turtle
-
-# screen settings
+# set up screen
 screen = 500
 window = turtle.Screen()
 window.setup(screen, screen)
 
 # create turtle instance
 my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
+my_ttl.shape("arrow")
 
-# shape parameters
-sides = 6
-length = 100
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
 
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-
-# shape parameters
-sides = 4
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
+move_pen(-100,0)
+draw_square(200)
+draw_triangle(200)
+move_pen(-25,-200)
+draw_rectangle(100,50)
+move_pen(-80,-100)
+draw_square(35)
+move_pen(45,-100)
+draw_square(35)
+move_pen(15,-150)
+draw_circle(5)
+my_ttl.hideturtle()
 ```
 
-plus triangle
+Now 53 lines, but much easier to read.
 
-```python
-import turtle
-
-# screen settings
-screen = 500
-window = turtle.Screen()
-window.setup(screen, screen)
-
-# create turtle instance
-my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
-
-# shape parameters
-sides = 6
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-
-# shape parameters
-sides = 4
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-
-# shape parameters
-sides = 3
-length = 100
-
-# draw shape
-for i in range(sides):
-    my_ttl.forward(length)
-    my_ttl.left(360/sides)
-```
