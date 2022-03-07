@@ -412,3 +412,5 @@ my_ttl.hideturtle()
 
 Now 53 lines, but much easier to read.
 
+## Tutorial 2: User Input
+
