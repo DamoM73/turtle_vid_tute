@@ -417,3 +417,85 @@ Now 53 lines, but much easier to read.
 
 ## Tutorial 2: User Input
 
+How can we make the computer respond to the user?
+
+Consider this code. To make a different shape, the user needs to be a programmer and know which values to change.
+
+``` python
+import turtle
+
+def draw_poly(length, sides):
+    for i in range(sides):
+        fred.forward(length)
+        fred.right(360/sides)
+
+# setup window
+screen = 500
+window = turtle.Screen()
+window.screensize(screen,screen)
+
+# create instance of turtle
+fred = turtle.Turtle()
+fred.shape("turtle")
+
+sides = 9
+length = 100
+
+draw_poly(length,sides)
+```
+
+There is a way for the user to give a value for the number and length of the sides
+
+``` python
+import turtle
+
+def draw_poly(length, sides):
+    for i in range(sides):
+        fred.forward(length)
+        fred.right(360/sides)
+
+# setup window
+screen = 500
+window = turtle.Screen()
+window.screensize(screen,screen)
+
+# create instance of turtle
+fred = turtle.Turtle()
+fred.shape("turtle")
+
+sides = input("How many sides?> ")
+length = input("How long are the sides?> ")
+
+draw_poly(length,sides)
+```
+
+Error: `TypeError: 'str' object cannot be interpreted as an integer`
+
+All input is received as a string
+
+```python
+import turtle
+
+def draw_poly(length, sides):
+    for i in range(sides):
+        fred.forward(length)
+        fred.right(360/sides)
+
+# setup window
+screen = 500
+window = turtle.Screen()
+window.screensize(screen,screen)
+
+# create instance of turtle
+fred = turtle.Turtle()
+fred.shape("turtle")
+
+sides = int(input("How many sides?> "))
+length = int(input("How long are the sides?> "))
+
+draw_poly(length,sides)
+```
+
+### Exercises
+
+- L4_Ex3.py
