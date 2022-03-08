@@ -1,8 +1,6 @@
-## Lesson 4 Script
+# Lesson 4 Script
 
 ## Tutorial 1 Functions
-
-Functions
 
 My solution for L3_Ex4
 
@@ -411,6 +409,11 @@ my_ttl.hideturtle()
 ```
 
 Now 53 lines, but much easier to read.
+
+### Exercises
+
+- L4_Ex1.py
+- L4_Ex2.py
 
 ## Tutorial 2: User Input
 

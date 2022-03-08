@@ -2,7 +2,9 @@
 
 Create a new file
 
-## To date
+## Tutorial 1: Iteration introduction
+
+### To date
 
 Writing out commands sequentially 
 
@@ -21,7 +23,7 @@ Doesn't scale well.
 
 - updating issues
 
-## For Loops
+### For Loops
 
 Solution - the `FOR` loop
 
@@ -77,8 +79,6 @@ Change greeting
 
 Remove repeating code: DRY principle
 
----
-
 ## Range
 
 You can also run loops over lists of numbers
@@ -106,7 +106,7 @@ for number in range(1,101):
     print(number)
 ```
 
-## Use for Turtle
+### Use for Turtle
 
 ```python
 import turtle
@@ -121,5 +121,9 @@ for number in range(1,101):
     my_ttl.backward(100)
     my_ttl.left(3)
 ```
-
-Complete: L2_Ex_1, L2_Ex_2, L2_Ex3, L2_Ex4, L2_Ex5
+## Exercises
+- L2_Ex_1
+- L2_Ex_2
+- L2_Ex3
+- L2_Ex4
+- L2_Ex5

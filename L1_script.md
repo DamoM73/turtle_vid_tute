@@ -1,6 +1,6 @@
 # Lesson 1
 
-## Thonny Introduction
+## Tutorial 1: Thonny Introduction
 
 Coding panel
 
@@ -24,7 +24,7 @@ Remove "
 
 mistype print
 
-## Introducing turtle
+## Tutorial 2: Introducing turtle
 
 ### First turtle program
 
@@ -34,7 +34,7 @@ mistype print
 
 Save as L1_tut2
 
-### Import tutrle
+### Import turtle
 
 ```python
 import turtle
@@ -58,7 +58,7 @@ my_ttl = turtle.Turtle()
 my_ttl.forward(100)
 ```
 
-## Resize canvas
+### Resize canvas
 
 ```python
 import turtle
@@ -71,7 +71,7 @@ my_ttl = turtle.Turtle()
 my_ttl.forward(100)
 ```
 
-## Change icon
+### Change icon
 
 ```python
 import turtle
@@ -85,7 +85,7 @@ my_ttl.shape("turtle")
 my_ttl.forward(100)
 ```
 
-## Draw with turn
+### Draw with turn
 
 ```python
 import turtle
@@ -100,7 +100,7 @@ my_ttl.forward(100)
 my_ttl.left(90)
 ```
 
-## Draw second line
+### Draw second line
 
 ```python
 mport turtle
@@ -115,7 +115,8 @@ my_ttl.forward(100)
 my_ttl.left(90)
 my_ttl.forward(100)
 ```
-
 ## Exercises
 
-L1_Ex1, L1_Ex2, L1_Ex3
+- L1_Ex1
+- L1_Ex2
+- L1_Ex3

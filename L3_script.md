@@ -36,7 +36,7 @@ for i in range(3):
     my_ttl.left(120)
 ```
 
-What values fdid we change, and what do they represent?
+What values did we change, and what do they represent?
 
 - 4 - # sides
 
@@ -95,12 +95,12 @@ for i in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
+## Exercises
+- L3_Ex1
 
-L3_Ex1
+- L3_Ex2
 
-L3_Ex2
-
-L3_Ex3
+- L3_Ex3
 
 ## Tutorial 2: Coordinates
 
@@ -175,4 +175,6 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
-L3Ex_4
+## Exercises
+
+- L3Ex_4
