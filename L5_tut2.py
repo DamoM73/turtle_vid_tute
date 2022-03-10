@@ -1,13 +1,13 @@
 import random
 
 def get_number(prompt):
-    num = input(prompt)
-    if num.isdigit():
-        return int(num)
-    else:
-        print("Invalid input")
-        quit()
-
+    while True:
+        num = input(prompt)
+        if num.isdigit():
+            return int(num)
+        else:
+            print("Invalid input")
+            
 number = random.randint(1,100)
 
 guess = 0
