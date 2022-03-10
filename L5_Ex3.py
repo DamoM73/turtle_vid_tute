@@ -1,5 +1,10 @@
 import turtle
 
+#####################################################
+## Adjust the code below to allow the user to      ##
+## choose the coordinates where the shape is drawn ##
+#####################################################
+
 def draw_poly(length, sides, color):
     fred.color("black",color)
     fred.begin_fill()
@@ -10,7 +15,7 @@ def draw_poly(length, sides, color):
         
 def get_number(prompt):
     num = input(prompt)
-    if num.isdigit():
+    if num.lstrip("-").isdigit():
         return int(num)
     else:
         print("Invalid input")

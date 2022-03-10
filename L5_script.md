@@ -37,7 +37,7 @@ user_value = input("Enter a number: ")
 print(user_value.isdigit())
 ```
 
-Introduce `if` statements
+### Introduce `if` statements
 
 ```python
 user_value = input("Enter a number: ")
@@ -46,7 +46,7 @@ if user_value.isdigit():
     print("Yes that is a number")
 ```
 
-Introduce `if` `else` statements
+### Introduce `if` `else` statements
 
 ```python
 user_value = input("Enter a number: ")
@@ -130,9 +130,140 @@ draw_poly(size,num_sides)
 
 Now, does this pass the dry test?
 
+```python
+import turtle
 
+def draw_poly(length, sides):
+    for i in range(sides):
+        fred.forward(length)
+        fred.right(360/sides)
+        
+def get_number(prompt):
+    num = input(prompt)
+    if num.isdigit():
+        return int(num)
+    else:
+        print("Invalid input")
+        quit()
+        
+# setup window
+screen = 500
+window = turtle.Screen()
+window.screensize(screen,screen)
+
+# create instance of turtle
+fred = turtle.Turtle()
+fred.shape("turtle")
+
+# get user input
+num_sides = get_number("How many sides?> ")
+size = get_number("How long are the sides?> ")
+
+draw_poly(size,num_sides)
+```
+
+### Introduce `if` `elif` `else` statements
+
+What if we want to colour our shape?
+
+```python
+import turtle
+
+def draw_poly(length, sides, color):
+    fred.color("black",color)
+    fred.begin_fill()
+    for i in range(sides):
+        fred.forward(length)
+        fred.right(360/sides)
+    fred.end_fill()
+        
+def get_number(prompt):
+    num = input(prompt)
+    if num.isdigit():
+        return int(num)
+    else:
+        print("Invalid input")
+        quit()
+        
+# setup window
+screen = 500
+window = turtle.Screen()
+window.screensize(screen,screen)
+
+# create instance of turtle
+fred = turtle.Turtle()
+fred.shape("turtle")
+
+# get user input
+num_sides = get_number("How many sides?> ")
+size = get_number("How long are the sides?> ")
+
+draw_poly(size,num_sides,"red")
+```
+
+Can we let the user choose the colour
+
+```python
+import turtle
+
+def draw_poly(length, sides, color):
+    fred.color("black",color)
+    fred.begin_fill()
+    for i in range(sides):
+        fred.forward(length)
+        fred.right(360/sides)
+    fred.end_fill()
+        
+def get_number(prompt):
+    num = input(prompt)
+    if num.isdigit():
+        return int(num)
+    else:
+        print("Invalid input")
+        quit()
+        
+def get_color():
+    color = input("Fill colour (red, blue, green)?> ").lower()
+    if color == "red":
+        return color
+    elif color == "blue":
+        return color
+    elif color == "green":
+        return color
+    else:
+        print("Invalid input")
+        quit()
+        
+# setup window
+screen = 500
+window = turtle.Screen()
+window.screensize(screen,screen)
+
+# create instance of turtle
+fred = turtle.Turtle()
+fred.shape("turtle")
+
+# get user input
+num_sides = get_number("How many sides?> ")
+size = get_number("How long are the sides?> ")
+fill = get_color()
+
+draw_poly(size,num_sides, fill)
+```
+
+### Exercises
+
+L5_Ex1.py
+
+L5_Ex2.py
+
+L5_Ex3.py
 
 ## Tutorial 2: While Loop
 
+### Number guessing game
 
+See if the user can guess a random number
+
+Introduce `random.randint`
 
