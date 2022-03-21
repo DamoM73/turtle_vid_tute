@@ -12,6 +12,6 @@ my_ttl.shape("turtle")
 ############################################
 ## Use you knowledge of Python and Turtle ##
 ## to draw a car. Use functions to ensure ##
-## that you Donot Repeat Yourself.        ##
+## that you Do not Repeat Yourself.       ##
 ############################################
 

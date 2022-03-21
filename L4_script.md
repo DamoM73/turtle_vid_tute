@@ -412,8 +412,97 @@ Now 53 lines, but much easier to read.
 
 ### Exercises
 
-- L4_Ex1.py
-- L4_Ex2.py
+#### L4_Ex1.py
+
+```python
+import turtle
+
+# set up screen
+screen = 500
+window = turtle.Screen()
+window.setup(screen, screen)
+
+# create turtle instance
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
+
+############################################
+## Convert the code below using functions ##
+############################################
+
+# move pen
+my_ttl.penup()
+my_ttl.goto(0,-200)
+my_ttl.pendown()
+
+# draw head
+my_ttl.color("black","yellow")
+my_ttl.begin_fill()
+my_ttl.circle(200)
+my_ttl.end_fill()
+
+# move pen
+my_ttl.penup()
+my_ttl.goto(-75,0)
+my_ttl.pendown()
+
+# draw eye
+my_ttl.color("black","black")
+my_ttl.begin_fill()
+my_ttl.circle(50)
+my_ttl.end_fill()
+
+# move pen
+my_ttl.penup()
+my_ttl.goto(75,0)
+my_ttl.pendown()
+
+# draw eye
+my_ttl.color("black","black")
+my_ttl.begin_fill()
+my_ttl.circle(50)
+my_ttl.end_fill()
+
+# move pen
+my_ttl.penup()
+my_ttl.goto(-100,-75)
+my_ttl.pendown()
+
+# draw mouth
+my_ttl.color("black","black")
+my_ttl.begin_fill()
+for i in range(2):
+    my_ttl.forward(200)
+    my_ttl.right(90)
+    my_ttl.forward(25)
+    my_ttl.right(90)
+my_ttl.end_fill()
+
+my_ttl.hideturtle()
+```
+
+#### L4_Ex2.py
+
+```python
+import turtle
+
+# set up screen
+screen = 500
+window = turtle.Screen()
+window.setup(screen, screen)
+
+# create turtle instance
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
+
+############################################
+## Use you knowledge of Python and Turtle ##
+## to draw a car. Use functions to ensure ##
+## that you Do not Repeat Yourself.       ##
+############################################
+```
+
+
 
 ## Tutorial 2: User Input
 
@@ -498,4 +587,13 @@ draw_poly(length,sides)
 
 ### Exercises
 
-- L4_Ex3.py
+#### L4_Ex3.py
+
+``` python
+###############################################
+## write a program that askes the user for a ##
+## number and then counts up to that number. ##
+###############################################
+
+```
+

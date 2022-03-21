@@ -95,12 +95,74 @@ for i in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
-## Exercises
-- L3_Ex1
+### Exercises
+#### L3_Ex1
 
-- L3_Ex2
+``` python
+import turtle
 
-- L3_Ex3
+#################################################
+## Change the variable values to draw a square ##
+#################################################
+
+screen = 500
+sides = 6
+length = 100
+
+window = turtle.Screen()
+window.setup(screen, screen)
+my_ttl = turtle.Turtle()
+
+for i in range(sides):
+    my_ttl.forward(length)
+    my_ttl.left(360 / sides)
+```
+
+#### L3_Ex2
+
+``` python
+import turtle
+
+#################################################
+## Change the variable values to draw a circle ##
+#################################################
+
+screen = 500
+sides = 6
+length = 100
+
+window = turtle.Screen()
+window.setup(screen, screen)
+my_ttl = turtle.Turtle()
+
+for i in range(sides):
+    my_ttl.forward(length)
+    my_ttl.left(360 / sides)
+```
+
+#### L3_Ex3
+
+```python
+import turtle
+
+###################################################
+## Change the variable values to draw a pentagon ##
+###################################################
+
+screen = 500
+sides = 6
+length = 100
+
+window = turtle.Screen()
+window.setup(screen, screen)
+my_ttl = turtle.Turtle()
+
+for i in range(sides):
+    my_ttl.forward(length)
+    my_ttl.left(360 / sides)
+```
+
+
 
 ## Tutorial 2: Coordinates
 
@@ -175,6 +237,25 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
-## Exercises
+### Exercises
 
-- L3Ex_4
+#### L3Ex_4
+
+```python
+import turtle
+
+# set up screen
+screen = 500
+window = turtle.Screen()
+window.setup(screen, screen)
+
+# create turtle instance
+my_ttl = turtle.Turtle()
+my_ttl.shape("dot")
+
+##################################
+## Using the tutrle command you ##
+## have learnt, draw a house.   ##
+##################################
+```
+

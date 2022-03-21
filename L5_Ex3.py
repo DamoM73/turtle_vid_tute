@@ -32,7 +32,10 @@ def get_color():
     else:
         print("Invalid input")
         quit()
-        
+
+def move_pen():
+    # write your code here to get coordinates from user #
+
 # setup window
 screen = 500
 window = turtle.Screen()

@@ -8,7 +8,7 @@ Shell / Terminal
 
 Assistant
 
-## Exercise 1 - Hello World
+### Hello World
 
 ```python
 # Our first program
@@ -115,8 +115,50 @@ my_ttl.forward(100)
 my_ttl.left(90)
 my_ttl.forward(100)
 ```
-## Exercises
+### Exercises
 
-- L1_Ex1
-- L1_Ex2
-- L1_Ex3
+#### L1_Ex1
+
+```python
+## Draw a square with the Turtle ##
+
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+
+myttl = turtle.Turtle()
+
+## Write your code below this line ##
+```
+
+#### L1_Ex2
+
+```python
+## Draw a Triangle with the Turtle ##
+
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+
+myttl = turtle.Turtle()
+
+## Write your code below this line ##
+```
+
+#### L1_Ex3
+
+```python
+## Draw a hexagon with the Turtle ##
+
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+
+myttl = turtle.Turtle()
+
+## Write your code below this line ##
+```
+

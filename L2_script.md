@@ -79,7 +79,7 @@ Change greeting
 
 Remove repeating code: DRY principle
 
-## Range
+## Tutorial 2: Range
 
 You can also run loops over lists of numbers
 
@@ -121,9 +121,74 @@ for number in range(1,101):
     my_ttl.backward(100)
     my_ttl.left(3)
 ```
-## Exercises
-- L2_Ex_1
-- L2_Ex_2
-- L2_Ex3
-- L2_Ex4
-- L2_Ex5
+### Exercises
+#### L2_Ex_1
+
+```python
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+##############################
+## Draw a square in 3 lines ##
+##############################
+```
+
+#### L2_Ex_2
+
+``` python
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+################################
+## Draw a Triangle in 3 lines ##
+################################
+```
+
+#### L2_Ex3
+
+```python
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+###############################
+## Draw a Hexagon in 3 lines ##
+###############################
+```
+
+#### L2_Ex4
+
+```python
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+#################################################
+## Draw a circle (hint - you only need 3 lines ##
+#################################################
+```
+
+#### L2_Ex5
+
+``` python
+import turtle
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+######################################################
+## Go Crazy and make something amazing with loops!! ##
+######################################################
+```
+
