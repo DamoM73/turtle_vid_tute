@@ -9,6 +9,16 @@ def left_pad_down():
     
 def left_pad_stop():
     left_pad.dir = "stop"
+    
+def right_pad_up():
+    right_pad.dir = "up"
+
+def right_pad_down():
+    right_pad.dir = "down"
+    
+def right_pad_stop():
+    right_pad.dir = "stop"
+
 
 def movement():
     if left_pad.dir == "up":
@@ -21,6 +31,18 @@ def movement():
         current_y = left_pad.ycor()
         new_y = current_y - paddle_speed
         left_pad.goto(current_x,new_y)
+    
+    if right_pad.dir == "up":
+        current_x = right_pad.xcor()
+        current_y = right_pad.ycor()
+        new_y = current_y + paddle_speed
+        right_pad.goto(current_x,new_y)
+    elif right_pad.dir == "down":
+        current_x = right_pad.xcor()
+        current_y = right_pad.ycor()
+        new_y = current_y - paddle_speed
+        right_pad.goto(current_x,new_y)
+        
 
 # vairable
 screen_width = 1000
@@ -62,11 +84,17 @@ right_pad.penup()
 right_pad.goto((screen_width/2-30),0)
 right_pad.dir = "stop"
 
+# key bindings
 window.listen()
 window.onkeypress(left_pad_up, "w")
 window.onkeyrelease(left_pad_stop,"w")
 window.onkeypress(left_pad_down, "s")
 window.onkeyrelease(left_pad_stop,"s")
+window.onkeypress(right_pad_up, "p")
+window.onkeyrelease(right_pad_stop,"p")
+window.onkeypress(right_pad_down, ";")
+window.onkeyrelease(right_pad_stop,";")
+
 
 # ---- MAIN LOOP ---- #
 while True:
