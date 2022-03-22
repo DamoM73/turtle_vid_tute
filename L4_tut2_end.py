@@ -8,7 +8,7 @@ def draw_poly(length, sides):
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 fred = turtle.Turtle()
