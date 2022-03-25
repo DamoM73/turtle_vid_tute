@@ -1,6 +1,3 @@
-user_value = input("Enter number: ")
+beetroot = input("What do you want me to say? ")
 
-if user_value.isdigit():
-    print("This is a number")
-else:
-    print("Silly, that not a number")
+print(beetroot)
