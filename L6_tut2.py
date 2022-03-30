@@ -18,7 +18,10 @@ def set_scene():
 ## Reaction to signal (slot) ##
 def draw_dot(x, y) :
     print(x,y)
-    dotColor = 'orange'
+    if y > 0:
+        dotColor = 'orange'
+    else:
+        dotColor = 'green'
     driver.goto(x, y)
     dotSize = 10
     driver.dot(dotSize, dotColor)
