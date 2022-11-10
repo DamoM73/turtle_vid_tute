@@ -1,18 +1,14 @@
-## Draw a square with the Turtle ##
-
 import turtle
 
 window = turtle.Screen()
 window.setup(500, 500)
 
-myttl = turtle.Turtle()
+ralph = turtle.Turtle()
 
 ## Write your code below this line ##
-myttl.forward(100)
-myttl.left(90)
-myttl.forward(100)
-myttl.left(90)
-myttl.forward(100)
-myttl.left(90)
-myttl.forward(100)
-myttl.left(90)
+
+num_of_side = 100
+
+for side in range(num_of_side):
+    ralph.forward(side)
+    ralph.left(360/num_of_side)
