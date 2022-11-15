@@ -66,6 +66,7 @@ def check_collision():
         reset_ball()
     elif ball.xcor() > 500:
         reset_ball()
+
         
 def draw_score():
     left_score.clear()
