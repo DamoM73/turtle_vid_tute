@@ -14,261 +14,131 @@ It's important to understand that Thonny isn't the language we will be programmi
 
 Python is programmed in text files called scripts. You can use any text editor to program Python. Integrated development environment like Thonny have additional features like highlighting syntax by marking it in different colours and helping you debug your program. We will deal with those features later, in the meanwhile just think of Thonny as a text editor with extra features built in.
 
+### Setting up Thonny
+
+Before we look at Thonny's User Interface (UI), we need to turn on a few features so our IDE looks the same.
+
+> Throughout this course, **bold words** are words that you need to look for on the UI
+
+First, go to the **View** menu and make sure there is a tick beside **Assistant**, **Shell** and **Variable**.
+
+![Thonny view settings](./assets/thonny_view_settings.png)
+
+Next go to **Tools** &rarr; **Options**
+
+![Thonny tools options](./assets/thonny_tools_options.png)
+
+On the **Editor** tab make sure that your check-boxes are the same as the image below.
+
+![Thonny options editor](./assets/thonny_options_editor.png)
+
+Finally on the **Theme and Font** tab make sure that the **Syntax theme** is set to **IDLE Classic**. Syntactic highlighting changes the colour of words, depending on their role in the code. This helps us to structure our code the right way.
+
+![Thonny options theme](./assets/thonny_options_theme.png)
+
+Now click **OK** and your Thonny will look the same as the one in the videos.
+
 ### The User Interface
 
-Your the user interface you'll not look
-slightly different we'll change around
-to work on that but to start off with
-you can see over here this is where we
-actually type our code in this little
-space here this is the code editor here
-and this is the particular script we
-have open at the moment which is just an
-untitled unsaved um file which is here
-that we haven't used
-down the bottom we have the terminal um
-or the shell so this is where your text
-out by um output will be going um
-down the bottom here over here is the
-assistant now yours may be turned off or
-may not be turned on
-so to um view your assistant is to you
-can turn it on and off with the view
-here
-and you can see with the assistant there
-is
-what it will do will help you with your
-actual coding because tony is designed
-primarily for education purposes
-says to help you learn how to use python
-um
-also the way that my python my funny
-looks might be slightly different like
-when i type my first line in here
-you can see that it is
-red if you type yours in you'll probably
-won't be red it'll be a different color
-because i've changed my theme
-um or my text theme so to do that you
-just go to tools and you go options and
-then you say your um
-theme and font
-and then choose ideally classic which
-makes it look the same as mine so you
-can see all the highlighting that i got
-in here which has different meanings for
-different words it will help you follow
-what i'm actually doing on my computer
-so it lines up color wise 
+The image below shows the Thonyy UI parts that you need to know to get started. We'll learn more as they are needed.
+
+![Thonny UI](./assets/thonny_ui.png)
 
 ### First Program
 
-so let's go
-and start our first program which is
-here and it says our first program
-so
-what we're going to do is going to make
-a really simple little program
-called
-print
-hello world
-because this is
-the traditional way that
-we kind of write your very first program
-now let's remember the concept of prim
-that we are using so when we're talking
-about actually using um code the idea is
-before we actually run the code is we
-try to predict um as we without running
-the code have a guess at what we think
-the actual code is going to do when
-they're going to run it and then see
-whether our prediction is correct and
-we'll do that in every single time we go
-through some code
-investigating we're going to take a
-closer look and see if we change things
-what happens we change values around or
-change characters around and we'll
-actually do that you can modify your
-code so it does something different and
-then finally you can apply your
-knowledge that you developed from that
-code to make something different
-so
-what are we doing here print hello world
-i'm going to run it and it's going to
-ask me to save it now i've made a
-folder called python channel on my
-desktop that your folder python turtle
-should be
-in your year 7 digital Technologies folder
-so here we come down and in my python
-turtle folder i'm going to give this a
-name and this is my lesson one
-um
-cute
-one
-yeah shoot one and now i could not put
-dot py at the end which would tell us
-that this is a python script but thoni
-will automatically add that at the end
-to let it know that this is a python
-script so i'm going to click on that and
-it's going to run and then down the
-bottom it's actually so actually what
-you predicted was actually happened that
-you think that it was going to say hello
-world down there um
-and interesting it says hello world
-that's a couple of things to observe
-let's see first off it doesn't
-it doesn't do anything with this
-okay there's no kind of effect there you
-know i can actually
-change this around and i run it again
-and it makes no difference
-okay now why is that well up here you
-see this little
-hash at the beginning this tells um
-python that this is a comment i it is
-designed for humans it is designed to
-explain things to humans to make notes
-to people um we will be using that
-extensively throughout our programming
-here on how we actually
-put information into our code which
-which the computer ignores so that's our
-little first little thing is a little
-hashtag that gives us comments 
+For our first program we are going to make a really simple little program called *hello world*, because this is the traditional first program to write.
 
-### Simple Troubleshooting
+Type the following code into the Code panel.
 
-now down
-here what have we got here
-we've got purple which is a command word
-print it says print it basically says
-send it to terminal whatever's in these
-brackets here so if i remove that if i
-said um pin or print
-or print
-you'll see that okay wait a second that
-isn't purple so it gives me here that
-it's not right and if i try to run it
-it's going to come up with an error see
-traceback error
-tell me what line it's in it's in this
-file
-which is my
-chute um lesson one shoot one
-radio line three in module so line three
-is one two three it's this line here and
-it says name p-r-i-t is not defined so
-it doesn't know what that is so that's
-cool so i know the problem is this i'm
-gonna change
-that and go in
-and let's run it again
-okay it was happy so let's see what else
-can i change in this investigation here
-what happens if i get rid of
-um let's see let's get rid of
-these
-what does that do get rid of the the
-quotation marks so print hello world i
-wanted to do this say hello world and
-run
-and it comes up with an error
-um look at this invalid syntax
-perhaps you forgot a comma and you'll
-learn that why it says it later on but
-look at this it actually points where
-all the errors are error is along here
-along this part here
-so i'm going to put those
-inverted commas back
-and
-see how this is green this tells it that
-this is a string or a list of characters
-so things inside vertical in inverted
-commas and they can be double inverted
-commas or they can be single inverted
-commas things inside of miracom is
-basically saying this is just a whole
-bunch of of characters it's words it's
-sentences there can be even numbers in
-there but it says just just
-put up this up as
-the way it is print this out the way it
-is and that's called a string so what
-about if i get rid of one of these
-brackets or get rid of both those
-brackets do they need to be there
-let's just try that
-yeah many missing parentheses to call
-print did you mean to say print cool
-tells us that
-rightio so
-let's see what's the last thing actually
-look at this if i have an open bracket
-there so if i get rid of the close
-bracket and i run it again it tells me
-oh
-error there the opening bracket this
-opening bracket was never closed and
-also finally gives you that hint there
-because it says look this gray bar says
-you have a bracket that you haven't
-closed
-it does the same with the inverted
-commas
-it says you have an inverted comma
-anything you type afterwards if you
-haven't closed it it's going to be in
-that green highlight
-righty-o so there we are that is our
-basic
-um
-code here
-let's have a look at the side of here
-the assistant basically says the code
-looks good and if there were some
-problems if it was a bit a bit off the
-assistant would give you some hints of
-how to fix it up
+``` python
+# Our First Program
 
-### First exercise
-
-so what i wanted to do is i want you
-just to now make yourself a really quick
-just adjust it a couple of times and
-make it say different things
-and then i will see you in our next
-tutorial
-
-Coding panel
-
-Shell / Terminal 
-
-Assistant
-
-### Hello World
-
-```python
-# Our first program
-```
-
-```python
 print("Hello World")
 ```
 
-save as L1_tut1
+#### Predict
 
-Remove "
+Remember the PRIMM process (*Predict*, *Run*, *Investigate*, *Modify*, *Make*). Before you run the code you need to *Predict* what you think will happen. Go ahead and have a guess at what you think will happen. 
 
-mistype print
+#### Run
 
-## Tutorial 2: Introducing turtle
+Now go ahead and *Run* the code by clicking on the **Play button** (or you can press F5 on your keyboard).
+
+Your **Shell** should now show `Hello World`. Is that what you predicted would happen?
+
+#### Investigate
+
+Let's *Investigate* what happened.
+
+The first thing to notice is that only `Hello World` appears in the terminal. The program completely misses the first line: `# Our First Program`. Why is that? Well. Starting a line with the `#` character tells Python that the line is a comment. It is only meant to be read by humans, so the computer will ignore that line. It's a way to make notes throughout your code.
+
+Next notice line `3`. The word `print` is in purple. This tells the coder that `print` is a keyword in Python. A key word is like a command. Try removing the `n` from print so the line now reads `prit("Hello World")`. Try running the code now and see what happens.
+
+You should get the following error message in your **Shell**:
+
+```
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+NameError: name 'prnt' is not defined
+```
+
+Let's unpack that error message. The first line `Traceback (most recent call last):` is Python saying "this is where I got up to".
+
+The second line `File "<string>", line 3, in <module>` tells you the file and the line of the error. In our case it is `line 3`.
+
+Finally the last line `NameError: name 'prnt' is not defined` explains the type of error. In this case it is a `NameError` which means it's found a word that it doesn't understand. It then tell us which word `prnt`.
+
+Now go back to line `3` and fix it up so it reads `print("Hello World")` again. Notice that `print` turns back to purple.
+
+Let's keep investigating by removing the `"` so line`3` reads `print(Hello World)`, and then run the program again.
+
+Once again your **Shell** contains another error:
+
+```
+Traceback (most recent call last):
+  File "<string>", line 3
+    print(Hello World)
+          ^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+```
+
+This time the error actually shows you the line with the error `print(Hello World)` and then the line underneath has a row of `^` symbols pointing to where the error is. It also tells us it is a `SyntaxError: invalid syntax.` which means it's not following Python rules. Finally it suggests what you might have done wrong `Perhaps you forgot a comma?`. The suggestion is wrong in this case, but luckily we know what we did wrong.
+
+Change line `3` back so that is reads `print("Hello World")` again. Notice how `"Hello World"` turns green? This syntax highlighting lets you know that the `Hello World` is a thing called a string. For the time being just think of a string as a whole bunch of characters. We will learn more about strings later on.
+
+Continuing with the *Investigation* of line `3`, lets remove the `(` and `)` characters. So it now reads `print Hello World`. Running this will present the following error in your *Shell*
+
+```
+Traceback (most recent call last):
+  File "<string>", line 3
+    print "Hello World"
+    ^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+```
+
+The error message should look familiar now. It's another `SyntaxError` but a different one called `Missing parentheses in call to 'print'`. Parentheses are the curved bracket we just removed. This time Python's hint was correct `Did you mean print(...)?`.
+
+Now lets just replace the opening parenthesis `(` so line `3` now reads `print("Hello World"`. Run it and your will notice the error message change changed to a different syntax error.
+
+```
+Traceback (most recent call last):
+  File "<string>", line 3
+    print ("Hello World"
+          ^
+SyntaxError: '(' was never closed
+```
+
+It is now letting you know that you failed to close your parenthesis. In Python every opening parenthesis `(` needs to be matched with a closing parenthesis `)`. But before you fix line`3`, look at Thonny. Notice from `(` onwards is highlighted grey. This is Thonny's way of letting you know that a opening parenthesis was not closed. That way you can catch the error before running your code.
+
+Ok you can fix line `3` up now so it reads `print("Hello World")`.
+
+Ok our investigation is over, and you have met some of the error messages. In your time coding, you will meet many, many more of these error messages. Don't be discouraged by them. Even the most experienced programmers regularly get error messages. In fact there is a saying amongst programmers: error messages are your friend. They help you work out what when wrong.
+
+#### Modify
+
+Now time to modify the code. There's not much code there. But spend some time making the code print different things to the **Shell**.
+
+## Part 2: Introducing turtle
 
 ### First turtle program
 
