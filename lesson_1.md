@@ -22,27 +22,27 @@ Before we look at Thonny's User Interface (UI), we need to turn on a few feature
 
 First, go to the **View** menu and make sure there is a tick beside **Assistant**, **Shell** and **Variable**.
 
-![Thonny view settings](./assets/thonny_view_settings.png)
+<img style="border:1px solid black" align="left" src="./assets/thonny_view_settings.png">
 
 Next go to **Tools** &rarr; **Options**
 
-![Thonny tools options](./assets/thonny_tools_options.png)
+<img style="border:1px solid black" align="left" src="./assets/thonny_tools_options.png">
 
 On the **Editor** tab make sure that your check-boxes are the same as the image below.
 
-![Thonny options editor](./assets/thonny_options_editor.png)
+<img style="border:1px solid black" align="left" src="./assets/thonny_options_editor.png">
 
 Finally on the **Theme and Font** tab make sure that the **Syntax theme** is set to **IDLE Classic**. Syntactic highlighting changes the colour of words, depending on their role in the code. This helps us to structure our code the right way.
 
-![Thonny options theme](./assets/thonny_options_theme.png)
+<img style="border:1px solid black" align="left" src="./assets/thonny_options_theme.png">
 
 Now click **OK** and your Thonny will look the same as the one in the videos.
 
 ### The User Interface
 
-The image below shows the Thonyy UI parts that you need to know to get started. We'll learn more as they are needed.
+The image below shows the Thonny UI parts that you need to know to get started. We'll learn more as they are needed.
 
-![Thonny UI](./assets/thonny_ui.png)
+<img style="border:1px solid black" align="left" src="./assets/thonny_ui.png">
 
 ### First Program
 
@@ -58,17 +58,17 @@ print("Hello World")
 
 #### Predict
 
-Remember the PRIMM process (*Predict*, *Run*, *Investigate*, *Modify*, *Make*). Before you run the code you need to *Predict* what you think will happen. Go ahead and have a guess at what you think will happen. 
+Remember the PRIMM process (*Predict*, *Run*, *Investigate*, *Modify*, *Make*). Before you run the code you need to *predict* what you think will happen. Go ahead and have a guess at what you think will happen. 
 
 #### Run
 
-Now go ahead and *Run* the code by clicking on the **Play button** (or you can press F5 on your keyboard).
+Now go ahead and *run* the code by clicking on the **Play button** (or you can press F5 on your keyboard).
 
 Your **Shell** should now show `Hello World`. Is that what you predicted would happen?
 
 #### Investigate
 
-Let's *Investigate* what happened.
+Let's *investigate* what happened.
 
 The first thing to notice is that only `Hello World` appears in the terminal. The program completely misses the first line: `# Our First Program`. Why is that? Well. Starting a line with the `#` character tells Python that the line is a comment. It is only meant to be read by humans, so the computer will ignore that line. It's a way to make notes throughout your code.
 
@@ -136,41 +136,67 @@ Ok our investigation is over, and you have met some of the error messages. In yo
 
 #### Modify
 
-Now time to modify the code. There's not much code there. But spend some time making the code print different things to the **Shell**.
+Now time to *modify* the code. There's not much code there. But spend some time making the code print different things to the **Shell**.
 
 ## Part 2: Introducing turtle
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CBrm4-ECyMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### First turtle program
+
+Let get started on our first Turtle program. Click the **New** icon and the type the following into the new file and then save it using the name **lesson_1_pt_1.py**.
 
 ```python
 # Our first turtle program
 ```
 
-Save as L1_tut2
+The Python programming language has a limited default set of commands (called function), but it also has access to whole libraries of other commands (called packages). One of those other packages is called *Turtle*. To tell Python to use these other packages, we use the `import` command. So we will now tell Python to `import turtle`. It is best to always put your `import` commands right at the top of your Python program.
 
-### Import turtle
+Your code should look like this:
 
 ```python
+# Our first turtle program
+
 import turtle
 ```
 
-### Create turtle
+### Create a turtle
+
+What is a turtle? Well, a turtle is a little arrow that you can command to move around the screen. By before we can program the turtle, we have to make one. On line `5` type the line `my_ttl = turtle.Turtle()`. Let's explore that line:
+
+- `turtle.Turtle()` tells Python from the *turtle* pack you just imported (`turtle.`) use the command `Turtle()` to create a turtle.
+- `myttl =` names the newly created turtle `myttl`. You can name the turtle anything you want. In fact the name `myttl` is pretty lame, so go ahead and name it whatever you want, but it can only be a *one word name*, and remember, where ever you see `myttl` you need to substitute it with your name.
+
+Your code should now look like this.
 
 ```python
+# Our first turtle program
+
 import turtle
 
 my_ttl = turtle.Turtle()
 ```
 
-### Draw line
+### Make your turtle move
+
+Next we're going to make the turtle move. So, on line `7` type `my_ttl.forward(100)`. You code should now look like this.
 
 ```python
+# Our first turtle program
+
 import turtle
 
 my_ttl = turtle.Turtle()
 
 my_ttl.forward(100)
 ```
+
+#### PRIMM
+
+- Predict: We're about ready to run our first turtle program, but before we do you need to *predict* what you think will happen.
+- Run: Now *run* the program and see if it follows your prediction. You probably predicted the movement to the right, but did you predict that it would leave a trail behind it?
+- Investigate: Just like we did with `Hello World` *investigate* the code by changing things and seeing what happens.
+- Modify: Finally, *modify* the code so the draws different lengths of line.
 
 ### Resize canvas
 
