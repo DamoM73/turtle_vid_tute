@@ -1,14 +1,30 @@
 # Lesson 2
 
-Create a new file
+> **Topics**
+> In this lesson you will:
+> 
+> - [ ] learn about iteration in Python
+> - [ ] learn how to express program in flow charts.
 
 ## Tutorial 1: Iteration introduction
 
-### To date
+So far with our programming Python has been executing each line of our code one after another. This is called *sequential* and is the default way that programs work. They start at the top and move their way through the code. This movement is called *the flow* of the program (like water, or electricity).
 
-Writing out commands sequentially 
+### Introduction to flowcharts
+
+There is a special diagram that is used to show this flow of the computer program. It's called a flowchart. Flow charts show each process in a program and how the program move from one process to the next. We use rectangles to symbolise processes and arrows to represent the flow.
+
+<img align="left" src="./assets/flow_chart_symbol_1.png">
+
+If we wanted a program to say hello to six people, you would show it in a flow chart like this:
+
+<img align="left" src="./assets/flow_chart_1.png">
+
+Transferring this code to Python would produce the following code. 
 
 ```python
+# our itreation program
+
 print("Hello Hunter")
 print("Hello Jordi")
 print("Hello Adam")
@@ -16,6 +32,29 @@ print("Hello Jesse")
 print("Hello Bryce")
 print("Hello Ben")
 ```
+
+Since the flow is sequential, Python will start at line `1` and work its way down to line `8`. Type it in and try it.
+
+If you change the order of the code the program will run differently.
+
+```python
+# our itreation program
+
+print("Hello Jesse")
+print("Hello Bryce")
+print("Hello Ben")
+print("Hello Hunter")
+print("Hello Jordi")
+print("Hello Adam")
+```
+
+Sequential programming is ok, but starts to become a problem when you are dealing with bigger programs. You don't want to have to type everything out.
+
+Imagine if I want to say hello to 500 people, or 1,000 people or more, how tedious will it be to type each line out? There is also other limitations.
+
+What if I decided to say 'good morning' rather than 'hello'? I would have to go along and change every single line of code.
+
+This is ok, but start to become a problem when I want 
 
 Doesn't scale well.
 

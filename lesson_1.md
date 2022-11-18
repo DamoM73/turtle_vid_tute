@@ -1,5 +1,14 @@
 # Python Turtle - Lesson 1
 
+> **Topics**
+> In this lesson you will:
+> 
+> - [ ] install and setup your programming environment
+> - [ ] run your first program
+> - [ ] learn how to deal with error messages
+> - [ ] import modules
+> - [ ] create a simple turtle program
+
 ## Part 1: Thonny Introduction
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/90T-NE_a50E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -8,7 +17,7 @@
 
 Welcome to our first lesson on Python Turtle. In this lesson you will be introduced to Thonny - the integrated development environment (IDE) we will use to write our code. We are going to have a look at a really basic python code and understand some of its syntax.
 
-> We will be using Thonny as our IDE. Thonny is a Python IDE for beginners. It comes packaged with Python, which helps with the setup. You can download it from: **[thonny.org/](https://thonny.org/)**.
+> We will be using Thonny as our IDE. Thonny is a Python IDE for beginners. It comes packaged with Python, which helps with the setup. You can download it from **[thonny.org](https://thonny.org/)**.
 
 It's important to understand that Thonny isn't the language we will be programming with, Python. Just like you use Microsoft Word to write English, we will be using Thonny to write Python. 
 
@@ -227,7 +236,7 @@ In the turtle module the window is called a Screen. Line `5` of our new code mak
 In line `6` we use `window.setup(500,500)` to set the size of window as 500 pixels wide, by 500 pixels high.
 
 > What's a pixel? Well, you screen is made up of thousand of little dots, if you look really close at your screen you might see them. You might read that a screen is 1920 x 1080. This is talking about pixels, it means the screen is 1,920 pixel wide and 1,080 pixels high. We'll learn more about pixels latter in the course.
- 
+
 For our current purposes, pixels are our measurement of movement on the screen, so `forward(100)` is actually saying move forward 100 pixels.
 
 The second change we're going to make is purely about looks. From the code below, add line `9` to your code.
@@ -283,7 +292,7 @@ In this course, the exercises are the Make component of the PRIMM model.
 
 ### Exercise 1
 
-Download the <a href="/lesson_1_ex1.py" download>lesson_1_ex1</a> file. Save it into your subject folder. It should have the code below.
+Create a new file and save it in your subject folder calling it **`lesson_1_ex_1.py`**. Then type the following code into it.
 
 ```python
 ## Draw a square with the Turtle ##
@@ -298,10 +307,11 @@ myttl = turtle.Turtle()
 ## Write your code below this line ##
 ```
 
-As the comments say, write code that will create a square.
+After line `10`, as the comments says, write code that will create a square.
 
+### Exercise 2
 
-#### L1_Ex2
+Create a new file and save it in your subject folder calling it **`lesson_1_ex_2.py`**. Then type the following code into it.
 
 ```python
 ## Draw a Triangle with the Turtle ##
@@ -316,7 +326,11 @@ myttl = turtle.Turtle()
 ## Write your code below this line ##
 ```
 
-#### L1_Ex3
+After line `10`, as the comments says, write code that will create a triangle.
+
+### Exercise 3
+
+Create a new file and save it in your subject folder calling it **`lesson_1_ex_3.py`**. Then type the following code into it.
 
 ```python
 ## Draw a hexagon with the Turtle ##
@@ -331,3 +345,4 @@ myttl = turtle.Turtle()
 ## Write your code below this line ##
 ```
 
+After line `10`, as the comments says, write code that will create a hexagon.
