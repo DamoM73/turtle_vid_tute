@@ -8,7 +8,7 @@
 
 Welcome to our first lesson on Python Turtle. In this lesson you will be introduced to Thonny - the integrated development environment (IDE) we will use to write our code. We are going to have a look at a really basic python code and understand some of its syntax.
 
-> We will be using Thonny as our IDE. Thonny is a Python IDE for beginners. It comes packages with Python, which helps with the setup. You can download it from: **[thonny.org/](https://thonny.org/)**.
+> We will be using Thonny as our IDE. Thonny is a Python IDE for beginners. It comes packaged with Python, which helps with the setup. You can download it from: **[thonny.org/](https://thonny.org/)**.
 
 It's important to understand that Thonny isn't the language we will be programming with, Python. Just like you use Microsoft Word to write English, we will be using Thonny to write Python. 
 
@@ -150,7 +150,7 @@ Let get started on our first Turtle program. Click the **New** icon and the type
 # Our first turtle program
 ```
 
-The Python programming language has a limited default set of commands (called function), but it also has access to whole libraries of other commands (called packages). One of those other packages is called *Turtle*. To tell Python to use these other packages, we use the `import` command. So we will now tell Python to `import turtle`. It is best to always put your `import` commands right at the top of your Python program.
+The Python programming language has a limited default set of commands (called function), but it also has access to whole libraries of other commands (called modules). One of those other modules is called *Turtle*. To tell Python to use these other modules, we use the `import` command. So we will now tell Python to `import turtle`. It is best to always put your `import` commands right at the top of your Python program.
 
 Your code should look like this:
 
@@ -164,7 +164,7 @@ import turtle
 
 What is a turtle? Well, a turtle is a little arrow that you can command to move around the screen. By before we can program the turtle, we have to make one. On line `5` type the line `my_ttl = turtle.Turtle()`. Let's explore that line:
 
-- `turtle.Turtle()` tells Python from the *turtle* pack you just imported (`turtle.`) use the command `Turtle()` to create a turtle.
+- `turtle.Turtle()` tells Python from the *turtle* module you just imported (`turtle.`) use the command `Turtle()` to create a turtle.
 - `myttl =` names the newly created turtle `myttl`. You can name the turtle anything you want. In fact the name `myttl` is pretty lame, so go ahead and name it whatever you want, but it can only be a *one word name*, and remember, where ever you see `myttl` you need to substitute it with your name.
 
 Your code should now look like this.
@@ -198,9 +198,15 @@ my_ttl.forward(100)
 - Investigate: Just like we did with `Hello World` *investigate* the code by changing things and seeing what happens.
 - Modify: Finally, *modify* the code so the draws different lengths of line.
 
-### Resize canvas
+### Changing the turtle environment
+
+Before we go any further, let's change the turtle environment so its consistence between all our computers. The first thing we will do is make the Turtle window the same size.
+
+Change your code to make it look the same as below.
 
 ```python
+# Our first turtle program
+
 import turtle
 
 window = turtle.Screen()
@@ -211,9 +217,24 @@ my_ttl = turtle.Turtle()
 my_ttl.forward(100)
 ```
 
-### Change icon
+Let's talk about the changes.
+
+In the turtle module the window is called a Screen. Line `5` of our new code makes a screen, much in the same way that we make a turtle:
+
+- `turtle.Screen()` tells Python from the *turtle* module (`turtle.`) use the command `Screen()` to create a screen.
+- `window =` give the newly created screen the name `window`.
+
+In line `6` we use `window.setup(500,500)` to set the size of window as 500 pixels wide, by 500 pixels high.
+
+> What's a pixel? Well, you screen is made up of thousand of little dots, if you look really close at your screen you might see them. You might read that a screen is 1920 x 1080. This is talking about pixels, it means the screen is 1,920 pixel wide and 1,080 pixels high. We'll learn more about pixels latter in the course.
+ 
+For our current purposes, pixels are our measurement of movement on the screen, so `forward(100)` is actually saying move forward 100 pixels.
+
+The second change we're going to make is purely about looks. From the code below, add line `9` to your code.
 
 ```python
+# Our first turtle program
+
 import turtle
 
 window = turtle.Screen()
@@ -225,9 +246,20 @@ my_ttl.shape("turtle")
 my_ttl.forward(100)
 ```
 
-### Draw with turn
+Do you want to predict what this change will do? Try running the code to see if you're correct.
+
+### Change direction
+
+So now that we have fixed our window size and dealt with out turtle's identity crisis, time to do some more drawing. At the bottom of your code, add two more lines:
+
+- `my_ttl.left(90)`
+- `my_ttl.forward(100)`
+
+Your code should now look like this:
 
 ```python
+# Our first turtle program
+
 import turtle
 
 window = turtle.Screen()
@@ -238,26 +270,20 @@ my_ttl.shape("turtle")
 
 my_ttl.forward(100)
 my_ttl.left(90)
-```
-
-### Draw second line
-
-```python
-mport turtle
-
-window = turtle.Screen()
-window.setup(500,500)
-
-my_ttl = turtle.Turtle()
-my_ttl.shape("turtle")
-
-my_ttl.forward(100)
-my_ttl.left(90)
 my_ttl.forward(100)
 ```
-### Exercises
 
-#### L1_Ex1
+- Predict: What do you think this code will do. Try to be specific in your description. Take a piece of paper and physically draw what you think will happen.
+- Run: Now *run* the program and see if it follows your prediction. Did the turtle drawing look the same as your drawing?
+- Investigate: When *investigating*, try changing the values in the bracket and seeing what this does.
+
+## Exercises
+
+In this course, the exercises are the Make component of the PRIMM model.
+
+### Exercise 1
+
+Download the <a href="/lesson_1_ex1.py" download>lesson_1_ex1</a> file. Save it into your subject folder. It should have the code below.
 
 ```python
 ## Draw a square with the Turtle ##
@@ -271,6 +297,9 @@ myttl = turtle.Turtle()
 
 ## Write your code below this line ##
 ```
+
+As the comments say, write code that will create a square.
+
 
 #### L1_Ex2
 
