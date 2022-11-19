@@ -288,7 +288,7 @@ my_ttl.forward(100)
 
 ## Exercises
 
-In this course, the exercises are the Make component of the PRIMM model.
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
 
 ### Exercise 1
 

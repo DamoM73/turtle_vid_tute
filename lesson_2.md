@@ -4,7 +4,7 @@
 > In this lesson you will:
 > 
 > - [ ] learn about iteration in Python
-> - [ ] learn how to express program in flow charts.
+> - [ ] learn how to represent programs in a flow chart.
 
 ## Tutorial 1: Iteration introduction
 
@@ -54,26 +54,54 @@ Imagine if I want to say hello to 500 people, or 1,000 people or more, how tedio
 
 What if I decided to say 'good morning' rather than 'hello'? I would have to go along and change every single line of code.
 
-This is ok, but start to become a problem when I want 
+This might be ok for a small program, but starts to become a problem when dealing with larger and larger programs. In Digital Technologies we would say that his is not *scalable*.
 
-Doesn't scale well.
+### Iteration
 
-- Large number of files
-
-- updating issues
-
-### For Loops
-
-Solution - the `FOR` loop
-
-Create a list of names
+If you look closely at the code you will notice that there is a lot of repetition.
 
 ```python
-names = ["Hunter", "Jordi", "Adam", "Bryce", "Ben"]
+# our itreation program
+
+print("Hello Jesse")
+print("Hello Bryce")
+print("Hello Ben")
+print("Hello Hunter")
+print("Hello Jordi")
+print("Hello Adam")
+```
+
+Lines `3` to `8` is essentially the same line, with only the name changing each time. This clashes with the DRY programming principle.
+
+<img align="left" src="./assets/dry.png">
+
+One of the methods of not repeating yourself, is to use *iteration* (often called *loops*). They repeat the same code with a slight change each time. This would be perfect for our use, as we want to repeat the code `print("Hello", name)` with a different name each time.
+
+The first loop we will use is called the `for` loop. This is the first *control structure* that we've used. They're called control structures because the control the flow of the program causing it to deviate from its default sequential flow.
+
+Change your code, so it is the same as the code below
+
+```python
+# our itreation program
+
+names = ["Hunter", "Jordi", "Adam", "Jesse", "Bryce", "Ben"]
 
 for name in names:
     print("Hello", name)
 ```
+
+Ok, let's run the code, but don't forget PRIMM, and make sure you *predict* what you think will happen before you *run* the code.
+
+So let's *investigate*.
+
+Line `3` is something we haven't seen before. It's called a **list** and it works just like a real world list. There are a number of items, and they are in a specific order:
+
+- the `[` and `]` at the beginning and end indicate the beginning and end of the list.
+- `"Hunter"`, `"Jordi"`, `"Adam"`, `"Jesse"`, `"Bryce"`, `"Ben"` are all items in the list. They're called *elements*.
+- the elements are separated with comma `,`.
+- just like our turtle and our window in the last lesson, we need to give this list a name. We use `names =` to give the list of names the name of names.
+
+
 
 Run through with debugger
 
