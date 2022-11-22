@@ -13,15 +13,15 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/90T-NE_a50E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### What's an IDE
+### What is Thonny
 
-Welcome to our first lesson on Python Turtle. In this lesson you will be introduced to Thonny - the integrated development environment (IDE) we will use to write our code. We are going to have a look at a really basic python code and understand some of its syntax.
+Welcome to our first lesson on Python Turtle. In this lesson you will be introduced to Thonny - the integrated development environment (IDE) we will use to write our code. We are going to have a look at a really basic Python code and understand some of its syntax.
 
 > We will be using Thonny as our IDE. Thonny is a Python IDE for beginners. It comes packaged with Python, which helps with the setup. You can download it from **[thonny.org](https://thonny.org/)**.
 
-It's important to understand that Thonny isn't the language we will be programming with, Python. Just like you use Microsoft Word to write English, we will be using Thonny to write Python. 
+It's important to understand that Thonny isn't the language we will be programming with, Python is. Just like you use Microsoft Word to write English, we will be using Thonny to write Python. 
 
-Python is programmed in text files called scripts. You can use any text editor to program Python. Integrated development environment like Thonny have additional features like highlighting syntax by marking it in different colours and helping you debug your program. We will deal with those features later, in the meanwhile just think of Thonny as a text editor with extra features built in.
+Python is programmed in text files called scripts. You can use any text editor to write Python. Integrated development environment like Thonny have additional features like highlighting syntax by marking it in different colours and helping you debug your program. We will deal with those features later, in the meanwhile just think of Thonny as a text editor with extra features built in.
 
 ### Setting up Thonny
 
@@ -57,7 +57,7 @@ The image below shows the Thonny UI parts that you need to know to get started. 
 
 For our first program we are going to make a really simple little program called *hello world*, because this is the traditional first program to write.
 
-Type the following code into the Code panel.
+Type the following code into the Code panel:
 
 ``` python
 # Our First Program
@@ -81,7 +81,7 @@ Let's *investigate* what happened.
 
 The first thing to notice is that only `Hello World` appears in the terminal. The program completely misses the first line: `# Our First Program`. Why is that? Well. Starting a line with the `#` character tells Python that the line is a comment. It is only meant to be read by humans, so the computer will ignore that line. It's a way to make notes throughout your code.
 
-Next notice line `3`. The word `print` is in purple. This tells the coder that `print` is a keyword in Python. A key word is like a command. Try removing the `n` from print so the line now reads `prit("Hello World")`. Try running the code now and see what happens.
+Next notice line `3`. The word `print` is in purple. This tells the coder that `print` is a keyword in Python. A key word is like a command. Try removing the `n` from `print` so the line now reads `prit("Hello World")`. Try running the code now and see what happens.
 
 You should get the following error message in your **Shell**:
 
@@ -95,7 +95,7 @@ Let's unpack that error message. The first line `Traceback (most recent call las
 
 The second line `File "<string>", line 3, in <module>` tells you the file and the line of the error. In our case it is `line 3`.
 
-Finally the last line `NameError: name 'prnt' is not defined` explains the type of error. In this case it is a `NameError` which means it's found a word that it doesn't understand. It then tell us which word `prnt`.
+Finally the last line `NameError: name 'prnt' is not defined` explains the type of error. In this case it is a `NameError` which means it's found a word that it doesn't understand. It then tells us which word `prnt`.
 
 Now go back to line `3` and fix it up so it reads `print("Hello World")` again. Notice that `print` turns back to purple.
 
@@ -153,13 +153,13 @@ Now time to *modify* the code. There's not much code there. But spend some time 
 
 ### First turtle program
 
-Let get started on our first Turtle program. Click the **New** icon and the type the following into the new file and then save it using the name **lesson_1_pt_1.py**.
+Let get started on our first Turtle program. Click the **New** icon and then type the following into the new file and then save it using the name **lesson_1_pt_1.py**.
 
 ```python
 # Our first turtle program
 ```
 
-The Python programming language has a limited default set of commands (called function), but it also has access to whole libraries of other commands (called modules). One of those other modules is called *Turtle*. To tell Python to use these other modules, we use the `import` command. So we will now tell Python to `import turtle`. It is best to always put your `import` commands right at the top of your Python program.
+The Python programming language has a limited default set of commands (called functions), but it also has access to whole libraries of other commands (called modules). One of those other modules is called *Turtle*. To tell Python to use these other modules, we use the `import` command. So we will now tell Python to `import turtle`. It is best to always put your `import` commands right at the top of your Python program.
 
 Your code should look like this:
 
@@ -171,7 +171,7 @@ import turtle
 
 ### Create a turtle
 
-What is a turtle? Well, a turtle is a little arrow that you can command to move around the screen. By before we can program the turtle, we have to make one. On line `5` type the line `my_ttl = turtle.Turtle()`. Let's explore that line:
+What is a turtle? Well, a turtle is a little arrow that you can command to move around the screen. But before we can program the turtle, we have to make one. On line `5` type the line `my_ttl = turtle.Turtle()`. Let's explore that line:
 
 - `turtle.Turtle()` tells Python from the *turtle* module you just imported (`turtle.`) use the command `Turtle()` to create a turtle.
 - `myttl =` names the newly created turtle `myttl`. You can name the turtle anything you want. In fact the name `myttl` is pretty lame, so go ahead and name it whatever you want, but it can only be a *one word name*, and remember, where ever you see `myttl` you need to substitute it with your name.
@@ -188,7 +188,7 @@ my_ttl = turtle.Turtle()
 
 ### Make your turtle move
 
-Next we're going to make the turtle move. So, on line `7` type `my_ttl.forward(100)`. You code should now look like this.
+Next we're going to make the turtle move. So, on line `7` type `my_ttl.forward(100)`. Your code should now look like this.
 
 ```python
 # Our first turtle program
@@ -209,7 +209,7 @@ my_ttl.forward(100)
 
 ### Changing the turtle environment
 
-Before we go any further, let's change the turtle environment so its consistence between all our computers. The first thing we will do is make the Turtle window the same size.
+Before we go any further, let's change the turtle environment so its consistent between all our computers. The first thing we will do is make the Turtle window the same size.
 
 Change your code to make it look the same as below.
 
@@ -235,7 +235,7 @@ In the turtle module the window is called a Screen. Line `5` of our new code mak
 
 In line `6` we use `window.setup(500,500)` to set the size of window as 500 pixels wide, by 500 pixels high.
 
-> What's a pixel? Well, you screen is made up of thousand of little dots, if you look really close at your screen you might see them. You might read that a screen is 1920 x 1080. This is talking about pixels, it means the screen is 1,920 pixel wide and 1,080 pixels high. We'll learn more about pixels latter in the course.
+> What's a pixel? Well, your screen is made up of thousand of little dots, if you look really close at your screen you might see them. You might read that a screen is 1920 x 1080. This is talking about pixels, it means the screen is 1,920 pixel wide and 1,080 pixels high. We'll learn more about pixels latter in the course.
 
 For our current purposes, pixels are our measurement of movement on the screen, so `forward(100)` is actually saying move forward 100 pixels.
 
