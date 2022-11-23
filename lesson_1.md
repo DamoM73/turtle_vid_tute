@@ -286,7 +286,7 @@ my_ttl.forward(100)
 - Run: Now *run* the program and see if it follows your prediction. Did the turtle drawing look the same as your drawing?
 - Investigate: When *investigating*, try changing the values in the bracket and seeing what this does.
 
-## Exercises
+## Make (Exercises)
 
 In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
 

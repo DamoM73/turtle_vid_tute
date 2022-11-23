@@ -1,29 +1,56 @@
-# Lesson 2
+---
+marp: true
+---
 
-> **Topics**
-> In this lesson you will:
-> 
-> - [ ] learn how to use iteration to reduce your code length
-> - [ ] learn how to represent programs in a flowchart
-> - [ ] write turtle programs using a `for` loop
+# Python Turtle - Lesson 2
+
+---
+
+## Topics
+
+In this lesson you will:
+
+- learn how to use iteration to reduce your code length
+- learn how to represent programs in a flowchart
+- write turtle programs using a `for` loop
+
+---
 
 ## Part 1: Iteration introduction
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_qZzz4lSckk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+---
 
-So far with our programming Python has been executing each line of our code one after another. This is called *sequential* and is the default way that programs work. They start at the top and move their way through the code. This movement is called *the flow* of the program (like water, or electricity).
+### Sequential flow
+
+Python has been executing each line of our code one after another
+
+- called *sequential*
+- the default way that programs work
+- the movement of a program called *the flow* of the program (like water, or electricity)
+
+---
 
 ### Introduction to flowcharts
 
-There is a special diagram that is used to show this flow of the computer program. It's called a flowchart. Flowcharts show each process in a program and how the program move from one process to the next. We use rectangles to symbolise processes and arrows to represent the flow.
+What are flowcharts?
 
-<img align="left" src="./assets/flow_chart_symbol_1.png">
+- special diagram used to show the flow of a computer program
+- show each process in a program and how the program moves from one process to the next
+- Symbols
+  - rectangles represent processes
+  - arrows represent the flow.
 
-If we wanted a program to say hello to six people, you would show it in a flowchart like this:
+![flowchart symbols 1](./assets/flow_chart_symbol_1.png)
 
-<img align="left" src="./assets/flow_chart_1.png">
+---
 
-Transferring this code to Python would produce the following code. 
+A program to say hello to six people would be represented like this:
+
+![sequential flowchart](./assets/flow_chart_1.png)
+
+---
+
+Transferring this code to Python would produce the following code:
 
 ```python
 # our itreation program
@@ -36,9 +63,11 @@ print("Hello Bryce")
 print("Hello Ben")
 ```
 
-Since the flow is sequential, Python will start at line `1` and work its way down to line `8`. Type it in and try it.
+Sequential flow: line `1` &rarr; line `8`. 
 
-If you change the order of the code the program will run differently.
+---
+
+Changing the order of the code will produce different results.
 
 ```python
 # our itreation program
@@ -51,17 +80,22 @@ print("Hello Jordi")
 print("Hello Adam")
 ```
 
-Sequential programming is ok, but starts to become a problem when you are dealing with bigger programs. You don't want to have to type everything out.
+---
 
-Imagine if I want to say hello to 500 people, or 1,000 people or more, how tedious will it be to type each line out? There is also other limitations.
+### Sequential code limitations
 
-What if I decided to say 'good morning' rather than 'hello'? I would have to go along and change every single line of code.
+Sequential programming starts to become a problem with larger programs.
 
-This might be ok for a small program, but starts to become a problem when dealing with larger and larger programs. In Digital Technologies we would say that his is not *scalable*.
+- saying hello to 500 or 1,000 people
+- changing the code from 'hello' to 'good morning'
+
+Sequential coding is not *scalable*
+
+---
 
 ### Iteration
 
-If you look closely at the code you will notice that there is a lot of repetition.
+There is a lot of repetition in the code
 
 ```python
 # our itreation program
@@ -74,17 +108,33 @@ print("Hello Jordi")
 print("Hello Adam")
 ```
 
-Lines `3` to `8` is essentially the same line, with only the name changing each time. This clashes with the DRY programming principle.
+Lines `3` to `8` &rarr; the same line with small changes
 
-<img align="left" src="./assets/dry.png">
+Clashes with the DRY programming principle.
 
-One of the methods of not repeating yourself, is to use *iteration* (often called *loops*). They repeat the same code with a slight change each time. This would be perfect for our use, as we want to repeat the code `print("Hello", name)` with a different name each time.
+---
+
+![DRY](./assets/dry.png)
+
+---
+
+To not repeat yourself, use *iteration* (often called *loops*). 
+
+- repeat the same code with a slight change each time
+- repeat the code `print("Hello", name)` with a different name each time
+
+---
 
 ### For loops
 
-The first loop we will use is called the `for` loop. This is the first *control structure* that we've used. They're called control structures because the control the flow of the program causing it to deviate from its default sequential flow.
+Our first *control structure*
 
-Change your code, so it is the same as the code below
+- control the flow of the program
+- cause it to deviate from its default sequential flow
+
+---
+
+Change your code to the code below:
 
 ```python
 # our itreation program
@@ -95,7 +145,12 @@ for name in names:
     print("Hello", name)
 ```
 
-Ok, let's run the code, but don't forget PRIMM, and make sure you *predict* what you think will happen before you *run* the code.
+PRIMM
+
+- *predict* what you think will happen
+- *run* the code.
+
+---
 
 So let's *investigate*.
 
@@ -137,7 +192,7 @@ Now lets look at the `for` loop flowchart.
 
 #### Tracing with debugger
 
-One last way we can see how the `for` loop works is to use Thonny's debugger. 
+One last way we can see how the `for` loop works is to use Thonny's debugger.
 
 You launch the debugger by clicking the bug beside the play button.
 
