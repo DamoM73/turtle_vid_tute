@@ -8,13 +8,56 @@
 
 ## Tutorial 1: Variables
 
-### Learning objective
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mG1O_JamxjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Understand how and when to use variables
+### Conventual range
+
+Before we start looking at variables, we want to make our use of range more conventual.
+
+Previously we would print four numbers using the code below
+
+``` python
+for number in range(1,5):
+    print(number)
+```
+
+If you run this code you get:
+
+```
+1
+2
+3
+4
+```
+
+If we weren't worried about the actual numbers, and we just needed to loop 4 times we could say:
+
+``` python
+for number in range(0,4):
+    print(number)
+```
+
+This will produce:
+
+```
+0
+1
+2
+3
+```
+
+It still has four iterations, but just starts counting at 0.
+
+In Python the `range` function, if you don't provide a starting number, it will automatically start from `0`. So we could just say.
+
+``` python
+for number in range(4):
+    print(number)
+```
 
 ### Replace magic numbers
 
-Look at code for an iterated square
+Look at code below for an iterated square. 
 
 ```python
 import turtle
@@ -28,7 +71,7 @@ for i in range(4):
     my_ttl.left(90)
 ```
 
-What do we need to change to make this into a large triangle?
+What do we need to change to make this into a large triangle with a length of 200 for each size? Try and work it out before looking at the code below.
 
 ```python
 import turtle
@@ -42,19 +85,17 @@ for i in range(3):
     my_ttl.left(120)
 ```
 
-What values did we change, and what do they represent?
+What values did we change? What do those numbers represent?
 
-- 4 - # sides
+- `4` &rarr; `3` representing the number sides
+- `100` &rarr; `200` representing the length of the sides
+- `90` &rarr; `120` representing the degrees the Turtle has to turn
 
-- 200 - length
+If I wanted to make a hexagon, or any other shape, you would need to change these values each time.
 
-- 90 - degrees
+In programming these are called *magic numbers*. A *magic number* is a literal value that appears in a program. Magic numbers are not good. If someone else was to look at my code, they would have to work out what the `3`, `200` and `120` meant. Additionally, if my program drew 1000 squares, and I wanted to change them all to triangles, I would have to make 3000 edits.
 
-These are magic numbers
-
-> A 'magic number' is a literal value that appears in a program.
-
-Remove the magic numbers from the code, by giving them labels. These labels are called variables.
+To write better code we remove the magic numbers by giving them labels. These labels are called variables.Below is the triangle code.
 
 ```python
 import turtle
@@ -72,15 +113,67 @@ for i in range(sides):
     my_ttl.left(degrees)
 ```
 
-Change to a hexagon
+Lets break that code down
 
-Change length to 100
+- `sides = 3` creates the variable `sides` and assigns the value of `3` to it
+- `length = 200` creates the variable `length` and assigns the value of `200` to it
+- `degress = 120` creates the variable `degrees` and assigns the value of `120` to it
+- `for i in range(sides):` substitutes `sides` with the value assigned to it so the line becomes `for i in range(3)`.
+- `my_ttl.forward(length)` substitutes `length` with the value assigned to it so the line becomes `my_ttl.forward(200)`
+- `my_ttl.left(degrees)` substitutes `degrees` with the value assigned to it so the line becomes `my_ttl.left(120)` 
 
-Are there any more magic numbers?
+Using variables, I can copy the `for` loop and use it as many times as I want, and the values for `sides`, `length`, and `degrees` will always be whatever I assigned to the at the beginning. In programming this is called a *single point of truth*. This means that by changing the value assigned to `sides` I can change the value for all places where `sides` is used. Same for `length` and `degrees`.
 
-### Remove calculations from meat space
+Type our new code into Thonny and change it so to draw a hexagon with a side length of 100.
 
-How did we know that degrees = 60?
+Your code should look like:
+
+```python
+import turtle
+
+sides = 6
+length = 100
+degrees = 60
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+for i in range(sides):
+    my_ttl.forward(length)
+    my_ttl.left(degrees)
+```
+
+### Remove calculations from 'meat space'
+
+In creating our hexagon, how did we know that degrees needed to be 60? You may have worked it out in your head, or you calculated it using a calculator. But both of these approaches are flawed. 
+
+- head calculations can be incorrect
+- time is wasted in getting a calculator.
+
+We can do the calculations directly in Python. The values assigned to `degrees` is `360` divided by the number assigned to `sides`. In code we would write that as `degrees = 306 / sides`
+
+Let's put that into our code:
+
+```python
+import turtle
+
+sides = 6
+length = 100
+degrees = 360 / sides
+
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+for i in range(sides):
+    my_ttl.forward(length)
+    my_ttl.left(degrees)
+```
+
+Do we need the `degrees` variable? We could simply replace it with the calculation
+
+
 
 Remove unnecessary variables
 
