@@ -481,4 +481,4 @@ my_ttl.forward(100)
 
 The exercises are the *make* component of the PRIMM model
 
-Work through the three exercise and *make* your own code
+Work through the five exercise and *make* your own code
