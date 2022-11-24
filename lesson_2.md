@@ -2,7 +2,7 @@
 
 > **Topics**
 > In this lesson you will:
-> 
+>
 > - [ ] learn how to use iteration to reduce your code length
 > - [ ] learn how to represent programs in a flowchart
 > - [ ] write turtle programs using a `for` loop
@@ -228,6 +228,8 @@ The flowchart for your latest code would look like:
 
 
 ## Part 2: List numbers and Range
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SpyHWIDWY5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 You can also run loops over lists of numbers.
 

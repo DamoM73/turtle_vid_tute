@@ -1,4 +1,10 @@
-# Leason 3 script
+# Lesson 3
+
+> **Topics**
+> In this lesson you will:
+>
+> - [ ] learn how to store values in variables
+> - [ ] learn when to use variables
 
 ## Tutorial 1: Variables
 
@@ -8,7 +14,7 @@ Understand how and when to use variables
 
 ### Replace magic numbers
 
-Look at code for an interated square
+Look at code for an iterated square
 
 ```python
 import turtle
