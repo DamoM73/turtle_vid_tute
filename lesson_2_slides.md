@@ -277,6 +277,8 @@ print("Come in and sit down")
 
 ## Part 2: List numbers and Range
 
+---
+
 You can also run loops over lists of numbers.
 
 Try the code below:
@@ -288,7 +290,11 @@ for number in number_list:
     print(number)
 ```
 
-But what if we want `print` the numbers between 1 and 100? Do you really want to type all those numbers out? Luckily Python has a function called `range` which makes list between two given numbers.
+Change the code to print the numbers between 1 and 100
+
+---
+
+`range` function &rarr; make list between two given numbers
 
 Try the code below:
 
@@ -299,22 +305,28 @@ for number in number_list:
     print(number)
 ```
 
-Let's unpack that code:
+---
 
-- `range` tells Python on create a list of numbers
-- `1` is the first number in that list
-- `101` is the first number *not* in that list. This can be confusing but we will learn why later on.
+Unpack the code:
 
-We can actually use the `range` function directly in the `for` loop.
+- `range` &rarr; create a list of numbers
+- `1` &rarr; first number in the list
+- `101` &rarr; first number *not* in the list
+
+---
+
+Can use the `range` function directly in `for` loop
 
 ```python
 for number in range(1,101):
     print(number)
 ```
 
+---
+
 ### Use for Turtle
 
-Code blocks can be made up of any code, including Turtle code. So let try it.
+Code blocks can be made up of any code, including Turtle code. 
 
 Create a new file and type in the code below.
 
@@ -332,11 +344,16 @@ for number in range(1,101):
     my_ttl.left(3)
 ```
 
+---
+
 PRIMM:
 
-- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted.
-- *Investigate* the code by changing aspect of the code.
+- *Predict* what you think will happen
+- *Run* the code. Did it do what you predicted?
+- *Investigate* the code by changing aspects of the code.
 - *Modify* the code so that is makes a complete circle.
+
+---
 
 ## Make (Exercises)
 
