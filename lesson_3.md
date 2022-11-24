@@ -171,13 +171,26 @@ for i in range(sides):
     my_ttl.left(degrees)
 ```
 
-Do we need the `degrees` variable? We could simply replace it with the calculation
+Another good programming practice is to remove unnecessary variables. Do we need the `degrees` variable? We could simply place the calculation in the `for` loop.
 
+So our code would look like this:
 
+```python
+import turtle
 
-Remove unnecessary variables
+sides = 6
+length = 100
 
-Change code.
+window = turtle.Screen()
+window.setup(500, 500)
+my_ttl = turtle.Turtle()
+
+for i in range(360 / sides):
+    my_ttl.forward(length)
+    my_ttl.left(degrees)
+```
+
+Are there any more *magic numbers*? See if you can find any more.
 
 ```python
 import turtle
@@ -185,6 +198,7 @@ import turtle
 screen = 500
 sides = 6
 length = 100
+DEGREES_IN_CIRCLE = 360
 
 window = turtle.Screen()
 window.setup(screen, screen)
@@ -192,10 +206,16 @@ my_ttl = turtle.Turtle()
 
 for i in range(sides):
     my_ttl.forward(length)
-    my_ttl.left(360 / sides)
+    my_ttl.left(DEGREES_IN_CIRCLE / sides)
 ```
-### Exercises
-#### L3_Ex1
+
+## Part 1 Exercises
+
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
+
+### Exercise 1
+
+Create a new file and save it in your subject folder calling it **`lesson_3_ex_1.py`**. Then type the following code into it.
 
 ``` python
 import turtle
@@ -217,7 +237,11 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
-#### L3_Ex2
+Follow the instructions in the comments and change the code so it draws a square
+
+### Exercise 2
+
+Create a new file and save it in your subject folder calling it **`lesson_3_ex_2.py`**. Then type the following code into it.
 
 ``` python
 import turtle
@@ -238,6 +262,13 @@ for i in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
+
+Follow the instructions in the comments and change the code so it draws a circle
+
+### Exercise 3
+
+Create a new file and save it in your subject folder calling it **`lesson_3_ex_3.py`**. Then type the following code into it.
+
 
 #### L3_Ex3
 
@@ -261,7 +292,7 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
-
+Follow the instructions in the comments and change the code so it draws a pentagon
 
 ## Tutorial 2: Coordinates
 
