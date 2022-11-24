@@ -153,7 +153,7 @@ Now time to *modify* the code. There's not much code there. But spend some time 
 
 ### First turtle program
 
-Let get started on our first Turtle program. Click the **New** icon and then type the following into the new file and then save it using the name **lesson_1_pt_1.py**.
+Let get started on our first Turtle program. Click the **New** icon and then type the following into the new file and then save it using the name **`lesson_1_pt_1.py`**.
 
 ```python
 # Our first turtle program

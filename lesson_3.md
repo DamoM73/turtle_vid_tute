@@ -269,9 +269,6 @@ Follow the instructions in the comments and change the code so it draws a circle
 
 Create a new file and save it in your subject folder calling it **`lesson_3_ex_3.py`**. Then type the following code into it.
 
-
-#### L3_Ex3
-
 ```python
 import turtle
 
@@ -292,13 +289,46 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
-Follow the instructions in the comments and change the code so it draws a pentagon
+Follow the instructions in the comments and change the code so it draws a pentagon.
 
 ## Tutorial 2: Coordinates
 
-Tidy-up
+Before we keep going, we should tidy the code up by implementing some good coding principles. we will:
 
-Show Coordinates example
+- group code under their functionality (what they do)
+- use comment to signpost what this functionality
+
+```python
+import turtle
+
+# set up screen
+screen = 500
+window = turtle.Screen()
+window.setup(screen, screen)
+
+# create turtle instance
+my_ttl = turtle.Turtle()
+my_ttl.shape("arrow")
+
+# shape parameters
+sides = 6
+length = 100
+DEGREES_IN_CIRCLE = 360
+
+# draw the shape
+for i in range(sides):
+    my_ttl.forward(length)
+    my_ttl.left(DEGREES_IN_CIRCLE / sides)
+```
+
+Anyone who reads the program now knows the location for the code that deals with the functionality of:
+
+- setting up the screen
+- creating the turtle instance
+- defining the shape parameters
+- drawing the shape
+
+Save the file a **`lesson_3_pt_3.py`**
 
 Draw boarder
 
