@@ -293,10 +293,16 @@ Follow the instructions in the comments and change the code so it draws a pentag
 
 ## Tutorial 2: Coordinates
 
-Before we keep going, we should tidy the code up by implementing some good coding principles. we will:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F4ajxJwXH58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Before we keep going, we should tidy the code up by implementing some good coding principles. 
+
+We will:
 
 - group code under their functionality (what they do)
-- use comment to signpost what this functionality
+- use comments to signpost what this functionality
+
+Adjust your code from the first part of this lesson so it looks like the code below
 
 ```python
 import turtle
@@ -329,6 +335,34 @@ Anyone who reads the program now knows the location for the code that deals with
 - drawing the shape
 
 Save the file a **`lesson_3_pt_3.py`**
+
+### How Turtle coordinates work
+
+Image the Turtle window to be a piece of graph paper that is measured in pixels. We know from the last lesson that our screen is set to 500px wide and 500px high (px is the recognised abbreviation for pixels). Just like maths, Turtle uses `x` to represent horizontal values, and `y` to represent vertical values. So we could instead say the window's `x = 500` and its `y = 500`
+
+In computing, we would represent these coordinates as `(500, 500)` where the first value is `x` and the second values is `y`.
+
+For our Turtle window of `(500,500)`, the screen is setup like this:
+
+<img style="border:1px solid black" align="left" src="./assets/Coordinates.png">
+
+Important to note:
+
+- the centre of the screen is the origin of `(0,0)`
+- moving up from the centre, the `y` value increases to a maximum of `250` which is `500 / 2`
+- similarly, moving down from the centre, the `y` value decreases to a minimum of `-250`
+- starting from the centre and moving left `x` increases in value to a maximum of `250`
+- starting from the centre and moving right `x` decreases to a minimum of `-250`
+- every pixel in the window can be referred to by a combination of it's `x` value and `y` value. For example the `(200,125)`.
+
+In summary:
+
+- &uarr; increases `y`
+- &darr; decreases `y`
+- &rarr; increases `x`
+- &larr; decreases `x`
+
+
 
 Draw boarder
 
