@@ -23,7 +23,7 @@ If we wanted a program to say hello to six people, you would show it in a flowch
 
 <img align="left" src="./assets/flow_chart_1.png">
 
-Transferring this code to Python would produce the following code. 
+Create a new file in Thonny and call it **lesson_2_pt_1.py**. Transferring this flowchart code to Python by entering the following code: 
 
 ```python
 # our itreation program
@@ -233,7 +233,7 @@ The flowchart for your latest code would look like:
 
 You can also run loops over lists of numbers.
 
-Try the code below:
+Create a new file and call it **lesson_2_pt_2a.py** then try the code below:
 
 ```python
 number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -270,7 +270,7 @@ for number in range(1,101):
 
 Code blocks can be made up of any code, including Turtle code. So let try it.
 
-Create a new file and type in the code below.
+Create a new file called **lesson_2_pt_2b.py** and type in the code below.
 
 ```python
 import turtle
@@ -288,7 +288,7 @@ for number in range(1,101):
 
 PRIMM:
 
-- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted.
+- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted?
 - *Investigate* the code by changing aspect of the code.
 - *Modify* the code so that is makes a complete circle.
 
@@ -298,7 +298,7 @@ In this course, the exercises are the *make* component of the PRIMM model. So wo
 
 ### Exercise 1
 
-Create a new file and save it in your subject folder calling it **`lesson_2_ex_1.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_2_ex_1.py**. Then type the following code into it.
 
 ```python
 import turtle
@@ -317,7 +317,7 @@ After line `9`, as the comments says, write code that will create a square but o
 
 ### Exercise 2
 
-Create a new file and save it in your subject folder calling it **`lesson_2_ex_2.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_2_ex_2.py**. Then type the following code into it.
 
 ``` python
 import turtle
@@ -335,7 +335,7 @@ After line `9`, as the comments says, write code that will create a triangle but
 
 ### Exercise 3
 
-Create a new file and save it in your subject folder calling it **`lesson_2_ex_3.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_2_ex_3.py**. Then type the following code into it.
 
 ```python
 import turtle
@@ -353,7 +353,7 @@ After line `9`, as the comments says, write code that will create a hexagon but 
 
 ### Exercise 4
 
-Create a new file and save it in your subject folder calling it **`lesson_2_ex_4.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_2_ex_4.py**. Then type the following code into it.
 
 ```python
 import turtle
@@ -369,7 +369,7 @@ my_ttl = turtle.Turtle()
 
 ### Exercise 5
 
-Create a new file and save it in your subject folder calling it **`lesson_2_ex_5.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_2_ex_5.py**. Then type the following code into it.
 
 ``` python
 import turtle

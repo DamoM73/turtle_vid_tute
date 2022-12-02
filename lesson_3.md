@@ -10,16 +10,18 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mG1O_JamxjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Conventual range
+### Conventional range
 
 Before we start looking at variables, we want to make our use of range more conventual.
 
-Previously we would print four numbers using the code below
+Previously we would print four numbers using the code below:
 
 ``` python
-for number in range(1,5):
+for index in range(1,5):
     print(number)
 ```
+
+> `index` is a programming convention that represents a count in a loop. You can call it anything you want, but, by convention, we call it `index`.
 
 If you run this code you get:
 
@@ -33,7 +35,7 @@ If you run this code you get:
 If we weren't worried about the actual numbers, and we just needed to loop 4 times we could say:
 
 ``` python
-for number in range(0,4):
+for index in range(0,4):
     print(number)
 ```
 
@@ -51,13 +53,13 @@ It still has four iterations, but just starts counting at 0.
 In Python the `range` function, if you don't provide a starting number, it will automatically start from `0`. So we could just say.
 
 ``` python
-for number in range(4):
+for index in range(4):
     print(number)
 ```
 
 ### Replace magic numbers
 
-Look at code below for an iterated square. 
+Below is a solution for lesson 2 exercise 1. Create a new file named **lesson_3_pt_1.py** and enter the code below.
 
 ```python
 import turtle
@@ -66,12 +68,12 @@ window = turtle.Screen()
 window.setup(500, 500)
 my_ttl = turtle.Turtle()
 
-for i in range(4):
+for index in range(4):
     my_ttl.forward(100)
     my_ttl.left(90)
 ```
 
-What do we need to change to make this into a large triangle with a length of 200 for each size? Try and work it out before looking at the code below.
+What do we need to change to make this into a large triangle with a length of `200` for each side? Try and work it out before looking at the code below.
 
 ```python
 import turtle
@@ -80,7 +82,7 @@ window = turtle.Screen()
 window.setup(500, 500)
 my_ttl = turtle.Turtle()
 
-for i in range(3):
+for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
 ```
@@ -95,7 +97,7 @@ If I wanted to make a hexagon, or any other shape, you would need to change thes
 
 In programming these are called *magic numbers*. A *magic number* is a literal value that appears in a program. Magic numbers are not good. If someone else was to look at my code, they would have to work out what the `3`, `200` and `120` meant. Additionally, if my program drew 1000 squares, and I wanted to change them all to triangles, I would have to make 3000 edits.
 
-To write better code we remove the magic numbers by giving them labels. These labels are called variables.Below is the triangle code.
+To write better code we remove the *magic numbers* by giving them labels called *variables*. Adjust your code in **lesson_3_pt_1.py** to match the code below.
 
 ```python
 import turtle
@@ -108,7 +110,7 @@ window = turtle.Screen()
 window.setup(500, 500)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(degrees)
 ```
@@ -118,13 +120,22 @@ Lets break that code down
 - `sides = 3` creates the variable `sides` and assigns the value of `3` to it
 - `length = 200` creates the variable `length` and assigns the value of `200` to it
 - `degress = 120` creates the variable `degrees` and assigns the value of `120` to it
-- `for i in range(sides):` substitutes `sides` with the value assigned to it so the line becomes `for i in range(3)`.
+- `for i in range(sides):` substitutes `sides` with the value assigned to it so the line becomes `for index in range(3)`.
 - `my_ttl.forward(length)` substitutes `length` with the value assigned to it so the line becomes `my_ttl.forward(200)`
 - `my_ttl.left(degrees)` substitutes `degrees` with the value assigned to it so the line becomes `my_ttl.left(120)` 
 
-Using variables, I can copy the `for` loop and use it as many times as I want, and the values for `sides`, `length`, and `degrees` will always be whatever I assigned to the at the beginning. In programming this is called a *single point of truth*. This means that by changing the value assigned to `sides` I can change the value for all places where `sides` is used. Same for `length` and `degrees`.
+> **Variable naming rules:**
+>
+> Python has very specific rules for what names you can use for variables:
+>
+> - names can only contain letter, numbers and the `_` character
+> - names cannot contain spaces
+> - names cannot start with a number
+> - names are case sensitive (eg. `age` is not the same as `Age`)
 
-Type our new code into Thonny and change it so to draw a hexagon with a side length of 100.
+Using variables, I can copy the `for` loop and use it as many times as I want, and the values for `sides`, `length`, and `degrees` will always the value I assigned to the at the beginning. In programming this is called a *single point of truth*. This means that by changing the value assigned to `sides` I can change the value for all places where `sides` is used. Same for `length` and `degrees`.
+
+Change **lesson_3_pt_1.py**  so it draws a hexagon with a side length of 100.
 
 Your code should look like:
 
@@ -139,7 +150,7 @@ window = turtle.Screen()
 window.setup(500, 500)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(degrees)
 ```
@@ -153,7 +164,7 @@ In creating our hexagon, how did we know that degrees needed to be 60? You may h
 
 We can do the calculations directly in Python. The values assigned to `degrees` is `360` divided by the number assigned to `sides`. In code we would write that as `degrees = 306 / sides`
 
-Let's put that into our code:
+Let's put that into our code at line `5`:
 
 ```python
 import turtle
@@ -166,14 +177,14 @@ window = turtle.Screen()
 window.setup(500, 500)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(degrees)
 ```
 
 Another good programming practice is to remove unnecessary variables. Do we need the `degrees` variable? We could simply place the calculation in the `for` loop.
 
-So our code would look like this:
+So we could remove line `5` by moving the calculation to line `10`. Our code would look like this:
 
 ```python
 import turtle
@@ -185,7 +196,7 @@ window = turtle.Screen()
 window.setup(500, 500)
 my_ttl = turtle.Turtle()
 
-for i in range(360 / sides):
+for index in range(360 / sides):
     my_ttl.forward(length)
     my_ttl.left(degrees)
 ```
@@ -204,18 +215,34 @@ window = turtle.Screen()
 window.setup(screen, screen)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(DEGREES_IN_CIRCLE / sides)
 ```
 
+> **Variable naming conventions**
+>
+> Python's naming conventions are different from the naming rules. If you break a naming rule, your program will cause a *syntax error*. If you break naming convention your program will still work. In programming we use naming conventions to make your code easier to read and understand.
+>
+> Variable naming conventions:
+>
+> - Use descriptive names that explains what value has been stored in them
+>   - `d = 30` &rarr; bad
+>   - `degrees = 30` &rarr; better
+>   - `degrees_celsius = 30` &rarr; best
+> - Use snake case in multiple word names:
+>   - replace the spaces with the `_` character
+>   - only use lower case letters
+> - CAPTIALIZE names of constants (variables whose value will not change)
+> - Do not use the names of keywords (eg. `print`, `for`, etc)
+
 ## Part 1 Exercises
 
-In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
 
 ### Exercise 1
 
-Create a new file and save it in your subject folder calling it **`lesson_3_ex_1.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_3_ex_1.py**. Then type the following code into it.
 
 ``` python
 import turtle
@@ -232,7 +259,7 @@ window = turtle.Screen()
 window.setup(screen, screen)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
@@ -241,7 +268,7 @@ Follow the instructions in the comments and change the code so it draws a square
 
 ### Exercise 2
 
-Create a new file and save it in your subject folder calling it **`lesson_3_ex_2.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_3_ex_2.py**. Then type the following code into it.
 
 ``` python
 import turtle
@@ -258,7 +285,7 @@ window = turtle.Screen()
 window.setup(screen, screen)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
@@ -267,7 +294,7 @@ Follow the instructions in the comments and change the code so it draws a circle
 
 ### Exercise 3
 
-Create a new file and save it in your subject folder calling it **`lesson_3_ex_3.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_3_ex_3.py**. Then type the following code into it.
 
 ```python
 import turtle
@@ -284,7 +311,7 @@ window = turtle.Screen()
 window.setup(screen, screen)
 my_ttl = turtle.Turtle()
 
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
@@ -302,7 +329,7 @@ We will:
 - group code under their functionality (what they do)
 - use comments to signpost what this functionality
 
-Adjust your code from the first part of this lesson so it looks like the code below
+Adjust your code in **lesson_3_pt_1.py** so it looks like the code below
 
 ```python
 import turtle
@@ -322,7 +349,7 @@ length = 100
 DEGREES_IN_CIRCLE = 360
 
 # draw the shape
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(DEGREES_IN_CIRCLE / sides)
 ```
@@ -334,7 +361,7 @@ Anyone who reads the program now knows the location for the code that deals with
 - defining the shape parameters
 - drawing the shape
 
-Save the file a **`lesson_3_pt_3.py`**
+Save the file as **lesson_3_pt_2.py** (**File** &rarr; **Save as...**).
 
 ### How Turtle coordinates work
 
@@ -342,7 +369,11 @@ Image the Turtle window to be a piece of graph paper that is measured in pixels.
 
 In computing, we would represent these coordinates as `(500, 500)` where the first value is `x` and the second values is `y`.
 
-For our Turtle window of `(500,500)`, the screen is setup like this:
+> Values like `(500,500)` are called *tuples*. Tuples are just like a list that we learnt about in lesson 2. The main difference is that you can change the values in a list, but you can't change the values in a tuple. In computer science, if you can't change a value of something, it is called *immutable*, so we would say that tuples are immutable.
+>
+> Tuples start with `(`, end with `)` and `,` are used to separate the elements.
+
+For our Turtle window of `(500,500)` we have `x` values ranging from `-250` to `250` and `y` values also ranging from `-250` to `250`. It looks like this:
 
 <img style="border:1px solid black" align="left" src="./assets/Coordinates.png">
 
@@ -362,9 +393,52 @@ In summary:
 - &rarr; increases `x`
 - &larr; decreases `x`
 
+Now that we know coordinates we can tell the our turtle to go to a specific coordinates. 
 
+### Using `goto()` to draw
 
-Draw boarder
+Make the following adjustments in **lesson_3_pt_2.py**:
+
+- add `my_ttl.goto(0,125)` to line `16`
+- put a `#` in front of lines `19` to `21`
+
+```python
+import turtle
+
+# set up screen
+screen = 500
+window = turtle.Screen()
+window.setup(screen, screen)
+
+# create turtle instance
+my_ttl = turtle.Turtle()
+my_ttl.shape("arrow")
+
+# shape parameters
+sides = 6
+length = 100
+
+my_ttl.goto(0,125)
+
+# draw shape
+#for i in range(sides):
+#    my_ttl.forward(length)
+#    my_ttl.left(360 / sides)
+```
+
+PRIMM
+
+- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted?
+
+- *Investigate* the by unpacking the changes:
+
+  - line `16` `my_ttl.goto(0,125)` tells your turtle to move to the position of `x = 0` and `y = 125`.
+
+  - the `#` at the beginning of lines `19` to `21` turns the code into comments, which mean that Python will ignore them. This practice is called *commenting out* code.
+
+- *Modify* the code so that your turtle moves to all the points in the coordinates diagram above.
+
+Change **lesson_3_pt_2.py** so that it looks like same as below.
 
 ```python
 import turtle
@@ -379,10 +453,12 @@ my_ttl = turtle.Turtle()
 my_ttl.shape("arrow")
 
 # draw boarder
+my_ttl.goto(240,240)
+my_ttl.goto(-240,240)
 my_ttl.goto(-240,-240)
-for i in range(4):
-    my_ttl.forward(480)
-    my_ttl.left(90)
+my_ttl.goto(240,-240)
+my_ttl.goto(240,240)
+my_ttl.goto(0,0)
 
 # shape parameters
 sides = 6
@@ -395,6 +471,21 @@ for i in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
+
+PRIMM:
+
+- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted?
+- *Investigate* the code by changing aspect of the code.
+
+### Using penup() and pendown()
+
+Now that we have a border around out our drawing, but there is this annoying line where the turtle move from the centre of the window to the border. Luckily we can get rid of it.
+
+<img style="border:1px solid black" align="left" src="./assets/penup.png">
+
+When we write, we can not leave trailing lines by simply lifting our pen up and moving. We then put our pen back down on the paper to keep writing. Well, turtle can do the same this with its `penup()` and `pendown()` commands.
+
+
 
 Introduce pen_up/pen_down
 
@@ -412,18 +503,20 @@ my_ttl.shape("arrow")
 
 # draw boarder
 my_ttl.penup()
+my_ttl.goto(240,240)
+my_ttl.pendown()
+my_ttl.goto(-240,240)
 my_ttl.goto(-240,-240)
-my_ttl.pendown()
-for i in range(4):
-    my_ttl.forward(470)
-    my_ttl.left(90)
-my_ttl.penup()
+my_ttl.goto(240,-240)
+my_ttl.pen(up)
 my_ttl.goto(0,0)
-my_ttl.pendown()
+my_ttle.pendown()
 
 # shape parameters
 sides = 6
 length = 100
+
+my_ttl.goto(0,0)
 
 # draw shape
 for i in range(sides):
@@ -433,7 +526,13 @@ for i in range(sides):
 
 ### Exercises
 
-#### L3Ex_4
+## Part 2 Exercises
+
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
+
+### Exercise 4
+
+Create a new file and save it in your subject folder calling it **lesson_3_ex_4.py**. Then type the following code into it.
 
 ```python
 import turtle
@@ -453,3 +552,6 @@ my_ttl.shape("dot")
 ##################################
 ```
 
+Follow the instructions in the comments and use your turtle knowledge to draw a house:
+
+- Remember to apply the DRY principle

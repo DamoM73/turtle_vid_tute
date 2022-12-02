@@ -292,7 +292,7 @@ In this course, the exercises are the *make* component of the PRIMM model. So wo
 
 ### Exercise 1
 
-Create a new file and save it in your subject folder calling it **`lesson_1_ex_1.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_1_ex_1.py**. Then type the following code into it.
 
 ```python
 ## Draw a square with the Turtle ##
@@ -311,7 +311,7 @@ After line `10`, as the comments says, write code that will create a square.
 
 ### Exercise 2
 
-Create a new file and save it in your subject folder calling it **`lesson_1_ex_2.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_1_ex_2.py**. Then type the following code into it.
 
 ```python
 ## Draw a Triangle with the Turtle ##
@@ -330,7 +330,7 @@ After line `10`, as the comments says, write code that will create a triangle.
 
 ### Exercise 3
 
-Create a new file and save it in your subject folder calling it **`lesson_1_ex_3.py`**. Then type the following code into it.
+Create a new file and save it in your subject folder calling it **lesson_1_ex_3.py**. Then type the following code into it.
 
 ```python
 ## Draw a hexagon with the Turtle ##
