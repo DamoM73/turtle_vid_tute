@@ -526,7 +526,7 @@ for i in range(sides):
 
 ### Exercises
 
-## Part 2 Exercises
+## Part 2 Exercise
 
 In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
 
