@@ -1,12 +1,15 @@
 # Lesson 3
 
 > **Topics**
-> In this lesson you will:
+> In this lesson you will learn:
 >
-> - [ ] learn how to store values in variables
-> - [ ] learn when to use variables
+> - [ ] how to store values in variables
+> - [ ] when and how to use variables
+> - [ ] screen coordinates are
+> - [ ] how to use coordinates to move the turtle
+> - [ ] how to move the turtle without drawing a line
 
-## Tutorial 1: Variables
+## Part 1: Variables
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mG1O_JamxjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -115,7 +118,7 @@ for index in range(sides):
     my_ttl.left(degrees)
 ```
 
-Lets break that code down
+Lets break that code down:
 
 - `sides = 3` creates the variable `sides` and assigns the value of `3` to it
 - `length = 200` creates the variable `length` and assigns the value of `200` to it
@@ -133,7 +136,7 @@ Lets break that code down
 > - names cannot start with a number
 > - names are case sensitive (eg. `age` is not the same as `Age`)
 
-Using variables, I can copy the `for` loop and use it as many times as I want, and the values for `sides`, `length`, and `degrees` will always the value I assigned to the at the beginning. In programming this is called a *single point of truth*. This means that by changing the value assigned to `sides` I can change the value for all places where `sides` is used. Same for `length` and `degrees`.
+Using variables, I can copy the `for` loop and use it as many times as I want, and the values for `sides`, `length`, and `degrees` will always use the value I assigned to the at the beginning. In programming this is called a *single point of truth*. This means that by changing the value assigned to `sides` I can change the value for all places where `sides` is used. Same for `length` and `degrees`.
 
 Change **lesson_3_pt_1.py**  so it draws a hexagon with a side length of 100.
 
@@ -182,7 +185,11 @@ for index in range(sides):
     my_ttl.left(degrees)
 ```
 
-Another good programming practice is to remove unnecessary variables. Do we need the `degrees` variable? We could simply place the calculation in the `for` loop.
+### Remove unnecessary variables
+
+Another good programming practice is to remove unnecessary variables. 
+
+Do we need the `degrees` variable? We could simply place the calculation in the `for` loop.
 
 So we could remove line `5` by moving the calculation to line `10`. Our code would look like this:
 
@@ -318,7 +325,7 @@ for index in range(sides):
 
 Follow the instructions in the comments and change the code so it draws a pentagon.
 
-## Tutorial 2: Coordinates
+## Part 2: Coordinates
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F4ajxJwXH58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -327,7 +334,7 @@ Before we keep going, we should tidy the code up by implementing some good codin
 We will:
 
 - group code under their functionality (what they do)
-- use comments to signpost what this functionality
+- use comments to signpost this functionality
 
 Adjust your code in **lesson_3_pt_1.py** so it looks like the code below
 
@@ -365,7 +372,7 @@ Save the file as **lesson_3_pt_2.py** (**File** &rarr; **Save as...**).
 
 ### How Turtle coordinates work
 
-Image the Turtle window to be a piece of graph paper that is measured in pixels. We know from the last lesson that our screen is set to 500px wide and 500px high (px is the recognised abbreviation for pixels). Just like maths, Turtle uses `x` to represent horizontal values, and `y` to represent vertical values. So we could instead say the window's `x = 500` and its `y = 500`
+Imagine the Turtle window to be a piece of graph paper that is measured in pixels. We know from the last lesson that our screen is set to 500px wide and 500px high (px is the recognised abbreviation for pixels). Just like maths, Turtle uses `x` to represent horizontal values, and `y` to represent vertical values. So we could instead say the window's `x = 500` and its `y = 500`
 
 In computing, we would represent these coordinates as `(500, 500)` where the first value is `x` and the second values is `y`.
 
@@ -375,7 +382,7 @@ In computing, we would represent these coordinates as `(500, 500)` where the fir
 
 For our Turtle window of `(500,500)` we have `x` values ranging from `-250` to `250` and `y` values also ranging from `-250` to `250`. It looks like this:
 
-<img style="border:1px solid black" align="left" src="./assets/Coordinates.png">
+<img style="border:1px solid black" align="left" src="./assets/coordinates.png">
 
 Important to note:
 
@@ -483,11 +490,9 @@ Now that we have a border around out our drawing, but there is this annoying lin
 
 <img style="border:1px solid black" align="left" src="./assets/penup.png">
 
-When we write, we can not leave trailing lines by simply lifting our pen up and moving. We then put our pen back down on the paper to keep writing. Well, turtle can do the same this with its `penup()` and `pendown()` commands.
+When we write, we do not leave trailing lines because we simply lift our pen up and moving. We then put our pen back down on the paper to keep writing. Well, turtle can do the same this with its `penup()` and `pendown()` commands.
 
-
-
-Introduce pen_up/pen_down
+Change you code by adding the code below on lines `13`, `15`, `19`, and `21` 
 
 ```python
 import turtle
@@ -524,6 +529,8 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
+Predict what you think will happen, then run the code.
+
 ### Exercises
 
 ## Part 2 Exercise
@@ -547,7 +554,7 @@ my_ttl = turtle.Turtle()
 my_ttl.shape("dot")
 
 ##################################
-## Using the tutrle command you ##
+## Using the turtle command you ##
 ## have learnt, draw a house.   ##
 ##################################
 ```
