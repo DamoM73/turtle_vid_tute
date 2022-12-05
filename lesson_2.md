@@ -110,14 +110,15 @@ Line `5` is also new, and it is the how we create `for` loops in Python.
 
 - `for` is a keyword identifying this as the beginning of a `for` loop
 - `in names` tells Python to repeat the code below using each *element* of the `names` list
-- `name` refers to the current `names` element being used.
+- `name` refers to the current `names` element being used
+- `:` tells Python that indented code follows
 
 Line `6` is a bit changed as well
 
 - it is indented: this indentation below the `for` loop identifies the code that needs to be repeated.
   - indentations can be many lines
   - multiple line indented code is called a *block*
-  - indents should be four spaces. In Thonny you can use the `tab` key because Thonny will just insert four spaces instead of a `tab` character.
+  - indents should be four spaces. In Thonny you can use the `tab` key because Thonny will just insert four spaces instead of a `tab` character
 - `print("Hello", name)` tells Python to print `Hello` to the **Shell** followed by the current element that the `for` statement has taken from the `names` list.
 
 #### For loop flowchart
