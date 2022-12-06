@@ -6,6 +6,9 @@
 > - [ ] What is coding modularisation
 > - [ ] When to use *functions* in Python
 > - [ ] How to define and use functions in Python
+> - [ ] How to get user's input into your code
+> - [ ] What are data types
+> - [ ] How to convert between data types
 
 ## Part 1: Functions
 
@@ -18,6 +21,8 @@ Functions are blocks of code that we can run several times in our program. So fa
 With functions, we move a block of code outside of the main program sequence, and give it a label. We can then use that block as many times as we like by *call* the function name from within the main program sequence.
 
 To understand this more clearly, we will start with my solution for ***lesson_3_ex_4.py**.
+
+Type the code below into a new file and save in as **lesson_4_pt_1.py**.
 
 ```python
 import turtle
@@ -42,12 +47,12 @@ my_ttl.goto(-100,0)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(200)
     my_ttl.right(90)
 
 # draw triangle
-for i in range(3):
+for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
     
@@ -57,7 +62,7 @@ my_ttl.goto(-25,-200)
 my_ttl.pendown()
 
 # draw rectangle
-for i in range(2):
+for index in range(2):
     my_ttl.forward(50)
     my_ttl.left(90)
     my_ttl.forward(100)
@@ -69,7 +74,7 @@ my_ttl.goto(-80,-100)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -79,7 +84,7 @@ my_ttl.goto(45,-100)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -93,8 +98,6 @@ my_ttl.circle(5)
 my_ttl.hideturtle()
 ```
 
-Type the code into a new file and save in as **lesson_4_pt_1.py**.
-
 PRIMM:
 
 - *Predict* the type of house that the code will draw
@@ -104,7 +107,7 @@ Remember the DRY principle - **Don't Repeat Yourself**? Have a look at the code,
 
 Can you identify any repetition?
 
-Let's look at the comments)?
+Let's look at the comments?
 
 - move pen
 - draw square
@@ -154,12 +157,12 @@ my_ttl.shape("arrow")
 move_pen()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(200)
     my_ttl.right(90)
 
 # draw triangle
-for i in range(3):
+for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
     
@@ -169,7 +172,7 @@ my_ttl.goto(-25,-200)
 my_ttl.pendown()
 
 # draw rectangle
-for i in range(2):
+for index in range(2):
     my_ttl.forward(50)
     my_ttl.left(90)
     my_ttl.forward(100)
@@ -181,7 +184,7 @@ my_ttl.goto(-80,-100)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -191,7 +194,7 @@ my_ttl.goto(45,-100)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -294,12 +297,12 @@ my_ttl.shape("arrow")
 move_pen(-100,0)
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(200)
     my_ttl.right(90)
 
 # draw triangle
-for i in range(3):
+for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
     
@@ -309,7 +312,7 @@ my_ttl.goto(-25,-200)
 my_ttl.pendown()
 
 # draw rectangle
-for i in range(2):
+for index in range(2):
     my_ttl.forward(50)
     my_ttl.left(90)
     my_ttl.forward(100)
@@ -321,7 +324,7 @@ my_ttl.goto(-80,-100)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -331,7 +334,7 @@ my_ttl.goto(45,-100)
 my_ttl.pendown()
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -376,19 +379,19 @@ my_ttl.shape("arrow")
 move_pen(-100,0)
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(200)
     my_ttl.right(90)
 
 # draw triangle
-for i in range(3):
+for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
     
 move_pen(-25,-200)
 
 # draw rectangle
-for i in range(2):
+for index in range(2):
     my_ttl.forward(50)
     my_ttl.left(90)
     my_ttl.forward(100)
@@ -397,14 +400,14 @@ for i in range(2):
 move_pen(-80,-100)
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
 
 move_pen(45,-100)
 
 # draw square
-for i in range(4):
+for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
     
@@ -460,7 +463,7 @@ def move_pen(x,y):
     my_ttl.pendown()
     
 def draw_square(length):
-    for i in range(4):
+    for index in range(4):
         my_ttl.forward(length)
         my_ttl.right(90)
 
@@ -482,14 +485,14 @@ move_pen(-100,0)
 draw_square(200)
 
 # draw triangle
-for i in range(3):
+for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
     
 move_pen(-25,-200)
 
 # draw rectangle
-for i in range(2):
+for index in range(2):
     my_ttl.forward(50)
     my_ttl.left(90)
     my_ttl.forward(100)
@@ -528,17 +531,17 @@ def move_pen(x,y):
     my_ttl.pendown()
     
 def draw_square(length):
-    for i in range(4):
+    for index in range(4):
         my_ttl.forward(length)
         my_ttl.right(90)
         
 def draw_triangle(length):
-    for i in range(3):
+    for index in range(3):
         my_ttl.forward(length)
         my_ttl.left(120)
 
 def draw_rectangle(long, short):
-    for i in range(2):
+    for index in range(2):
         my_ttl.forward(short)
         my_ttl.left(90)
         my_ttl.forward(long)
@@ -646,7 +649,7 @@ my_ttl.pendown()
 # draw mouth
 my_ttl.color("black","black")
 my_ttl.begin_fill()
-for i in range(2):
+for index in range(2):
     my_ttl.forward(200)
     my_ttl.right(90)
     my_ttl.forward(25)
@@ -683,24 +686,26 @@ my_ttl.shape("turtle")
 
 Follow the instructions in the comments and write a program that draws a car.
 
-## Tutorial 2: User Input
+## Part 2: User Input
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HUEgYhYAuB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 How can we make the computer respond to the user?
 
-Consider this code. To make a different shape, the user needs to be a programmer and know which values to change.
+Copy the code below, save it as **lesson_4_pt_2.py** then run it.
 
 ``` python
 import turtle
 
 def draw_poly(length, sides):
-    for i in range(sides):
+    for index in range(sides):
         fred.forward(length)
         fred.right(360/sides)
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 fred = turtle.Turtle()
@@ -712,20 +717,37 @@ length = 100
 draw_poly(length,sides)
 ```
 
-There is a way for the user to give a value for the number and length of the sides
+PRIMM
+
+- *Predict* what you think will happen.
+- *Run* the code and see how close your prediction is.
+- *Modify* the code so the shape fits within the window.
+
+When we run the code the shape is partially off the screen. That's not a big problem, you just need to change the length from `100` to `80`. This something quite simple for you, because you have learnt how to code.
+
+So, how do we make our programs interactive by getting the user's input?
+
+The simplest way to do this is to use the `input()` command which will ask the user for input in the **Shell**.
+
+To do this change:
+
+- line `17` to `sides = input("How many sides?> ")`
+- line `18` to `length = input("How long are the sides?> ")`
+
+Then run the code.
 
 ``` python
 import turtle
 
 def draw_poly(length, sides):
-    for i in range(sides):
+    for index in range(sides):
         fred.forward(length)
         fred.right(360/sides)
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 fred = turtle.Turtle()
@@ -737,22 +759,103 @@ length = input("How long are the sides?> ")
 draw_poly(length,sides)
 ```
 
-Error: `TypeError: 'str' object cannot be interpreted as an integer`
+PRIMM
 
-All input is received as a string
+- *Predict* what you think will happen
+- *Run* run the code. Did it do what you thought?
+  - Did you predict:
+    - a *prompt* appearing in the **Shell** like the image below?
+    - the program raising the error.
+
+<img style="border:1px solid black" align="left" src="./assets/input.png">
+
+
+
+```
+Traceback (most recent call last):
+  File "<string>", line 20, in <module>
+  File "<string>", line 4, in draw_poly
+TypeError: 'str' object cannot be interpreted as an integer
+```
+
+- Let's *investigate* by:
+  - unpacking the code we changed
+  - explaining the error
+
+Unpacking line `17` (note line `18` is virtually the same):
+
+- `input`: is the keyword that tells Python to wait for an input from the user from the **Shell**.
+- `("How many sides?> ")` tells Python what *prompt* to write to the **Shell** before it waits for a response.
+- `sides =` takes whatever the user enters and assigns it to the variable `sides`
+
+Now for the error. This is a `TypeError` and to understand it we need to learn about *data types*.
+
+### Data types
+
+Variables in Python can hold different types of data. The four types of data we will be concerned with are:
+
+- integer numbers (`int`)
+  - stores whole numbers
+  - can be identified by a whole whole number
+- floating point numbers (`float`)
+  - stores numbers that have a decimal points
+  - can be identified by having a decimal point with at least one number after it. For example, `1` is and integer, `1.0` is a float
+- strings (`str`)
+  - stores characters like letters, numbers and special characters
+  - start and end with `"` or `'` (just make sure they are the same the at beginning or end)
+  - numbers can be a string. For example, a phone number like `0432 789 367` is a string not and integer or float. It contains spaces and you would never do a calculation with it.
+- Booleans (`bool`)
+  - stores either `True` or `False`
+
+Using data types helps Python work out what kind of operations it can do with the data. For example. it wouldn't make much sense to divide a string. Python also has special operations called *methods*. Each data type has it's own methods. You will learn more about data types right through your programming journey.
+
+Now, lets look at the error again:
+
+```
+Traceback (most recent call last):
+  File "<string>", line 20, in <module>
+  File "<string>", line 4, in draw_poly
+TypeError: 'str' object cannot be interpreted as an integer
+```
+
+`TypeError: 'str' object cannot be interpreted as an integer` tells us that this involves two data types (string and integer). It says we are trying to use a string when Python is expecting an integer.
+
+When looking at the `Traceback` always check the last line first and in this case the error occurred at line `4`: `for index in range(sides):`. Here we are trying to use the values in `sides` to create a `range()` and Python thinks it is a string. let's look at where we got the value for `sides`
+
+In line `17`: `sides = input("How many sides?> ")` we took whatever value the user entered and assigned it to `sides`. Now I entered `3` which is an integer, so why does Python think it's a string.
+
+Well, when Python accepts a value using it `input()` command, it is always accepted as a string. This is because string can contain all characters.
+
+So how do we fix this? Luckily we can convert a variable's data type.
+
+### Converting data types
+
+There is a command to convert a variable in to each data type other than Boolean.
+
+If we had a variable called `var`:
+
+- to convert `var` into a string, use `str(var)`
+- to convert `var` into an integer, use `int(var)`
+- to convert `var` into a float, use `float(var)`
+
+There is a heap more to this, but we will deal with it later. At the moment this is all you need to know.
+
+So let's change our code so that string that is received by the `input()` statement is converted into an integer.
+
+Make the changes below to lines `17` and `18`.
 
 ```python
 import turtle
 
 def draw_poly(length, sides):
-    for i in range(sides):
+    for index in range(sides):
         fred.forward(length)
         fred.right(360/sides)
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 fred = turtle.Turtle()
@@ -764,9 +867,23 @@ length = int(input("How long are the sides?> "))
 draw_poly(length,sides)
 ```
 
-### Exercises
+PRIMM
 
-#### L4_Ex3.py
+- *Predict* what you think will happen
+- *Run* you code and see if your predictions were correct
+- *Investigate* by trying to enter different values for sides and length:
+  - draw different shapes
+  - what are the correct values to make your turtle draw a circle?
+  - What happens when you enter a float or a string?
+- *Modify* your code to use different prompts
+
+## Part 2 Exercise
+
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
+
+### Exercise 4
+
+Create a new file and save it in your subject folder calling it **lesson_4_ex_4.py**. Then type the following code into it.
 
 ``` python
 ###############################################
@@ -776,3 +893,4 @@ draw_poly(length,sides)
 
 ```
 
+Follow the instructions in the comments and use your Python knowledge to create a count up app. Remember to apply the DRY principle

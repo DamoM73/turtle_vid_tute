@@ -531,8 +531,6 @@ for i in range(sides):
 
 Predict what you think will happen, then run the code.
 
-### Exercises
-
 ## Part 2 Exercise
 
 In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
@@ -559,6 +557,4 @@ my_ttl.shape("dot")
 ##################################
 ```
 
-Follow the instructions in the comments and use your turtle knowledge to draw a house:
-
-- Remember to apply the DRY principle
+Follow the instructions in the comments and use your turtle knowledge to draw a house. Remember to apply the DRY principle
