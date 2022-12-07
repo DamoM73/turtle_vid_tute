@@ -18,7 +18,7 @@
 
 Functions are blocks of code that we can run several times in our program. So far in our programming all our blocks of code are only run once. Even loop blocks are only run once, although the code inside the block is repeated. But once you have gone past a loop, you can't go back and run it gain.
 
-With functions, we move a block of code outside of the main program sequence, and give it a label. We can then use that block as many times as we like by *call* the function name from within the main program sequence.
+With functions, we move a block of code outside of the main program sequence, and give it a label. We can then use that block as many times as we like by *calling* the function name from within the main program sequence.
 
 To understand this more clearly, we will start with my solution for ***lesson_3_ex_4.py**.
 
@@ -130,7 +130,15 @@ When a wrote this code, I didn't type it straight out, I copied and pasted a lot
 
 ### Creating functions
 
-Let's look at how this works. First, we will take all the move pen code and consolidate that in one spot. In the code below I have taken the first move pen action (lines `17` to `20` in the previous code) and moved them up to the top (lines `3` to `6`) where I have turned them into a function. Adjust your code so that it looks the same.
+Let's look at how this works.
+
+1. take all the *move pen code* and consolidate that in one spot
+   - below I have copied the first move pen action (lines `17` to `20` in the previous code)
+   - I have pasted them up to the top (lines `3` to `6`) 
+   - I then have turned them into a function
+2. Replace the original code with a call to the function (line `22`).
+
+Adjust your code so that it looks the same as below:
 
 ```python
 import turtle
@@ -440,7 +448,7 @@ From the current:
 
 - copy one of the `# draw square` blocks to the top of the code
 - change it into a function that draws a square called `draw_square()`
-- the function will need to accept a value for the `lenght` of the square's side
+- the function will need to accept a value for the `length` of the square's side
 - then replace all the `# draw square` blocks with an appropriate `draw_square()` call
 
 > **Function location**
@@ -516,7 +524,7 @@ There is no more repetition in the main code, but there is still three code bloc
 This will provide two benefits:
 
 - it will make the code more readable
-- if we want to extent the drawing we can easily add more rectangles, triangle and circles.
+- if we want to extend the drawing we can easily add more rectangles, triangle and circles.
 
 See if you can change all three blocks into functions. Remember to test each function when you create it.
 
@@ -723,7 +731,7 @@ PRIMM
 - *Run* the code and see how close your prediction is.
 - *Modify* the code so the shape fits within the window.
 
-When we run the code the shape is partially off the screen. That's not a big problem, you just need to change the length from `100` to `80`. This something quite simple for you, because you have learnt how to code.
+When we run the code the shape is partially off the screen. That's not a big problem, you just need to change the length from `100` to `80`. This something quite simple for you, because you have learnt how to code, but what about people who haven't?
 
 So, how do we make our programs interactive by getting the user's input?
 
@@ -807,7 +815,7 @@ Variables in Python can hold different types of data. The four types of data we 
 - Booleans (`bool`)
   - stores either `True` or `False`
 
-Using data types helps Python work out what kind of operations it can do with the data. For example. it wouldn't make much sense to divide a string. Python also has special operations called *methods*. Each data type has it's own methods. You will learn more about data types right through your programming journey.
+Using data types helps Python work out what kind of operations it can do with the variable. For example. it wouldn't make much sense to divide a string. Python also has special operations called *methods*. Each data type has it's own methods. You will learn more about data types right through your programming journey.
 
 Now, lets look at the error again:
 
@@ -824,7 +832,7 @@ When looking at the `Traceback` always check the last line first and in this cas
 
 In line `17`: `sides = input("How many sides?> ")` we took whatever value the user entered and assigned it to `sides`. Now I entered `3` which is an integer, so why does Python think it's a string.
 
-Well, when Python accepts a value using it `input()` command, it is always accepted as a string. This is because string can contain all characters.
+Well, when Python accepts a value using the `input()` command, it is always accepted as a string. This is because strings can contain all characters.
 
 So how do we fix this? Luckily we can convert a variable's data type.
 
@@ -874,7 +882,7 @@ PRIMM
 - *Investigate* by trying to enter different values for sides and length:
   - draw different shapes
   - what are the correct values to make your turtle draw a circle?
-  - What happens when you enter a float or a string?
+  - what happens when you enter a float or a string?
 - *Modify* your code to use different prompts
 
 ## Part 2 Exercise

@@ -578,8 +578,6 @@ for i in range(sides):
 
 ## Part 2 Exercise
 
-## Exercises
-
 The exercises are the *make* component of the PRIMM model
 
 Work through the last lesson 3 exercise and *make* your own code
