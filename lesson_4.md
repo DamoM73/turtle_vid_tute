@@ -707,8 +707,8 @@ import turtle
 
 def draw_poly(length, sides):
     for index in range(sides):
-        fred.forward(length)
-        fred.right(360/sides)
+        myttl.forward(length)
+        myttl.right(360/sides)
 
 # setup window
 screen = 500
@@ -716,8 +716,8 @@ window = turtle.Screen()
 window.setup(screen,screen)
 
 # create instance of turtle
-fred = turtle.Turtle()
-fred.shape("turtle")
+myttl = turtle.Turtle()
+myttl.shape("turtle")
 
 sides = 9
 length = 100
@@ -749,8 +749,8 @@ import turtle
 
 def draw_poly(length, sides):
     for index in range(sides):
-        fred.forward(length)
-        fred.right(360/sides)
+        myttl.forward(length)
+        myttl.right(360/sides)
 
 # setup window
 screen = 500
@@ -758,8 +758,8 @@ window = turtle.Screen()
 window.setup(screen,screen)
 
 # create instance of turtle
-fred = turtle.Turtle()
-fred.shape("turtle")
+myttl = turtle.Turtle()
+myttl.shape("turtle")
 
 sides = input("How many sides?> ")
 length = input("How long are the sides?> ")
@@ -857,8 +857,8 @@ import turtle
 
 def draw_poly(length, sides):
     for index in range(sides):
-        fred.forward(length)
-        fred.right(360/sides)
+        myttl.forward(length)
+        myttl.right(360/sides)
 
 # setup window
 screen = 500
@@ -866,8 +866,8 @@ window = turtle.Screen()
 window.setup(screen,screen)
 
 # create instance of turtle
-fred = turtle.Turtle()
-fred.shape("turtle")
+myttl = turtle.Turtle()
+myttl.shape("turtle")
 
 sides = int(input("How many sides?> "))
 length = int(input("How long are the sides?> "))
