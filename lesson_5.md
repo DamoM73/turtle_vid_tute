@@ -28,7 +28,7 @@ def draw_poly(length, sides):
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -177,7 +177,7 @@ def draw_poly(length, sides):
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -220,7 +220,7 @@ def draw_poly(length, sides):
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -277,12 +277,58 @@ Code breakdown:
   - if `size.isdigit()` is `True` then run the code block in line `27`
 - line `27` - `size = int(size)` takes the value assigned to `size` converts it to an integer, then reassigns it to `size`
 - line `28` - `else:` &rarr; if `size` is not all numbers execute following code block (lines `29` to `30`)
-- line `22` - `print("Invalid input")` &rarr; informs user of their mistake
-- line `23` - `quit()` &rarr; exits the program
+- line `29` - `print("Invalid input")` &rarr; informs user of their mistake
+- line `30` - `quit()` &rarr; exits the program
 
+### Refactor Code - DRY
 
+Looking at our code, does it pass the DRY test?
 
-Now, does this pass the dry test?
+The `# get user input` section from line `17` to `30` definitely has repeatition in it. Twice the code:
+
+1. asks the user for input
+2. checks if that input is all numbers
+3. either converts or quits the program depending on the `if` statement.
+
+During all this the only part of the code that differs is:
+
+- line `18` and `25` the `input` prompt is different:
+  - line `18` &rarr; `"How many sides?> "`
+  - line `25` &rarr; `"How long are the sides?> "`
+- in the respectice section different variable names are used:
+  - lines `18` to `23` &rarr; `num_sides`
+  - lines `25` to `30` &rarr; `size`
+
+This looks like a prefect opportunity to *refactor* the code using a function.
+
+> **Refactoring**
+>
+> *Refactoring* is the computer science term for changing your code **without changing the way it works**. This is normally done to make code more efficient or more maintainable.
+>
+> - effienct code uses less computing resources (processing power, storage, internet bandwidth etc.)
+> - maintainable code is easier for programmers to understand, and therefore easier to fix, update and enhance.
+
+To refactor our code we need add the following function at line `8` of your code:
+
+``` python
+def get_number(prompt):
+    num = input(prompt)
+    if num.isdigit():
+        return int(num)
+    else:
+        print("Invalid input")
+        quit()
+```
+
+Then remove the code under `# get user input` from lines `17` to `30`, and replace it with two calls to the function;
+
+``` python
+# get user input
+num_sides = get_number("How many sides?> ")
+size = get_number("How long are the sides?> ")
+```
+
+In the end your code should look like the below:
 
 ```python
 import turtle
@@ -303,7 +349,7 @@ def get_number(prompt):
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -316,9 +362,58 @@ size = get_number("How long are the sides?> ")
 draw_poly(size,num_sides)
 ```
 
-### Introduce `if` `elif` `else` statements
+It is really important, when you refactor code, to ensure that the code still works the same as it did before you refactored. So run the code to ensure that it still works the same way. Remeber to test all 4 possible branches:
 
-What if we want to colour our shape?
+- valid `sides` value and valid `size` value
+- valid `sides` value and invalid `size` value
+- invalid `sides` value and valid `size` value
+- invalid `sides` value and invalid `size` value
+
+If your code still works as it should, lets unpack the code we just added:
+
+- the `get_number` function:
+  - `def get_number(prompt):` &rarr; defines our new function with one argument `prompt`:
+    - we observed that the prompt was one of the differnces between our two blocks of simlar code
+    - we can provide a different prompt each time we call the function
+  - `num = input(prompt)` &rarr; uses the `prompt` argument and assigns the user input to `num`
+  - `if num.isdigit():` &rarr; checks if `num` only contains numbers
+  - `return int(num)` &rarr; converts the value assigned to `num` then `returns` to the main program:
+    - `return` is new
+    - `return` sends a value back to the main program and then finishes the function.
+  - `else:` &rarr; if `num` does not only contain numbers, run the following code
+  - `print("Invalid input")` &rarr; informs the user their input is not correct
+  - `quit()` &rarr; exits the program
+- `num_sides = get_number("How many sides?> ")` &rarr; calls the `get_number` function
+  - `get_number()` &rarr; calls the function
+  - `"How many sides?> "` &rarr; provides the prompt string to the function
+  - `num_sides =` takes the value returned by the function and assigns it to `num_sides`
+- `size = get_number("How long are the sides?> ")` &rarr; calls the `get_number` function
+  - `get_number()` &rarr; calls the function
+  - `"How long are the sides?> "` &rarr; provides the prompt string to the function
+  - `size =` takes the value returned by the function and assigns it to `size`
+
+### Playing with colour
+
+Let's keep adding features to our program. Turtle allows you to also change the colour of your shapes and lines using the method `color()`:
+
+`color()` accepts two arguments:
+
+- first argument &rarr; line colour
+- second argument &rarr; fill colour
+
+> **Spelling**
+>
+> Like most programming languages, Python uses US spelling. Using Australian spelling (eg. colour) will generate an error.
+>
+> It up to the programmer to decide what spelling to follow in your naming of variables and functions. I choose to use the US spelling. This means all the code uses the same spelling and therefore reduce the likelihood of errors.
+
+Now let's change the colour of our shape.
+
+Make the changes in code the code below to:
+
+- line `3`
+- line `4`
+- line `32`
 
 ```python
 import turtle
@@ -342,7 +437,7 @@ def get_number(prompt):
 # setup window
 screen = 500
 window = turtle.Screen() 
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -355,9 +450,42 @@ size = get_number("How long are the sides?> ")
 draw_poly(size,num_sides,"red")
 ```
 
-Can we let the user choose the colour
+PRIMM
 
-```python
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your prediction?
+- Let's *investigate* that code.
+
+Breakdown of our code changes:
+
+- `def draw_poly(length, sides, color):` &rarr; accepts a third argument `color`
+- `myttl.color("black",color)` &rarr; sets the turtle color
+  - line colour &rarr; `"black"` 
+  - fill colour &rarr; the value in the `color` argument
+
+> **Turtle colours**
+>
+> Turtle allows the use of named colours. [Here is a list of all the named colours](https://cs111.wellesley.edu/labs/lab02/colors).
+
+Now that we can change colour, can we let the user choose between `red`, `blue` and `green` for the fill colour?
+
+We will need to capture the error when the user enters anythin other than `"red"`, `"blue"` or `"green"`, so that's means using an `if` statement. But the `if` / `else` statement only allows two brnaces, as we need to have three.
+
+To choos between three or more branches we need to learn about the last part of the `if` statement: `elif`.
+
+### `if` `elif` `else` statements
+
+The `elif` statement is effectively a `else` + `if` statement and allows branching between multiple blocks of code. The best way to explpore this is by using it in our code.
+
+Create a function so the user can choose between `red`, `blue` and `green` for the fill colour.
+
+Adjust your code so it is the same as the code below. Changes are on:
+
+- lines `19` to `29`
+- line `43`
+- line `45`
+
+``` python
 import turtle
 
 def draw_poly(length, sides, color):
@@ -391,7 +519,7 @@ def get_color():
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -405,9 +533,65 @@ fill = get_color()
 draw_poly(size,num_sides, fill)
 ```
 
-### Exercises
+PRIMM
 
-#### L5_Ex1.py
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your prediction?
+- Let's *investigate* that code.
+
+There are a few new concepts for us to breakdown:
+
+- line `20` - `color = input("Fill colour (red, blue, green)?> ").lower()` &rarr; `lower()` is new
+  - `lower()` is another string method
+  - it converts all the letters in a string to their lowercase version
+- line `21` - `if color == "red":` &rarr; tests if the user inputed `"red"`
+- line `22` - `return color`
+  - sends the value of `color` (in this case `"red"` back to the main program)
+  - ends the function
+- line `23` - `elif color == "blue":`
+  - is only executed if the condition in line `21` is `False`
+  - checks if the value of `color` is `"blue"`
+- line `24` - `return color`
+  - sends the value of `color` (in this case `"blue"` back to the main program)
+  - ends the function
+- line `25` - `elif color == "green":`
+  - is only executed if the conditions in line `21` and line `23` are both `False`
+  - checks if the value of `color` is `"green"`
+- line `26` - `return color`
+  - sends the value of `color` (in this case `"green"` back to the main program)
+  - ends the function
+- line `27` - `else:`
+  - is only executed if the conditions in line `21`, line `23` and line `24` are all `False`
+- line `28` and line `29` are the same as the `get_number()` function
+
+The `if` / `elif` / `else` statement very useful and flexiable. You will use it in various configurations, so let look at it's rules.
+
+> **`if` / `elif` / `else` structure**
+> 
+> The structure of a full `if` / `elif` / `else` statement is:
+>
+> - the `if` component
+>   - always at the beginning of an `if` / `elif` / `else` statement
+>   - the only compulsary part
+>   - there can only be one per `if` / `elif` / `else` statement
+> - the `elif` component
+>   - must come after the `if` statement and before the `else` statement
+>   - is optional
+>   - there can be as many `elif` components as you wish
+>   - is only accessed when all the conditions before it are `False` and its condition is `True`
+> - the `else` componet
+>   - must be at the end of an an `if` / `elif` / `else` statement
+>   - is optional
+>   - there can only be one per `if` / `elif` / `else` statement
+>   - is only accessed when all the conditions before it are `False`
+
+## Part 2 Exercise
+
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
+
+### Exercise 1
+
+Create a new file and save it in your subject folder calling it **lesson_5_ex_1.py**. Then type the following code into it.
 
 ```python
 # Almyttl's security guard program
@@ -420,7 +604,11 @@ draw_poly(size,num_sides, fill)
 
 ```
 
-#### L5_Ex2.py
+Follow the instructions in the comments and use your Python knowledge to create a password checker. Remember to apply the DRY principle
+
+### Exercise 2
+
+Create a new file and save it in your subject folder calling it **lesson_5_ex_2.py**. Then type the following code into it.
 
 ``` python
 # Almyttl's security guard program
@@ -436,7 +624,11 @@ friends = "Bruce"
 
 ```
 
-#### L5_Ex3.py
+Follow the instructions in the comments and use your Python knowledge to create an enhanced password checker. Remember to apply the DRY principle
+
+### Exercise 3
+
+Create a new file and save it in your subject folder calling it **lesson_5_ex_3.py**. Then type the following code into it.
 
 ```python
 import turtle
@@ -480,7 +672,7 @@ def move_pen():
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -494,6 +686,7 @@ fill = get_color()
 draw_poly(size,num_sides, fill)
 ```
 
+Follow the instructions in the comments (check line `37`) and use your Python knowledge to enhance our shape drawing code. Remember to apply the DRY principle.
 
 
 ## Tutorial 2: While Loop
@@ -709,7 +902,7 @@ def move_pen():
 # setup window
 screen = 500
 window = turtle.Screen()
-window.screensize(screen,screen)
+window.setup(screen,screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()

@@ -20,7 +20,7 @@ Functions are blocks of code that we can run several times in our program. So fa
 
 With functions, we move a block of code outside of the main program sequence, and give it a label. We can then use that block as many times as we like by *calling* the function name from within the main program sequence.
 
-To understand this more clearly, we will start with my solution for ***lesson_3_ex_4.py**.
+To understand this more clearly, we will start with my solution for **lesson_3_ex_4.py**.
 
 Type the code below into a new file and save in as **lesson_4_pt_1.py**.
 
