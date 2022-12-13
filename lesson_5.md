@@ -585,7 +585,7 @@ The `if` / `elif` / `else` statement very useful and flexiable. You will use it 
 >   - there can only be one per `if` / `elif` / `else` statement
 >   - is only accessed when all the conditions before it are `False`
 
-## Part 2 Exercise
+## Part 1 Exercise
 
 In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
 
@@ -688,14 +688,43 @@ draw_poly(size,num_sides, fill)
 
 Follow the instructions in the comments (check line `37`) and use your Python knowledge to enhance our shape drawing code. Remember to apply the DRY principle.
 
-
 ## Tutorial 2: While Loop
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A9j7N6kLL1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In Python we have two form of iteration. We have already looked at the `for` loop, and in the section we will look at the other iteration control structure, the `while` loop.
+
+The two type of loops are used for two different types of iteration:
+
+- **definite iteration**
+  - used, when you know how many times the loop will need to run
+  - `for` loops are used for definite iteration since they loop for a set number of times
+- **indefinite iteration**
+  - used whe you don't know how many times the loop will need to run
+  - `while` loops are used for indefinite iteration since they will keep looping as long as a condition is `True`
+
+The best example for the difference between definite and indefinite loops is dealing cards for a game:
+
+- Dealing for Uno
+  - how many times do you need to deal to each player?
+  - answer: seven times, so each player has seven cards
+  - definite iteration as you will need to deal to the players seven times.
+- Dealing for Snap
+  - how many times do you you need to deal to each player?
+  - answer: until there are no more cards left to deal
+  - indefinite iteration as you will need to deal to the players while there are still cards left to deal
+
+In summary:
+
+- `for` loop is count controlled - we know how many times to run it.
+- `while` loop is condition controlled - we don't know how many times to run it.
+
+
+To understand `while` loops, lets look at a number guessing game example.
 
 ### Number guessing game
 
-See if the user can guess a random number
-
-#### Introduce `random.randint`
+Create a new file in Thonny and call it `lesson_5_pt_2.py`, then enter the code below.
 
 ```python
 import random
@@ -718,7 +747,54 @@ else:
     print("Incorrect. The number was", number)
 ```
 
-What would make this more fun? More than one guess! How can we do that?
+PRIMM
+
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your prediction?
+- Let's *investigate* that code.
+
+Code breakdown
+
+- line `1`: `import random`
+  - a module we haven't used before
+  - the random module gives us access to a whole heap of functions to produce random results
+  - we will be using one of these functions `randint()`, so we need to `import random`.
+  - to see all the commands you can go the [**W3Schools Python Random Module page**](https://www.w3schools.com/python/module_random.asp).
+- lines `3` to `9` is the same `get_number()` function we have been using previously.
+- line `11`: `number = random.randint(1,100)`
+  - `random.randint(1,100)` &rarr; use the `randint` function from the `random` module to give a random integer between `1` and `100` (inclusive)
+  - `number =` &rarr; assign the returned integer to the variable `number`
+- line `13`: `guess = get_number("Guess a number between 1 and 100> ")`
+  - `get_number("Guess a number between 1 and 100> ")` &rarr; calls the `get_number` function to ask the user to provide a guessed number
+  - `guess =` &rarr; assigns the returned integer to the variable `guess`
+- line `15`: `if guess == number:` 
+  - checks if the guessed and random number are the same
+  - the `==` symbol is a *comparrison opperator* (see below), that is used to see if two values are the same
+  - if the two values are the same run the code block on line `16`
+- line `17`: `else:` &rarr; if the guessed and random number are not the same, run the code block on line `18`
+
+> **Comparison Operators**
+>
+> A *comparison operation* compares two values and either returns `True` or `False`
+> Python has many comparison operators that we use in condition testing
+>
+> - `==` &rarr; checks if two values are the same (equal to)
+> - `!=` &rarr; checks if two values are not the same (not equal to)
+> - `>` &rarr; checks if the left value is greater than the right value
+> - `<` &rarr; checks if the left value is less than the right value
+> - `>=` &rarr; checks if the left value is greater than or equal to the right value
+> - `<=` &rarr; checks if the right value is less than or equal to the right value
+
+So we've made a simple game, but it is not a really good one. Having a one in one hundred chance of guessing a number is not goint to keep the user entertained for too long. How about we adjust the code to allow the user to have 10 guesses.
+
+Now that sounds like iteration, but what kind? Since we know how many times this will need to loop (10), its definite ireation, so that would require a `for` loop.
+
+Change your code so it look like the code below. Specifically:
+
+- line `13` &rarr; provide user instructions
+- lines `15` to `21` &rarr; place the guessing process within a `for` loop
+- line `21` &rarr; make sure you remove the number reveal
+- line `23` &rarr; reveal the number after all 10 guesses are finished
 
 ```python
 import random
@@ -746,7 +822,15 @@ for turn in range(10):
 print("The number was", number)
 ```
 
-How about giving hints?
+PRIMM
+
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your prediction?
+- We won't worry about *investigating* that code as it implenting code we have used before.
+
+This is better, but still isn't great. There is a one in ten chance of getting the right number, and each guess is just a stab in the dark, with no knowledege gained from the previous guesses. How about we give the user hints? Let them know that their guess is too high or too low.
+
+Change the `if` / `else` statement into the `if` / `elif` / `else` statement on lines `18` to `23` in the code below:
 
 ```python
 import random
@@ -767,27 +851,37 @@ for turn in range(10):
     guess = get_number("Guess a number between 1 and 100> ")
 
     if guess > number:
-        print("Lower")
+        print("Guess is too high")
     elif guess < number:
-        print("Higher")
+        print("Guess is too low")
     else:
         print("Correct!")
 
 print("The number was", number)
 ```
 
+We've done a fair bit of coding with out any serious testing. So this time lets keep running our code until we cover all four branches:
+
+1. guess is too high
+2. guess is too low
+3. guess is correct
+4. all 10 guess used up without guessing the number
+
+This might be easier to do if we know the random number. Feel free to add a line that prints the random number, but make sure you comment it out after testing.
+
+PRIMM
+
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your prediction?
+- We won't worry about *investigating* that code as it implenting code we have used before.
+
 Problem when we get the answer correct.
+
+
 
 #### Introduce `while` loop
 
-Think of playing cards.
 
-- Dealing poker -  how many times does the loop run?
-- Dealing snap - how many times do you loop?
-
-`for` loop is count controlled - we know how many times to run it.
-
-`while` loop is condition controlled - we don't know how many times to run it.
 
 ```python
 import random
