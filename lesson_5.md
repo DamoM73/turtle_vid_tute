@@ -585,7 +585,7 @@ The `if` / `elif` / `else` statement very useful and flexiable. You will use it 
 >   - there can only be one per `if` / `elif` / `else` statement
 >   - is only accessed when all the conditions before it are `False`
 
-## Part 1 Exercise
+## Part 1 Exercises
 
 In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
 
@@ -872,16 +872,19 @@ This might be easier to do if we know the random number. Feel free to add a line
 PRIMM
 
 - *Predict* what you think will happen when you run the code:
-- *Run* the code. Did it follow your prediction?
+- *Run* the code. Did it follow your predictions?
 - We won't worry about *investigating* that code as it implenting code we have used before.
 
-Problem when we get the answer correct.
+Did you identify a probelm when the user guesses the number before their ten guesses were used up? The game prints `Correct!` but then contiunes to ask them to guess a number. This is because we have a set numbers. We use a `for` loop which to impliment a definite iteration.
 
+What we actuallly have is an indefinite iteration which keep looping until the user gueses the number. To do this we will use a `while` loop.
 
+### Using a `while` loop
 
-#### Introduce `while` loop
+Change your code so that is the same as the code below. Specifically:
 
-
+- line `13` &rarr; add `guess = 0`
+- line `15` &rarr; change the `for` statement to `while guess != number:`
 
 ```python
 import random
@@ -902,16 +905,49 @@ while guess != number:
     guess = get_number("Guess a number between 1 and 100> ")
 
     if guess > number:
-        print("Lower")
+        print("Guess is too high")
     elif guess < number:
-        print("Higher")
+        print("Guess is too low")
     else:
         print("Correct!")
 
 print("The number was", number)
 ```
 
-What happens with a typo putting numbers in?
+Again you want to run this code enough time that you have covered all four possible branches:
+
+1. guess is too high
+2. guess is too low
+3. guess is correct
+4. all 10 guess used up without guessing the number
+
+PRIMM
+
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your predictions?
+- Let's *investigating* the new code to see how `while` statements work.
+
+We're going ot do this code breakdown out of order to help our understanding:
+
+- line `15`: `while guess != number:`
+  - `guess != number` &rarr; this is the loop condition
+  - as long as `guess` and `number` will:
+    - return `True` if `guess` and `number` are not the same
+    - return `False` if `guess` and `number` are the same
+  - `while` tells Python to keep looping the following code block as long as the loop condition returns `True`
+- line `13`: `guess = 0`
+  - in our `while` statement we use the variale `guess` before getting an input from the user &rarr; this is raise an error
+  - we need to assign value to `guess` before the `while` statement
+    - if the value we assign to `guess` is the same as `number` the `while` loop will not run, and the user will not provide input.
+    - so we assign `0` because `number` will always be between `1` and `100`
+
+### Using `while` to enhance our error capture
+
+We now have a somewhat fun game where the user has a good chance of gusessing the number. But in learning about `while` we have an opportunity to enhance ouir error capture in the `get_number()` function.
+
+At the moment, if the user provides an input which isn't an integer, the game just ends. This is a bit harsh, especially if they have already made three or four guesses.
+
+Adjust your `get_number()` function so that it is the same as in the code below.
 
 ```python
 import random
@@ -932,18 +968,48 @@ while guess != number:
     guess = get_number("Guess a number between 1 and 100> ")
 
     if guess > number:
-        print("Lower")
+        print("Guess is too high")
     elif guess < number:
-        print("Higher")
+        print("Guess is too low")
     else:
         print("Correct!")
 
 print("The number was", number)
 ```
 
-### Exercises
+Again you want to run this code enough time that you have covered all four possible branches:
 
-#### L5_Ex4.py
+1. guess is too high
+2. guess is too low
+3. guess is correct
+4. all 10 guess used up without guessing the number
+
+PRIMM
+
+- *Predict* what you think will happen when you run the code:
+- *Run* the code. Did it follow your predictions?
+- Let's *investigating* the new code to see how this use of a `while` loop works
+
+Code breakdown:
+
+- line `4`: `while True`
+  - this is called an infinite loop, since the condition of will always be `True` the loop will always run.
+  - infinite loops are frequently cause by errors, although not in this case
+  - infinite loops can be broken out of by using the `break` statement, or the `return` statement, if it is in a function.
+- lines `5` to `9` are the same as before, except they are now a code block inside of a `while` loop.
+- it is worth noting the importance of line `7`
+  - since the `while` loop is infinite, the program will keep asking for input unless it executes line `7`
+  - in line `7` the value assigned to `num` is converted into an integer and then returned to the main program, effectively ending the function and exiting the `while` loop in the process.
+
+The end effect of these changes is the program will endlessly ask the user for a number between 1 and 100, until the user provides an integer.
+
+## Part 2 Exercise
+
+In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
+
+### Exercise 4
+
+Create a new file and save it in your subject folder calling it **lesson_5_ex_4.py**. Then type the following code into it.
 
 ``` python
 import turtle
@@ -1011,3 +1077,4 @@ move_pen()
 draw_poly(size,num_sides, fill)
 ```
 
+Follow the instructions in comments and make changes to the `get_number()` and `get_colour()` functions so they capture user input errors.
