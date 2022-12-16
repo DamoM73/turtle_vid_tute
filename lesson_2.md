@@ -189,14 +189,14 @@ What happens if we remove the indentation?
 
 Change your code by adding `print("Come in and sit down")` to the end. Make sure you remove the indentation, so you code looks like the code below:
 
-```python
-# our itreation program
+``` python
+# our iteration program
 
 names = ["Hunter", "Jordi", "Adam", "Bryce", "Ben"]
 
 for name in names:
     print("Hello", name)
-    print("How are you?")
+    print("How are you?")
 
 print("Come in and sit down")
 ```
@@ -248,7 +248,7 @@ But what if we want `print` the numbers between 1 and 100? Do you really want to
 Try the code below:
 
 ```python
-number_list = range(1,101)
+number_list = range(1, 101)
 
 for number in number_list:
     print(number)
@@ -263,7 +263,7 @@ Let's unpack that code:
 We can actually use the `range` function directly in the `for` loop.
 
 ```python
-for number in range(1,101):
+for number in range(1, 101):
     print(number)
 ```
 
@@ -277,11 +277,11 @@ Create a new file called **lesson_2_pt_2b.py** and type in the code below.
 import turtle
 
 window = turtle.Screen()
-window.setup(500,500)
+window.setup(500, 500)
 
 my_ttl = turtle.Turtle()
 
-for number in range(1,101):
+for number in range(1, 101):
     my_ttl.forward(100)
     my_ttl.backward(100)
     my_ttl.left(3)

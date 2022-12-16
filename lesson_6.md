@@ -22,11 +22,11 @@ There are six comparison operators you can use. Create a new file called `lesson
 
 ```python
 print("jeff" == "jeff")  # equal to
-print(1 != 1)            # not equal to
-print(500 > 300)         # greater than
-print(100 >= 250)        # greater than or equal to
-print("a" < "q")         # less than
-print(-30 <= 3)          # less than or equal to
+print(1 != 1)  # not equal to
+print(500 > 300)  # greater than
+print(100 >= 250)  # greater than or equal to
+print("a" < "q")  # less than
+print(-30 <= 3)  # less than or equal to
 ```
 
 PRIMM:
@@ -209,7 +209,7 @@ def set_scene():
 
     ## Respond to mouse click (signal) ##
     turtle.onscreenclick(draw_dot)
-    
+
     ## Set up the grid ##
     driver.speed(0)
     for i in range(4):
@@ -218,13 +218,15 @@ def set_scene():
         driver.right(90)
     driver.penup()
 
+
 ## Reaction to signal (slot) ##
 def draw_dot(x, y):
-    print(x,y)
+    print(x, y)
     dot_colour = "orange"
     dot_size = 10
     driver.goto(x, y)
     driver.dot(dot_size, dot_color)
+
 
 ## Main Program
 driver = turtle.Turtle()
@@ -288,7 +290,7 @@ def set_scene():
 
     ## Respond to mouse click (signal) ##
     turtle.onscreenclick(draw_dot)
-    
+
     ## Set up the grid ##
     driver.speed(0)
     for i in range(4):
@@ -297,14 +299,15 @@ def set_scene():
         driver.right(90)
     driver.penup()
 
+
 ## Reaction to signal (slot) ##
-def draw_dot(x, y) :
+def draw_dot(x, y):
     dot_colour = "orange"
-    
+
     ##################################
     ######## Answer goes here ########
     ##################################
-    ''' Part A
+    """ Part A
     Use an 'if' statement to set the dot color to red
     when the mouse clicks in the top right quadrant
 
@@ -312,18 +315,19 @@ def draw_dot(x, y) :
     x and y
 
     To change the colour of the dot to red, run the command
-    
+
     dot_color = 'red'
 
-    '''
-    
+    """
+
     ##################################
     ##################################
     ##################################
-    
+
     driver.goto(x, y)
     dot_size = 10
     driver.dot(dot_size, dot_color)
+
 
 driver = turtle.Turtle()
 set_scene()
@@ -345,7 +349,7 @@ def set_scene():
 
     ## Respond to mouse click (signal) ##
     turtle.onscreenclick(draw_dot)
-    
+
     ## Set up the grid ##
     driver.speed(0)
     for i in range(4):
@@ -354,25 +358,24 @@ def set_scene():
         driver.right(90)
     driver.penup()
 
+
 ## Reaction to signal (slot) ##
-def draw_dot(x, y) :
+def draw_dot(x, y):
     dot_color = "orange"
 
     ##################################
     ######## Answer goes here ########
     ##################################
-    ''' Part B
+    """ Part B
     Use both 'if' and 'else' to set the dot color to red
     if the mouse is clicked in the top right quadrant and
     green if clicked anywhere else
-    '''
-    
-    
-    
+    """
+
     ##################################
     ##################################
     ##################################
-    
+
     driver.goto(x, y)
     dot_size = 10
     driver.dot(dot_size, dot_color)
@@ -398,7 +401,7 @@ def set_scene():
 
     ## Respond to mouse click (signal) ##
     turtle.onscreenclick(draw_dot)
-    
+
     ## Set up the grid ##
     driver.speed(0)
     for i in range(4):
@@ -407,26 +410,25 @@ def set_scene():
         driver.right(90)
     driver.penup()
 
+
 ## Reaction to signal (slot) ##
-def draw_dot(x, y) :
+def draw_dot(x, y):
     dot_color = "orange"
 
     ##################################
     ######## Answer goes here ########
     ##################################
-    ''' Part C
+    """ Part C
     Use 'if', 'elif' and 'else' keywords to set the dot color to
     red when the mouse is clicked in the top right quadrant,
     blue in the top left quadrant, yellow in the bottom left quadrant
     and green in the bottom right quadrant
-    '''
+    """
 
-    
-    
     ##################################
     ##################################
     ##################################
-    
+
     driver.goto(x, y)
     dot_size = 10
     driver.dot(dot_size, dot_color)

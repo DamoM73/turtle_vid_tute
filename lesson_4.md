@@ -43,7 +43,7 @@ my_ttl.shape("arrow")
 
 # move pen
 my_ttl.penup()
-my_ttl.goto(-100,0)
+my_ttl.goto(-100, 0)
 my_ttl.pendown()
 
 # draw square
@@ -55,10 +55,10 @@ for index in range(4):
 for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(-25,-200)
+my_ttl.goto(-25, -200)
 my_ttl.pendown()
 
 # draw rectangle
@@ -67,30 +67,30 @@ for index in range(2):
     my_ttl.left(90)
     my_ttl.forward(100)
     my_ttl.left(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(-80,-100)
+my_ttl.goto(-80, -100)
 my_ttl.pendown()
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(45,-100)
+my_ttl.goto(45, -100)
 my_ttl.pendown()
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(15,-150)
+my_ttl.goto(15, -150)
 my_ttl.pendown()
 
 # draw circle
@@ -143,10 +143,12 @@ Adjust your code so that it looks the same as below:
 ```python
 import turtle
 
+
 def move_pen():
     my_ttl.penup()
-    my_ttl.goto(-100,0)
+    my_ttl.goto(-100, 0)
     my_ttl.pendown()
+
 
 # set up screen
 screen = 500
@@ -173,10 +175,10 @@ for index in range(4):
 for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(-25,-200)
+my_ttl.goto(-25, -200)
 my_ttl.pendown()
 
 # draw rectangle
@@ -185,30 +187,30 @@ for index in range(2):
     my_ttl.left(90)
     my_ttl.forward(100)
     my_ttl.left(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(-80,-100)
+my_ttl.goto(-80, -100)
 my_ttl.pendown()
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(45,-100)
+my_ttl.goto(45, -100)
 my_ttl.pendown()
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(15,-150)
+my_ttl.goto(15, -150)
 my_ttl.pendown()
 
 # draw circle
@@ -250,7 +252,7 @@ Looking back at our `move_pen()` function in the code, what we need to do is get
 ``` python
 def move_pen():
     my_ttl.penup()
-    my_ttl.goto(-100,0)
+    my_ttl.goto(-100, 0)
     my_ttl.pendown()
 ```
 
@@ -283,10 +285,12 @@ Your code should now look like the code below:
 ```python
 import turtle
 
+
 def move_pen(x, y):
     my_ttl.penup()
-    my_ttl.goto(x,y)
+    my_ttl.goto(x, y)
     my_ttl.pendown()
+
 
 # set up screen
 screen = 500
@@ -302,7 +306,7 @@ my_ttl.shape("arrow")
 ## have learnt, draw a house.   ##
 ##################################
 
-move_pen(-100,0)
+move_pen(-100, 0)
 
 # draw square
 for index in range(4):
@@ -313,10 +317,10 @@ for index in range(4):
 for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(-25,-200)
+my_ttl.goto(-25, -200)
 my_ttl.pendown()
 
 # draw rectangle
@@ -325,30 +329,30 @@ for index in range(2):
     my_ttl.left(90)
     my_ttl.forward(100)
     my_ttl.left(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(-80,-100)
+my_ttl.goto(-80, -100)
 my_ttl.pendown()
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(45,-100)
+my_ttl.goto(45, -100)
 my_ttl.pendown()
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
+
 # move pen
 my_ttl.penup()
-my_ttl.goto(15,-150)
+my_ttl.goto(15, -150)
 my_ttl.pendown()
 
 # draw circle
@@ -365,10 +369,12 @@ Your code should now look like this:
 ```python
 import turtle
 
+
 def move_pen(x, y):
     my_ttl.penup()
-    my_ttl.goto(x,y)
+    my_ttl.goto(x, y)
     my_ttl.pendown()
+
 
 # set up screen
 screen = 500
@@ -384,7 +390,7 @@ my_ttl.shape("arrow")
 ## have learnt, draw a house.   ##
 ##################################
 
-move_pen(-100,0)
+move_pen(-100, 0)
 
 # draw square
 for index in range(4):
@@ -395,8 +401,8 @@ for index in range(4):
 for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
-    
-move_pen(-25,-200)
+
+move_pen(-25, -200)
 
 # draw rectangle
 for index in range(2):
@@ -404,22 +410,22 @@ for index in range(2):
     my_ttl.left(90)
     my_ttl.forward(100)
     my_ttl.left(90)
-    
-move_pen(-80,-100)
+
+move_pen(-80, -100)
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
 
-move_pen(45,-100)
+move_pen(45, -100)
 
 # draw square
 for index in range(4):
     my_ttl.forward(35)
     my_ttl.right(90)
-    
-move_pen(15,-150)
+
+move_pen(15, -150)
 
 # draw circle
 my_ttl.circle(5)
@@ -465,15 +471,18 @@ Once you have made `draw_square()` function changes, you code should look like:
 ```python
 import turtle
 
-def move_pen(x,y):
+
+def move_pen(x, y):
     my_ttl.penup()
-    my_ttl.goto(x,y)
+    my_ttl.goto(x, y)
     my_ttl.pendown()
-    
+
+
 def draw_square(length):
     for index in range(4):
         my_ttl.forward(length)
         my_ttl.right(90)
+
 
 # set up screen
 screen = 500
@@ -489,15 +498,15 @@ my_ttl.shape("arrow")
 ## have learnt, draw a house.   ##
 ##################################
 
-move_pen(-100,0)
+move_pen(-100, 0)
 draw_square(200)
 
 # draw triangle
 for index in range(3):
     my_ttl.forward(200)
     my_ttl.left(120)
-    
-move_pen(-25,-200)
+
+move_pen(-25, -200)
 
 # draw rectangle
 for index in range(2):
@@ -505,12 +514,12 @@ for index in range(2):
     my_ttl.left(90)
     my_ttl.forward(100)
     my_ttl.left(90)
-    
-move_pen(-80,-100)
+
+move_pen(-80, -100)
 draw_square(35)
-move_pen(45,-100)
+move_pen(45, -100)
 draw_square(35)
-move_pen(15,-150)
+move_pen(15, -150)
 
 # draw circle
 my_ttl.circle(5)
@@ -533,20 +542,24 @@ When you finish your code should look like this:
 ```python
 import turtle
 
-def move_pen(x,y):
+
+def move_pen(x, y):
     my_ttl.penup()
-    my_ttl.goto(x,y)
+    my_ttl.goto(x, y)
     my_ttl.pendown()
-    
+
+
 def draw_square(length):
     for index in range(4):
         my_ttl.forward(length)
         my_ttl.right(90)
-        
+
+
 def draw_triangle(length):
     for index in range(3):
         my_ttl.forward(length)
         my_ttl.left(120)
+
 
 def draw_rectangle(long, short):
     for index in range(2):
@@ -554,9 +567,11 @@ def draw_rectangle(long, short):
         my_ttl.left(90)
         my_ttl.forward(long)
         my_ttl.left(90)
-        
+
+
 def draw_circle(rad):
     my_ttl.circle(rad)
+
 
 # set up screen
 screen = 500
@@ -572,16 +587,16 @@ my_ttl.shape("arrow")
 ## have learnt, draw a house.   ##
 ##################################
 
-move_pen(-100,0)
+move_pen(-100, 0)
 draw_square(200)
 draw_triangle(200)
-move_pen(-25,-200)
-draw_rectangle(100,50)
-move_pen(-80,-100)
+move_pen(-25, -200)
+draw_rectangle(100, 50)
+move_pen(-80, -100)
 draw_square(35)
-move_pen(45,-100)
+move_pen(45, -100)
 draw_square(35)
-move_pen(15,-150)
+move_pen(15, -150)
 draw_circle(5)
 my_ttl.hideturtle()
 ```
@@ -618,44 +633,44 @@ my_ttl.shape("turtle")
 
 # move pen
 my_ttl.penup()
-my_ttl.goto(0,-200)
+my_ttl.goto(0, -200)
 my_ttl.pendown()
 
 # draw head
-my_ttl.color("black","yellow")
+my_ttl.color("black", "yellow")
 my_ttl.begin_fill()
 my_ttl.circle(200)
 my_ttl.end_fill()
 
 # move pen
 my_ttl.penup()
-my_ttl.goto(-75,0)
+my_ttl.goto(-75, 0)
 my_ttl.pendown()
 
 # draw eye
-my_ttl.color("black","black")
+my_ttl.color("black", "black")
 my_ttl.begin_fill()
 my_ttl.circle(50)
 my_ttl.end_fill()
 
 # move pen
 my_ttl.penup()
-my_ttl.goto(75,0)
+my_ttl.goto(75, 0)
 my_ttl.pendown()
 
 # draw eye
-my_ttl.color("black","black")
+my_ttl.color("black", "black")
 my_ttl.begin_fill()
 my_ttl.circle(50)
 my_ttl.end_fill()
 
 # move pen
 my_ttl.penup()
-my_ttl.goto(-100,-75)
+my_ttl.goto(-100, -75)
 my_ttl.pendown()
 
 # draw mouth
-my_ttl.color("black","black")
+my_ttl.color("black", "black")
 my_ttl.begin_fill()
 for index in range(2):
     my_ttl.forward(200)
@@ -705,15 +720,17 @@ Copy the code below, save it as **lesson_4_pt_2.py** then run it.
 ``` python
 import turtle
 
+
 def draw_poly(length, sides):
     for index in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -722,7 +739,7 @@ myttl.shape("turtle")
 sides = 9
 length = 100
 
-draw_poly(length,sides)
+draw_poly(length, sides)
 ```
 
 PRIMM
@@ -747,15 +764,17 @@ Then run the code.
 ``` python
 import turtle
 
+
 def draw_poly(length, sides):
     for index in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -764,7 +783,7 @@ myttl.shape("turtle")
 sides = input("How many sides?> ")
 length = input("How long are the sides?> ")
 
-draw_poly(length,sides)
+draw_poly(length, sides)
 ```
 
 PRIMM
@@ -855,15 +874,17 @@ Make the changes below to lines `17` and `18`.
 ```python
 import turtle
 
+
 def draw_poly(length, sides):
     for index in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -872,7 +893,7 @@ myttl.shape("turtle")
 sides = int(input("How many sides?> "))
 length = int(input("How long are the sides?> "))
 
-draw_poly(length,sides)
+draw_poly(length, sides)
 ```
 
 PRIMM
@@ -898,7 +919,6 @@ Create a new file and save it in your subject folder calling it **lesson_4_ex_4.
 ## write a program that askes the user for a ##
 ## number and then counts up to that number. ##
 ###############################################
-
 ```
 
 Follow the instructions in the comments and use your Python knowledge to create a count up app. Remember to apply the DRY principle

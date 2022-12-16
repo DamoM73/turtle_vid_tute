@@ -20,7 +20,7 @@ Before we start looking at variables, we want to make our use of range more conv
 Previously we would print four numbers using the code below:
 
 ``` python
-for index in range(1,5):
+for index in range(1, 5):
     print(number)
 ```
 
@@ -38,7 +38,7 @@ If you run this code you get:
 If we weren't worried about the actual numbers, and we just needed to loop 4 times we could say:
 
 ``` python
-for index in range(0,4):
+for index in range(0, 4):
     print(number)
 ```
 
@@ -425,10 +425,10 @@ my_ttl.shape("arrow")
 sides = 6
 length = 100
 
-my_ttl.goto(0,125)
+my_ttl.goto(0, 125)
 
 # draw shape
-#for i in range(sides):
+# for i in range(sides):
 #    my_ttl.forward(length)
 #    my_ttl.left(360 / sides)
 ```
@@ -460,18 +460,18 @@ my_ttl = turtle.Turtle()
 my_ttl.shape("arrow")
 
 # draw boarder
-my_ttl.goto(240,240)
-my_ttl.goto(-240,240)
-my_ttl.goto(-240,-240)
-my_ttl.goto(240,-240)
-my_ttl.goto(240,240)
-my_ttl.goto(0,0)
+my_ttl.goto(240, 240)
+my_ttl.goto(-240, 240)
+my_ttl.goto(-240, -240)
+my_ttl.goto(240, -240)
+my_ttl.goto(240, 240)
+my_ttl.goto(0, 0)
 
 # shape parameters
 sides = 6
 length = 100
 
-my_ttl.goto(0,0)
+my_ttl.goto(0, 0)
 
 # draw shape
 for i in range(sides):
@@ -508,20 +508,20 @@ my_ttl.shape("arrow")
 
 # draw boarder
 my_ttl.penup()
-my_ttl.goto(240,240)
+my_ttl.goto(240, 240)
 my_ttl.pendown()
-my_ttl.goto(-240,240)
-my_ttl.goto(-240,-240)
-my_ttl.goto(240,-240)
+my_ttl.goto(-240, 240)
+my_ttl.goto(-240, -240)
+my_ttl.goto(240, -240)
 my_ttl.pen(up)
-my_ttl.goto(0,0)
+my_ttl.goto(0, 0)
 my_ttle.pendown()
 
 # shape parameters
 sides = 6
 length = 100
 
-my_ttl.goto(0,0)
+my_ttl.goto(0, 0)
 
 # draw shape
 for i in range(sides):

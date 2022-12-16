@@ -219,7 +219,7 @@ Change your code to make it look the same as below.
 import turtle
 
 window = turtle.Screen()
-window.setup(500,500)
+window.setup(500, 500)
 
 my_ttl = turtle.Turtle()
 
@@ -247,7 +247,7 @@ The second change we're going to make is purely about looks. From the code below
 import turtle
 
 window = turtle.Screen()
-window.setup(500,500)
+window.setup(500, 500)
 
 my_ttl = turtle.Turtle()
 my_ttl.shape("turtle")
@@ -272,7 +272,7 @@ Your code should now look like this:
 import turtle
 
 window = turtle.Screen()
-window.setup(500,500)
+window.setup(500, 500)
 
 my_ttl = turtle.Turtle()
 my_ttl.shape("turtle")

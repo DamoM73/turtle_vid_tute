@@ -20,15 +20,17 @@ Open the file **lesson_4_pt_2.py** then save it as **lesson_5_pt_1a.py**
 ```python
 import turtle
 
+
 def draw_poly(length, sides):
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -37,7 +39,7 @@ myttl.shape("turtle")
 num_sides = int(input("How many sides?> "))
 size = int(input("How long are the sides?> "))
 
-draw_poly(size,num_sides)
+draw_poly(size, num_sides)
 ```
 Run the program, and at the prompt, instead of providing a number, provide a word like, for example `dog`
 
@@ -169,15 +171,17 @@ Your code should look like the code below:
 ```python
 import turtle
 
+
 def draw_poly(length, sides):
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -190,10 +194,10 @@ if num_sides.isdigit():
 else:
     print("Invalid input")
     quit()
-    
+
 size = input("How long are the sides?> ")
 
-draw_poly(size,num_sides)
+draw_poly(size, num_sides)
 ```
 
 Then replace line `25` with this code:
@@ -212,15 +216,17 @@ Your code should look like the code below:
 ```python
 import turtle
 
+
 def draw_poly(length, sides):
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -241,7 +247,7 @@ else:
     print("Invalid input")
     quit()
 
-draw_poly(size,num_sides)
+draw_poly(size, num_sides)
 ```
 
 Let's test this code to see if it works.
@@ -333,11 +339,13 @@ In the end your code should look like the below:
 ```python
 import turtle
 
+
 def draw_poly(length, sides):
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
-        
+        myttl.right(360 / sides)
+
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -345,11 +353,12 @@ def get_number(prompt):
     else:
         print("Invalid input")
         quit()
-        
+
+
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -359,7 +368,7 @@ myttl.shape("turtle")
 num_sides = get_number("How many sides?> ")
 size = get_number("How long are the sides?> ")
 
-draw_poly(size,num_sides)
+draw_poly(size, num_sides)
 ```
 
 It is really important, when you refactor code, to ensure that the code still works the same as it did before you refactored. So run the code to ensure that it still works the same way. Remeber to test all 4 possible branches:
@@ -418,14 +427,16 @@ Make the changes in code the code below to:
 ```python
 import turtle
 
+
 def draw_poly(length, sides, color):
-    myttl.color("black",color)
+    myttl.color("black", color)
     myttl.begin_fill()
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
     myttl.end_fill()
-        
+
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -433,11 +444,12 @@ def get_number(prompt):
     else:
         print("Invalid input")
         quit()
-        
+
+
 # setup window
 screen = 500
-window = turtle.Screen() 
-window.setup(screen,screen)
+window = turtle.Screen()
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -447,7 +459,7 @@ myttl.shape("turtle")
 num_sides = get_number("How many sides?> ")
 size = get_number("How long are the sides?> ")
 
-draw_poly(size,num_sides,"red")
+draw_poly(size, num_sides, "red")
 ```
 
 PRIMM
@@ -488,14 +500,16 @@ Adjust your code so it is the same as the code below. Changes are on:
 ``` python
 import turtle
 
+
 def draw_poly(length, sides, color):
-    myttl.color("black",color)
+    myttl.color("black", color)
     myttl.begin_fill()
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
     myttl.end_fill()
-        
+
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -503,7 +517,8 @@ def get_number(prompt):
     else:
         print("Invalid input")
         quit()
-        
+
+
 def get_color():
     color = input("Fill colour (red, blue, green)?> ").lower()
     if color == "red":
@@ -515,11 +530,12 @@ def get_color():
     else:
         print("Invalid input")
         quit()
-        
+
+
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -530,7 +546,7 @@ num_sides = get_number("How many sides?> ")
 size = get_number("How long are the sides?> ")
 fill = get_color()
 
-draw_poly(size,num_sides, fill)
+draw_poly(size, num_sides, fill)
 ```
 
 PRIMM
@@ -601,7 +617,6 @@ Create a new file and save it in your subject folder calling it **lesson_5_ex_1.
 ## and then grants entry of that person is Almyttl ##
 ## everyone else is told, politely, to go away     ##
 #####################################################
-
 ```
 
 Follow the instructions in the comments and use your Python knowledge to create a password checker. Remember to apply the DRY principle
@@ -621,7 +636,6 @@ friends = "Bruce"
 ## or a friend of Almyttl.                          ##
 ## Everyone else is told, politely, to go away     ##
 #####################################################
-
 ```
 
 Follow the instructions in the comments and use your Python knowledge to create an enhanced password checker. Remember to apply the DRY principle
@@ -630,7 +644,7 @@ Follow the instructions in the comments and use your Python knowledge to create 
 
 Create a new file and save it in your subject folder calling it **lesson_5_ex_3.py**. Then type the following code into it.
 
-```python
+``` python
 import turtle
 
 #####################################################
@@ -638,14 +652,16 @@ import turtle
 ## choose the coordinates where the shape is drawn ##
 #####################################################
 
+
 def draw_poly(length, sides, color):
-    myttl.color("black",color)
+    myttl.color("black", color)
     myttl.begin_fill()
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
     myttl.end_fill()
-        
+
+
 def get_number(prompt):
     num = input(prompt)
     if num.lstrip("-").isdigit():
@@ -653,7 +669,8 @@ def get_number(prompt):
     else:
         print("Invalid input")
         quit()
-        
+
+
 def get_color():
     color = input("Fill colour (red, blue, green)?> ").lower()
     if color == "red":
@@ -666,13 +683,15 @@ def get_color():
         print("Invalid input")
         quit()
 
+
 def move_pen():
     # write your code here to get coordinates from user #
+
 
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -683,7 +702,7 @@ num_sides = get_number("How many sides?> ")
 size = get_number("How long are the sides?> ")
 fill = get_color()
 
-draw_poly(size,num_sides, fill)
+draw_poly(size, num_sides, fill)
 ```
 
 Follow the instructions in the comments (check line `37`) and use your Python knowledge to enhance our shape drawing code. Remember to apply the DRY principle.
@@ -729,6 +748,7 @@ Create a new file in Thonny and call it `lesson_5_pt_2.py`, then enter the code 
 ```python
 import random
 
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -737,7 +757,8 @@ def get_number(prompt):
         print("Invalid input")
         quit()
 
-number = random.randint(1,100)
+
+number = random.randint(1, 100)
 
 guess = get_number("Guess a number between 1 and 100> ")
 
@@ -799,6 +820,7 @@ Change your code so it look like the code below. Specifically:
 ```python
 import random
 
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -807,7 +829,8 @@ def get_number(prompt):
         print("Invalid input")
         quit()
 
-number = random.randint(1,100)
+
+number = random.randint(1, 100)
 
 print("You have 10 turns to guess a number between 1 and 100")
 
@@ -835,6 +858,7 @@ Change the `if` / `else` statement into the `if` / `elif` / `else` statement on 
 ```python
 import random
 
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -843,7 +867,8 @@ def get_number(prompt):
         print("Invalid input")
         quit()
 
-number = random.randint(1,100)
+
+number = random.randint(1, 100)
 
 print("You have 10 turns to guess a number between 1 and 100")
 
@@ -889,6 +914,7 @@ Change your code so that is the same as the code below. Specifically:
 ```python
 import random
 
+
 def get_number(prompt):
     num = input(prompt)
     if num.isdigit():
@@ -897,7 +923,8 @@ def get_number(prompt):
         print("Invalid input")
         quit()
 
-number = random.randint(1,100)
+
+number = random.randint(1, 100)
 
 guess = 0
 
@@ -952,6 +979,7 @@ Adjust your `get_number()` function so that it is the same as in the code below.
 ```python
 import random
 
+
 def get_number(prompt):
     while True:
         num = input(prompt)
@@ -959,8 +987,9 @@ def get_number(prompt):
             return int(num)
         else:
             print("Invalid input")
-            
-number = random.randint(1,100)
+
+
+number = random.randint(1, 100)
 
 guess = 0
 
@@ -1014,18 +1043,21 @@ Create a new file and save it in your subject folder calling it **lesson_5_ex_4.
 ``` python
 import turtle
 
+
 def draw_poly(length, sides, color):
-    myttl.color("black",color)
+    myttl.color("black", color)
     myttl.begin_fill()
     for i in range(sides):
         myttl.forward(length)
-        myttl.right(360/sides)
+        myttl.right(360 / sides)
     myttl.end_fill()
+
 
 ############################################
 ## adjust the get_number code so it loops ##
 ## until the user provides a valid input  ##
 ############################################
+
 
 def get_number(prompt):
     num = input(prompt)
@@ -1035,10 +1067,12 @@ def get_number(prompt):
         print("Invalid input")
         quit()
 
+
 ###########################################
 ## adjust the get_color code so it loops ##
 ## until the user provides a valid input ##
 ###########################################
+
 
 def get_color():
     color = input("Fill colour (red, blue, green)?> ").lower()
@@ -1051,18 +1085,20 @@ def get_color():
     else:
         print("Invalid input")
         quit()
-        
+
+
 def move_pen():
     x_val = get_number("x axis position?> ")
     y_val = get_number("y axis position?> ")
     myttl.penup()
-    myttl.goto(x_val,y_val)
+    myttl.goto(x_val, y_val)
     myttl.pendown()
-    
+
+
 # setup window
 screen = 500
 window = turtle.Screen()
-window.setup(screen,screen)
+window.setup(screen, screen)
 
 # create instance of turtle
 myttl = turtle.Turtle()
@@ -1074,7 +1110,7 @@ size = get_number("How long are the sides?> ")
 fill = get_color()
 
 move_pen()
-draw_poly(size,num_sides, fill)
+draw_poly(size, num_sides, fill)
 ```
 
 Follow the instructions in comments and make changes to the `get_number()` and `get_colour()` functions so they capture user input errors.
