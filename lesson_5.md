@@ -3,9 +3,12 @@
 > **Topics**
 > In this lesson you will learn:
 >
-> - [ ] How to capturing errors
-> - [ ] About the branching control structure (if statements)
-> - [ ] How and when to use if statements
+> - [ ] how to capturing errors
+> - [ ] what are branching control structures (`if` statements) 
+> - [ ] how and when to use `if` / `elif` / `else` in Python
+> - [ ] the difference between definite and indefinite iteration
+> - [ ] how and when to use `where` loops in Python
+> - [ ] how to generate random numbers in Python
 
 ## Part 1: Branching
 

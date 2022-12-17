@@ -1,11 +1,11 @@
-# Lesson 3
+# Python Turtle - Lesson 3
 
 > **Topics**
 > In this lesson you will learn:
 >
-> - [ ] how to store values in variables
+> - [ ] about storing values in variables
 > - [ ] when and how to use variables
-> - [ ] screen coordinates are
+> - [ ] about screen coordinates
 > - [ ] how to use coordinates to move the turtle
 > - [ ] how to move the turtle without drawing a line
 
@@ -15,18 +15,20 @@
 
 ### Conventional range
 
-Before we start looking at variables, we want to make our use of range more conventual.
+Before we start looking at variables, we need to use `range` in a  more conventual way.
 
-Previously we would print four numbers using the code below:
+Previously, we would use the following code to print four numbers:
 
 ``` python
 for index in range(1, 5):
     print(number)
 ```
 
-> `index` is a programming convention that represents a count in a loop. You can call it anything you want, but, by convention, we call it `index`.
+> **Index**
+>
+> `index` is a programming convention that represents a count in a loop. You can call it anything you want, but the convention is to call it `index`.
 
-If you run this code you get:
+If you run the code you get:
 
 ```
 1
@@ -35,7 +37,7 @@ If you run this code you get:
 4
 ```
 
-If we weren't worried about the actual numbers, and we just needed to loop 4 times we could say:
+If we weren't worried about what numbers are printed, but rather, we just needed to loop 4 times we could use:
 
 ``` python
 for index in range(0, 4):
@@ -51,18 +53,24 @@ This will produce:
 3
 ```
 
-It still has four iterations, but just starts counting at 0.
+This still has four iterations. It just starts counting at 0.
 
-In Python the `range` function, if you don't provide a starting number, it will automatically start from `0`. So we could just say.
+If you use the `range` function without providing a starting number, Python will automatically start from `0`.
+
+So we could just use:
 
 ``` python
 for index in range(4):
     print(number)
 ```
 
+This is the way that `range` is conventionally used in Python.
+
 ### Replace magic numbers
 
-Below is a solution for lesson 2 exercise 1. Create a new file named **lesson_3_pt_1.py** and enter the code below.
+Below is **a** solution for lesson 2 exercise 1 (there are many possible solutions).
+
+Create a new file named **lesson_3_pt_1.py** and enter the code.
 
 ```python
 import turtle
@@ -76,7 +84,9 @@ for index in range(4):
     my_ttl.left(90)
 ```
 
-What do we need to change to make this into a large triangle with a length of `200` for each side? Try and work it out before looking at the code below.
+What do we need to change in the code sot the turtle draws a triangle with a length of `200` for each side?
+
+Try and work it out before looking at the code below.
 
 ```python
 import turtle
@@ -90,17 +100,23 @@ for index in range(3):
     my_ttl.left(120)
 ```
 
-What values did we change? What do those numbers represent?
+What values did we change and what do those numbers represent?
 
-- `4` &rarr; `3` representing the number sides
-- `100` &rarr; `200` representing the length of the sides
-- `90` &rarr; `120` representing the degrees the Turtle has to turn
+- `4` &rarr; `3` representing the number sides.
+- `100` &rarr; `200` representing the length of the sides.
+- `90` &rarr; `120` representing the degrees the Turtle has to turn.
 
-If I wanted to make a hexagon, or any other shape, you would need to change these values each time.
+If I wanted to make a hexagon, or any other shape, I would need to change these values each time.
 
-In programming these are called *magic numbers*. A *magic number* is a literal value that appears in a program. Magic numbers are not good. If someone else was to look at my code, they would have to work out what the `3`, `200` and `120` meant. Additionally, if my program drew 1000 squares, and I wanted to change them all to triangles, I would have to make 3000 edits.
+In programming these are called **magic numbers**. A magic number is a hard coded value that appears in a program.
 
-To write better code we remove the *magic numbers* by giving them labels called *variables*. Adjust your code in **lesson_3_pt_1.py** to match the code below.
+Magic numbers are not good. If someone else were to look at my code, they would need to work out what the `3`, `200` and `120` meant. Additionally, if my program drew 1000 squares, and I wanted to change them 1000 to triangles, I would have to make 3000 edits.
+
+---
+
+To write better code we remove magic numbers by giving them labels called **variables**.
+
+Adjust your code in **lesson_3_pt_1.py** to match the code below.
 
 ```python
 import turtle
@@ -118,25 +134,35 @@ for index in range(sides):
     my_ttl.left(degrees)
 ```
 
-Lets break that code down:
+PRIMM
 
-- `sides = 3` creates the variable `sides` and assigns the value of `3` to it
-- `length = 200` creates the variable `length` and assigns the value of `200` to it
-- `degress = 120` creates the variable `degrees` and assigns the value of `120` to it
-- `for i in range(sides):` substitutes `sides` with the value assigned to it so the line becomes `for index in range(3)`.
-- `my_ttl.forward(length)` substitutes `length` with the value assigned to it so the line becomes `my_ttl.forward(200)`
-- `my_ttl.left(degrees)` substitutes `degrees` with the value assigned to it so the line becomes `my_ttl.left(120)` 
+- **Predict** what will happen when you run the code
+- **Run** the code and see if your predictions were correct.
+- `sides`, `length` and `degrees` are all **variables**. Let's **investigate** the code and see how they are used.
 
-> **Variable naming rules:**
+Code breakdown:
+
+- `sides = 3` creates the variable `sides` and assigns the value of `3` to it.
+- `length = 200` creates the variable `length` and assigns the value of `200` to it.
+- `degress = 120` creates the variable `degrees` and assigns the value of `120` to it.
+- `for i in range(sides):` substitutes `sides` with the value assigned to it so that the line becomes `for index in range(3)`.
+- `my_ttl.forward(length)` substitutes `length` with the value assigned to it so that the line becomes `my_ttl.forward(200)`.
+- `my_ttl.left(degrees)` substitutes `degrees` with the value assigned to it so that the line becomes `my_ttl.left(120)`.
+
+> **Naming rules:**
 >
 > Python has very specific rules for what names you can use for variables:
 >
-> - names can only contain letter, numbers and the `_` character
+> - names can only contain letters, numbers and the `_` character
 > - names cannot contain spaces
 > - names cannot start with a number
 > - names are case sensitive (eg. `age` is not the same as `Age`)
 
-Using variables, I can copy the `for` loop and use it as many times as I want, and the values for `sides`, `length`, and `degrees` will always use the value I assigned to the at the beginning. In programming this is called a *single point of truth*. This means that by changing the value assigned to `sides` I can change the value for all places where `sides` is used. Same for `length` and `degrees`.
+Now that we are using variables, we can copy the `for` loop and use it as many times as we want. The values for `sides`, `length`, and `degrees` will always use the values we assigned to the at the beginning.
+
+In programming this is called a **single point of truth**. This means if we change the value assigned to `sides`, we can change the value for all places where `sides` is used. Same for `length` and `degrees`.
+
+---
 
 Change **lesson_3_pt_1.py**  so it draws a hexagon with a side length of 100.
 
@@ -158,14 +184,18 @@ for index in range(sides):
     my_ttl.left(degrees)
 ```
 
-### Remove calculations from 'meat space'
+### No 'meat space' calculations
 
-In creating our hexagon, how did we know that degrees needed to be 60? You may have worked it out in your head, or you calculated it using a calculator. But both of these approaches are flawed. 
+In creating our hexagon, how did we know that degrees needed to be 60?
+
+You may have worked it out in your head, or you calculated it using a calculator. But both of these approaches are flawed.
 
 - head calculations can be incorrect
 - time is wasted in getting a calculator.
 
-We can do the calculations directly in Python. The values assigned to `degrees` is `360` divided by the number assigned to `sides`. In code we would write that as `degrees = 306 / sides`
+We can do the calculations directly in Python.
+
+The value assigned to `degrees` is `360` divided by the number assigned to `sides`. In code we would write that as `degrees = 360 / sides`
 
 Let's put that into our code at line `5`:
 
@@ -187,11 +217,11 @@ for index in range(sides):
 
 ### Remove unnecessary variables
 
-Another good programming practice is to remove unnecessary variables. 
+Another good programming practice is to remove unnecessary variables.
 
-Do we need the `degrees` variable? We could simply place the calculation in the `for` loop.
+Do we need the `degrees` variable? We could simply place the calculation inside the `for` loop.
 
-So we could remove line `5` by moving the calculation to line `10`. Our code would look like this:
+If remove line `5` by moving the calculation to line `10`, our code would look like this:
 
 ```python
 import turtle
@@ -208,7 +238,7 @@ for index in range(360 / sides):
     my_ttl.left(degrees)
 ```
 
-Are there any more *magic numbers*? See if you can find any more.
+Are there any more **magic numbers**? See if you can find any more.
 
 ```python
 import turtle
@@ -227,9 +257,13 @@ for index in range(sides):
     my_ttl.left(DEGREES_IN_CIRCLE / sides)
 ```
 
-> **Variable naming conventions**
+In line `6` we have created another variable called `DEGREES_IN_CIRCLE` and assigned it `360`. We have capitalised the name because the value of `360` will never change, no matter what shape we wish to draw. We call variables whose values doesn't change **constants**. In Python's naming conventions, constants are capitalised.
+
+> **Naming conventions**
 >
-> Python's naming conventions are different from the naming rules. If you break a naming rule, your program will cause a *syntax error*. If you break naming convention your program will still work. In programming we use naming conventions to make your code easier to read and understand.
+> Python's naming conventions are different from the naming rules. If you break a naming rule, your program will cause a **syntax error**. If you break naming convention your program will still work.
+>
+> In programming we use naming conventions to make your code easier to read and understand.
 >
 > Variable naming conventions:
 >
@@ -237,7 +271,7 @@ for index in range(sides):
 >   - `d = 30` &rarr; bad
 >   - `degrees = 30` &rarr; better
 >   - `degrees_celsius = 30` &rarr; best
-> - Use snake case in multiple word names:
+> - Use snake case for multiple word names:
 >   - replace the spaces with the `_` character
 >   - only use lower case letters
 > - CAPTIALIZE names of constants (variables whose value will not change)
@@ -245,7 +279,7 @@ for index in range(sides):
 
 ## Part 1 Exercises
 
-In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
+In this course, the exercises are the **make** component of the PRIMM model. So work through the following exercises and make your own code.
 
 ### Exercise 1
 
@@ -329,7 +363,11 @@ Follow the instructions in the comments and change the code so it draws a pentag
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F4ajxJwXH58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Before we keep going, we should tidy the code up by implementing some good coding principles. 
+### Maintainability
+
+In programming, **maintainability** refers to how easy it is for other programmers to understand your code. This is important, because that other programmer may be someone trying to help you, your teacher trying to mark your work, or even your future self in six months time.
+
+So, before we keep going, we should tidy the code up by implementing some good coding principles.
 
 We will:
 
@@ -361,7 +399,7 @@ for index in range(sides):
     my_ttl.left(DEGREES_IN_CIRCLE / sides)
 ```
 
-Anyone who reads the program now knows the location for the code that deals with the functionality of:
+Anyone who reads the program will know where the code is that deals with the functionality of:
 
 - setting up the screen
 - creating the turtle instance
@@ -372,15 +410,19 @@ Save the file as **lesson_3_pt_2.py** (**File** &rarr; **Save as...**).
 
 ### How Turtle coordinates work
 
-Imagine the Turtle window to be a piece of graph paper that is measured in pixels. We know from the last lesson that our screen is set to 500px wide and 500px high (px is the recognised abbreviation for pixels). Just like maths, Turtle uses `x` to represent horizontal values, and `y` to represent vertical values. So we could instead say the window's `x = 500` and its `y = 500`
+Imagine the Turtle window as a piece of graph paper that is measured in pixels. We know from the last lesson that our screen is set to 500px wide and 500px high (px is the recognised abbreviation for pixels). Just like maths, Turtle uses `x` to represent horizontal values, and `y` to represent vertical values. So we could instead say the window's `x = 500` and its `y = 500`
 
 In computing, we would represent these coordinates as `(500, 500)` where the first value is `x` and the second values is `y`.
 
-> Values like `(500,500)` are called *tuples*. Tuples are just like a list that we learnt about in lesson 2. The main difference is that you can change the values in a list, but you can't change the values in a tuple. In computer science, if you can't change a value of something, it is called *immutable*, so we would say that tuples are immutable.
+> Values like `(500,500)` are called **tuples**. Tuples are just like a list that we learnt about in lesson 2. The main difference is that you can change the values in a list, but you can't change the values in a tuple.
 >
-> Tuples start with `(`, end with `)` and `,` are used to separate the elements.
+> In computer science, if you can't change a value of something, it is called **immutable**, so we would say that tuples are immutable.
+>
+> Tuples start with `(`, end with `)` and a `,` is used to separate the elements.
 
-For our Turtle window of `(500,500)` we have `x` values ranging from `-250` to `250` and `y` values also ranging from `-250` to `250`. It looks like this:
+For our Turtle window of `(500,500)` we have `x` values ranging from `-250` to `250` and `y` values also ranging from `-250` to `250`.
+
+It looks like this:
 
 <img style="border:1px solid black" align="left" src="./assets/coordinates.png">
 
@@ -400,7 +442,7 @@ In summary:
 - &rarr; increases `x`
 - &larr; decreases `x`
 
-Now that we know coordinates we can tell the our turtle to go to a specific coordinates. 
+Now that we know coordinates we can tell our turtle to go to a specific coordinates.
 
 ### Using `goto()` to draw
 
@@ -435,15 +477,18 @@ my_ttl.goto(0, 125)
 
 PRIMM
 
-- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted?
+- **Predict** what you think will happen
+- **Run** the code. Did it do what you predicted?
 
-- *Investigate* the by unpacking the changes:
+- **Investigate** the by unpacking the changes:
 
   - line `16` `my_ttl.goto(0,125)` tells your turtle to move to the position of `x = 0` and `y = 125`.
 
-  - the `#` at the beginning of lines `19` to `21` turns the code into comments, which mean that Python will ignore them. This practice is called *commenting out* code.
+  - the `#` at the beginning of lines `19` to `21` turns the code into comments, which means Python will ignore them. This practice is called **commenting out** code.
 
-- *Modify* the code so that your turtle moves to all the points in the coordinates diagram above.
+- **Modify** the code so that your turtle moves to all the points in the coordinates diagram above.
+
+---
 
 Change **lesson_3_pt_2.py** so that it looks like same as below.
 
@@ -481,18 +526,18 @@ for i in range(sides):
 
 PRIMM:
 
-- *Predict* what you think will happen, and then *run* the code. Did it do what you predicted?
-- *Investigate* the code by changing aspect of the code.
+- **Predict** what you think will happen, and then **run** the code. Did it do what you predicted?
+- **Investigate** the code by changing aspect of the code.
 
-### Using penup() and pendown()
+### Using `penup` and `pendown`
 
-Now that we have a border around out our drawing, but there is this annoying line where the turtle move from the centre of the window to the border. Luckily we can get rid of it.
+Now we have a border around our drawing, but there is this annoying line where the turtle moves from the centre of the window to the border. Luckily we can get rid of it.
 
 <img style="border:1px solid black" align="left" src="./assets/penup.png">
 
-When we write, we do not leave trailing lines because we simply lift our pen up and moving. We then put our pen back down on the paper to keep writing. Well, turtle can do the same this with its `penup()` and `pendown()` commands.
+When we write, we do not leave trailing lines because we simply lift our pen up to move. We then put our pen back down to keep writing. Well, turtle can do the same this with its `penup` and `pendown` functions.
 
-Change you code by adding the code below on lines `13`, `15`, `19`, and `21` 
+Change you code by adding the code below on lines `13`, `15`, `19`, and `21`
 
 ```python
 import turtle
@@ -529,11 +574,11 @@ for i in range(sides):
     my_ttl.left(360 / sides)
 ```
 
-Predict what you think will happen, then run the code.
+**Predict** what you think will happen, then **run** the code.
 
 ## Part 2 Exercise
 
-In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercise and *make* your own code.
+In this course, the exercises are the **make** component of the PRIMM model. So work through the following exercise and make your own code.
 
 ### Exercise 4
 
@@ -557,4 +602,4 @@ my_ttl.shape("dot")
 ##################################
 ```
 
-Follow the instructions in the comments and use your turtle knowledge to draw a house. Remember to apply the DRY principle
+Follow the instructions in the comments and use your turtle knowledge to draw a house. Remember to apply the DRY principle.

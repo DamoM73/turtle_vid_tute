@@ -1,6 +1,17 @@
 # Python Turtle - Lesson 6
 
-## Part 1: Boolean Logic
+> **Topics**
+>
+> In this lesson your will learn:
+>
+> - [ ] about Boolean logic and how it is used in Python
+> - [ ] about Boolean comparisons and how to use then
+> - [ ] about Boolean operators and how to use them
+> - [ ] how to use Boolean comparison and operators to make complex conditional statements 
+
+## Part 1: Boolean logic
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5GrokwhCXXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Boolean Introduction
 
@@ -265,7 +276,7 @@ The code is in three sections, so let's look at them in the order they are execu
   - line `23`: sends the turtle to the `x` and `y` coordinates
   - line `24`: `driver.dot(dot_size, dot_color)` draws a dot at the turtle position of size `dot_size` and colour `dot_colour`
   
-## Part 2 Exercises
+## Exercises
 
 In this course, the exercises are the *make* component of the PRIMM model. So work through the following exercises and *make* your own code.
 
