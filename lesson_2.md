@@ -140,7 +140,7 @@ So let's **investigate** by unpacking the code:
 - Line `6` is a bit changed as well, it's indented.
   - The indentation below the `for` loop identifies the code that needs to be repeated.
     - Indentations can be many lines.
-    - Multiple line indented code is called a **block**.
+    - Multiple line indented code is called a **code block**.
     - Indents should be four spaces.
       - Note, in Thonny you can use the `tab` key because Thonny inserts four spaces instead of a `tab` character.
   - `print("Hello", name)` tells Python to:
@@ -176,7 +176,7 @@ We'll learn more about how to use the debugger later in the course.
 
 ### Code blocks
 
-Earlier we said that multiple lines of indented code is called a block. Lets have a look at how they work.
+Earlier we said that multiple lines of indented code is called a code block. Let's have a look at how they work.
 
 Change your code so it is the same as below:
 

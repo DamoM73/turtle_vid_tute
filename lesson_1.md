@@ -193,7 +193,7 @@ Ok our investigation is over, and you have met some error messages. In your time
 
 #### Modify
 
-Now time to **modify** the code. 
+Now time to **modify** the code.
 
 There's not much code there, but spend some time making the code print different things to the **Shell**.
 
@@ -209,7 +209,7 @@ Let get started on our first Turtle program. Click the **New** icon and then typ
 # Our first turtle program
 ```
 
-The Python programming language has a limited default set of commands (called **functions**), but it also has access to whole libraries of other commands (called **modules**). One of those other modules is called **Turtle**. To tell Python to use these other modules, we use the `import` command. 
+The Python programming language has a limited default set of commands (called **functions**), but it also has access to whole libraries of other commands (called **modules**). One of those other modules is called **Turtle**. To tell Python to use these other modules, we use the `import` command.
 
 We will now tell Python to `import turtle`. Always put your `import` commands right at the top of your Python program.
 
@@ -223,16 +223,16 @@ import turtle
 
 ### Create a turtle
 
-What is a turtle? A turtle is a little arrow that you can command to move around the screen. Before we can program the turtle, we have to make one. 
+What is a turtle? A turtle is a little arrow that you can command to move around the screen. Before we can program the turtle, we have to make one.
 
-On line `5` type the line `my_ttl = turtle.Turtle()`. Let's explore that line:
+On line `5` type `my_ttl = turtle.Turtle()`. Let's explore that code:
 
 - `turtle.Turtle()` tells Python:
-  - from the **turtle** module you just imported (`turtle.`)
+  - from the **turtle** module you just imported (`turtle`)
   - use the command `Turtle()` to create a turtle.
-- `myttl =` names the newly created turtle `myttl`. 
+- `my_ttl =` names the newly created turtle `my_ttl`.
 
-You can name the turtle anything you want. In fact the name `myttl` is pretty lame, so go ahead and name it whatever you want, but it can **only be a one word name**, and remember, wherever you see `myttl` you need to substitute it with your name.
+You can name the turtle anything you want. In fact the name `my_ttl` is pretty lame, so go ahead and name it whatever you want, but it can **only be a one word name**, and remember, wherever you see `my_ttl` you need to substitute it with your name.
 
 Your code should now look like this.
 
@@ -262,7 +262,7 @@ my_ttl = turtle.Turtle()
 my_ttl.forward(100)
 ```
 
-#### PRIMM
+PRIMM
 
 - **Predict**: We're about ready to run our first turtle program, but before we do you need to predict what you think will happen.
 - **Run**: Now run the program and see if it follows your prediction. You probably predicted the movement to the right, but did you predict that it would leave a trail behind it?
@@ -271,7 +271,7 @@ my_ttl.forward(100)
 
 ### Changing the turtle environment
 
-Before we go any further, let's change the turtle environment so it is consistent between all our computers. 
+Before we go any further, let's change the turtle environment so it is consistent between all our computers.
 
 The first thing we will do is make the Turtle window the same size.
 
@@ -302,9 +302,9 @@ In line `6` we use `window.setup(500,500)` to set the size of window as 500 pixe
 > **What are pixels?**
 >
 > Your screen is made up of thousand of little dots, if you look really close at your screen you might see them, these are called **pixels**.
-> 
+>
 > You also might read that a screen is 1920 x 1080. This is talking about pixels, it means the screen is 1,920 pixel wide and 1,080 pixels high.
-> 
+>
 > We'll learn more about pixels latter in the course.
 
 For our current purposes, consider pixels are our measurement of movement on the screen, so `forward(100)` is actually saying move forward 100 pixels.
@@ -329,7 +329,7 @@ Do you want to **predict** what this change will do? Try running the code to see
 
 ### Change direction
 
-So now that we have fixed our window size and dealt with our turtle's identity crisis, time to do some more drawing. 
+So now that we have fixed our window size and dealt with our turtle's identity crisis, time to do some more drawing.
 
 At the bottom of your code, add two more lines:
 
@@ -354,7 +354,7 @@ my_ttl.left(90)
 my_ttl.forward(100)
 ```
 
-- **Predict**: What do you think this code will do. 
+- **Predict**: What do you think this code will do.
   - Try to be specific in your description.
   - Take a piece of paper and physically draw what you think will happen.
 - **Run**: Now run the program and see if it follows your prediction. Did the turtle drawing look the same as your drawing?
@@ -376,7 +376,7 @@ import turtle
 window = turtle.Screen()
 window.setup(500, 500)
 
-myttl = turtle.Turtle()
+my_ttl = turtle.Turtle()
 
 ## Write your code below this line ##
 ```
@@ -395,7 +395,7 @@ import turtle
 window = turtle.Screen()
 window.setup(500, 500)
 
-myttl = turtle.Turtle()
+my_ttl = turtle.Turtle()
 
 ## Write your code below this line ##
 ```
@@ -414,7 +414,7 @@ import turtle
 window = turtle.Screen()
 window.setup(500, 500)
 
-myttl = turtle.Turtle()
+my_ttl = turtle.Turtle()
 
 ## Write your code below this line ##
 ```

@@ -133,9 +133,9 @@ Let's look at how this works.
 
 1. Take all the **move pen code** and consolidate that in one spot.
    - Below I have copied the first move pen action (lines `17` to `20` in the previous code)
-   - I have pasted them up to the top (lines `3` to `6`)
+   - I have pasted them up to the top (lines `4` to `7`)
    - I then turned them into a function
-2. Replace the original code with a **call** to the function (line `22`).
+2. Replace the original code with a **call** to the function (line `24`).
 
 Adjust your code so that it looks the same as below:
 
@@ -224,7 +224,7 @@ PRIMM:
 
 Now lets **investigate** the code by unpacking it:
 
-- Line `3`: `def move_pen():` create the function:
+- Line `4`: `def move_pen():` create the function:
   - In programming we call this **defining** a function.
   - The program reads and bookmarks the code, but does not execute it.
   - `def` is the key word for defining a function.
@@ -233,15 +233,15 @@ Now lets **investigate** the code by unpacking it:
     - By using a descriptive name, we also remove the need for comments, as the code explains itself.
   - `()` is where we can put values. We'll deal with this soon.
   - `:` tells Python that an indented code block follows (the same as a `for` loop).
-- Lines `4` to `6` are indented:
+- Lines `5` to `7` are indented:
   - This is the code that is executed when the function is called
   - The indentation rules are the same as the `for` loop
     - indentations can be many lines
     - multiple line indented code is called a **block**
     - indents should be four spaces
-- Line `22`: `move_pen()` calls the function:
-  - At this point the program will go to line `3` run the code in the function.
-  - When the code in the function is finished, the program will return to line `22` and continue with the rest of the code.
+- Line `24`: `move_pen()` calls the function:
+  - At this point the program will go to line `4` run the code in the function.
+  - When the code in the function is finished, the program will return to line `24` and continue with the rest of the code.
 
 ### Passing arguments
 
@@ -273,11 +273,11 @@ But how do we assign values to `x` and `y`? This is where **arguments** are used
 Let's unpack that:
 
 - `def move_pen(x, y):` says:
-  - When you call the `move_pen()` function, you need to provide two values.
+  - When you call the `move_pen` function, you need to provide two values.
   - First value will be assigned to the variable `x`.
   - Second value will be assigned to the variable `y`.
 - `move_pen(-100,0)` says:
-  - Call the `move_pen()` function.
+  - Call the `move_pen` function.
   - Use `-100` as the first value (the `x` value).
   - Use `0` as the second value (the `y` value).
 
@@ -363,7 +363,7 @@ my_ttl.hideturtle()
 
 PRIMM
 
-- **Predict** what this code will now do. 
+- **Predict** what this code will now do.
 - **Run** the code to check if your prediction was correct.
 - **Investigate** the code by using the debugger and stepping your way through the program.
 
@@ -441,7 +441,7 @@ my_ttl.hideturtle()
 
 **Run** the code to make sure the house is still being drawn.
 
-Notice that our line count is down from the original `71` to `61`.
+Notice that our line count is down from the original `71` to `63`.
 
 > **Testing**
 >
@@ -460,9 +460,9 @@ When we first looked for repetition, we also identified the drawing shapes repet
 From the current code:
 
 - copy one of the `# draw square` blocks to the top of the code
-- change it into a function that draws a square called `draw_square()`
+- change it into a function that draws a square called `draw_square`
 - the function will need to accept a value for the `length` of the square's side
-- then replace all the `# draw square` blocks with an appropriate `draw_square()` call
+- then replace all the `# draw square` blocks with an appropriate `draw_square` call
 
 > **Function location**
 >
@@ -473,7 +473,7 @@ From the current code:
 > - If the function is not defined before you call it, your code will generate a `NameError`.
 > - Placing all your functions at the start improves you code's maintainability by making it easier to find them.
 
-Once you have made `draw_square()` function changes, you code should look like:
+Once you have made `draw_square` function changes, you code should look like:
 
 ```python
 import turtle
@@ -533,7 +533,7 @@ my_ttl.circle(5)
 my_ttl.hideturtle()
 ```
 
-We are now down to 52 lines of code.
+We are now down to 55 lines of code.
 
 ---
 
@@ -612,7 +612,7 @@ my_ttl.hideturtle()
 
 That's our final code:
 
-- Down from `71` lines to `53` lines.
+- Down from `71` lines to `59` lines.
 - Easier to read.
 - Easier to test and troubleshoot errors.
 
@@ -734,8 +734,8 @@ import turtle
 
 def draw_poly(length, sides):
     for index in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 # setup window
@@ -744,8 +744,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 sides = 9
 length = 100
@@ -767,8 +767,8 @@ The simplest way to do this is to use the `input` command which will ask the use
 
 To do this change:
 
-- line `17` to `sides = input("How many sides?> ")`
-- line `18` to `length = input("How long are the sides?> ")`
+- line `19` to `sides = input("How many sides?> ")`
+- line `20` to `length = input("How long are the sides?> ")`
 
 Your code should look like the following:
 
@@ -778,8 +778,8 @@ import turtle
 
 def draw_poly(length, sides):
     for index in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 # setup window
@@ -788,8 +788,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 sides = input("How many sides?> ")
 length = input("How long are the sides?> ")
@@ -809,8 +809,8 @@ PRIMM
 
 ```
 Traceback (most recent call last):
-  File "<string>", line 20, in <module>
-  File "<string>", line 4, in draw_poly
+  File "<string>", line 22, in <module>
+  File "<string>", line 5, in draw_poly
 TypeError: 'str' object cannot be interpreted as an integer
 ```
 
@@ -818,7 +818,7 @@ TypeError: 'str' object cannot be interpreted as an integer
   - unpacking the code we changed
   - explaining the error
 
-Unpacking line `17` (note line `18` is virtually the same):
+Unpacking line `19` (note line `20` is virtually the same):
 
 - `input`: is the keyword that tells Python to wait for an input from the user from the **Shell**.
 - `("How many sides?> ")` tells Python what **prompt** to write to the **Shell** before it waits for a response.
@@ -849,25 +849,25 @@ Now, lets look at the error again:
 
 ```
 Traceback (most recent call last):
-  File "<string>", line 20, in <module>
-  File "<string>", line 4, in draw_poly
+  File "<string>", line 22, in <module>
+  File "<string>", line 5, in draw_poly
 TypeError: 'str' object cannot be interpreted as an integer
 ```
 
 Breaking the error down:
 
-- line `4`: `TypeError: 'str' object cannot be interpreted as an integer`:
-  - tells us that this involves two data types (string and integer).
-  - says we are trying to use a string when Python is expecting an integer.
+- Error line `4`: `TypeError: 'str' object cannot be interpreted as an integer`:
+  - This tells us that this involves two data types (string and integer).
+  - It says we are trying to use a string when Python is expecting an integer.
 - `Traceback`:
-  - when looking at a `Traceback` always check the last line first
-  - line `3` tells us that the error occurred at line `4` in the code: `for index in range(sides):`
-    - here we are trying to use the values in `sides` in a `range` function but Python thinks it is a string
+  - When looking at a `Traceback` always check the last line first
+  - Error line `3` tells us that the error occurred at line `5` in the code: `for index in range(sides):`
+    - Here we are trying to use the values in `sides` in a `range` function but Python thinks it is a string.
     - let's look at where we got the value for `sides`
-  - line `17`: `sides = input("How many sides?> ")` 
-    - we took whatever value the user entered and assigned it to `sides`
-    - I entered `3` which is an integer
-    - why does Python think it's a string?
+  - Line `19`: `sides = input("How many sides?> ")`
+    - We took the value the user entered and assigned it to `sides`.
+    - I entered `3` which is an integer.
+    - Why does Python think it's a string?
 
 When Python accepts a value using the `input` function, it is always accepted it as a string. This is because strings can contain all characters.
 
@@ -895,8 +895,8 @@ import turtle
 
 def draw_poly(length, sides):
     for index in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 # setup window
@@ -905,8 +905,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 sides = int(input("How many sides?> "))
 length = int(input("How long are the sides?> "))

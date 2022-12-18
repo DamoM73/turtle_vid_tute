@@ -99,8 +99,7 @@ print("True and True is:", True and True)
 print("True and False is:", True and False)
 print("False and True is:", False and True)
 print("False and False is:", False and False)
-print("True and True and True is:", True and True and True)
-print("True and True and False is:", True and True and False)
+print("True and True and True is:", True and True and True)print("True and True and False is:", True and True and False)
 ```
 
 PRIMM:
@@ -225,12 +224,12 @@ def set_scene():
     turtle.onscreenclick(draw_dot)
 
     ## Set up the grid ##
-    driver.speed(0)
+    my_ttl.speed(0)
     for i in range(4):
-        driver.forward(400)
-        driver.back(400)
-        driver.right(90)
-    driver.penup()
+        my_ttl.forward(400)
+        my_ttl.back(400)
+        my_ttl.right(90)
+    my_ttl.penup()
 
 
 ## Reaction to signal (slot) ##
@@ -238,14 +237,14 @@ def draw_dot(x, y):
     print(x, y)
     dot_colour = "orange"
     dot_size = 10
-    driver.goto(x, y)
-    driver.dot(dot_size, dot_color)
+    my_ttl.goto(x, y)
+    my_ttl.dot(dot_size, dot_color)
 
 
 ## Main Program
-driver = turtle.Turtle()
+my_ttl = turtle.Turtle()
 set_scene()
-driver.hideturtle()
+my_ttl.hideturtle()
 ```
 
 - **Predict** what you think will be written to the **Shell** when your run this code.
@@ -255,9 +254,9 @@ driver.hideturtle()
 The code is in three sections, so let's look at them in the order they are executed:
 
 - Lines `29` to `31`: the main program
-  - Line `29`: `driver = turtle.Turtle()` &rarr; create a Turtle object and names it `driver`
+  - Line `29`: `my_ttl = turtle.Turtle()` &rarr; create a Turtle object and names it `my_ttl`
   - Line `30`: `set_scene()` calls the `set_scene()` function
-  - Line `31`: `driver.hideturtle()` make the turtle invisible
+  - Line `31`: `my_ttl.hideturtle()` make the turtle invisible
 - Lines `4` to `16`: the `set_scene` function
   - Line `4`: `def set_scene()` &rarr; defines the `set_scene` function without any arguments
   - Line `5`: `turtle.setup(800, 600)` &rarr; creates a `800` x `600` window
@@ -265,7 +264,7 @@ The code is in three sections, so let's look at them in the order they are execu
     - if a mouse click is detected:
       - calls the `draw_dot` function
       - passes to the `draw_dot` function the `x` and `y` coordinates of where the mouse clicked
-  - Line `11`: `driver.speed(0)` &rarr; a turtle speed of `0` means you don't see the turtle move
+  - Line `11`: `my_ttl.speed(0)` &rarr; a turtle speed of `0` means you don't see the turtle move
   - Lines `12` to `15`: draws four lines from `(0, 0)` making the four quadrants
   - Line `16`: `penup` prevents the turtle from drawing a line to the mouse click coordinates (try commenting it out and see what happens)
 - Lines `20` to `25`: the `draw_dot` function
@@ -277,7 +276,7 @@ The code is in three sections, so let's look at them in the order they are execu
   - Line `22`: assigns `"orange"` to the variable `dot_colour`
   - Line `23`: assigns `10` to the variable `dot_size`
   - Line `24`: sends the turtle to the `x` and `y` coordinates
-  - Line `25`: `driver.dot(dot_size, dot_color)` draws a dot at the turtle position of size `dot_size` and colour `dot_colour`
+  - Line `25`: `my_ttl.dot(dot_size, dot_color)` draws a dot at the turtle position of size `dot_size` and colour `dot_colour`
   
 ## Exercises
 
@@ -306,12 +305,12 @@ def set_scene():
     turtle.onscreenclick(draw_dot)
 
     ## Set up the grid ##
-    driver.speed(0)
+    my_ttl.speed(0)
     for i in range(4):
-        driver.forward(400)
-        driver.back(400)
-        driver.right(90)
-    driver.penup()
+        my_ttl.forward(400)
+        my_ttl.back(400)
+        my_ttl.right(90)
+    my_ttl.penup()
 
 
 ## Reaction to signal (slot) ##
@@ -339,14 +338,14 @@ def draw_dot(x, y):
     ##################################
     ##################################
 
-    driver.goto(x, y)
+    my_ttl.goto(x, y)
     dot_size = 10
-    driver.dot(dot_size, dot_color)
+    my_ttl.dot(dot_size, dot_color)
 
 
-driver = turtle.Turtle()
+my_ttl = turtle.Turtle()
 set_scene()
-driver.hideturtle()
+my_ttl.hideturtle()
 ```
 
 Follow the instructions in the comments from line `24` to line `42`.
@@ -366,12 +365,12 @@ def set_scene():
     turtle.onscreenclick(draw_dot)
 
     ## Set up the grid ##
-    driver.speed(0)
+    my_ttl.speed(0)
     for i in range(4):
-        driver.forward(400)
-        driver.back(400)
-        driver.right(90)
-    driver.penup()
+        my_ttl.forward(400)
+        my_ttl.back(400)
+        my_ttl.right(90)
+    my_ttl.penup()
 
 
 ## Reaction to signal (slot) ##
@@ -392,14 +391,14 @@ def draw_dot(x, y):
     ##################################
     ##################################
 
-    driver.goto(x, y)
+    my_ttl.goto(x, y)
     dot_size = 10
-    driver.dot(dot_size, dot_color)
+    my_ttl.dot(dot_size, dot_color)
 
 
-driver = turtle.Turtle()
+my_ttl = turtle.Turtle()
 set_scene()
-driver.hideturtle()
+my_ttl.hideturtle()
 ```
 
 Follow the instructions in the comments from line `25` to line `36`.
@@ -419,12 +418,12 @@ def set_scene():
     turtle.onscreenclick(draw_dot)
 
     ## Set up the grid ##
-    driver.speed(0)
+    my_ttl.speed(0)
     for i in range(4):
-        driver.forward(400)
-        driver.back(400)
-        driver.right(90)
-    driver.penup()
+        my_ttl.forward(400)
+        my_ttl.back(400)
+        my_ttl.right(90)
+    my_ttl.penup()
 
 
 ## Reaction to signal (slot) ##
@@ -446,14 +445,14 @@ def draw_dot(x, y):
     ##################################
     ##################################
 
-    driver.goto(x, y)
+    my_ttl.goto(x, y)
     dot_size = 10
-    driver.dot(dot_size, dot_color)
+    my_ttl.dot(dot_size, dot_color)
 
 
-driver = turtle.Turtle()
+my_ttl = turtle.Turtle()
 set_scene()
-driver.hideturtle()
+my_ttl.hideturtle()
 ```
 
 Follow the instructions in the comments from line `24` to line `36`.

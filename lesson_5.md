@@ -26,8 +26,8 @@ import turtle
 
 def draw_poly(length, sides):
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 # setup window
@@ -36,8 +36,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 num_sides = int(input("How many sides?> "))
 size = int(input("How long are the sides?> "))
@@ -180,8 +180,8 @@ import turtle
 
 def draw_poly(length, sides):
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 # setup window
@@ -190,8 +190,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = input("How many sides?> ")
@@ -227,8 +227,8 @@ import turtle
 
 def draw_poly(length, sides):
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 # setup window
@@ -237,8 +237,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = input("How many sides?> ")
@@ -350,8 +350,8 @@ import turtle
 
 def draw_poly(length, sides):
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
 
 
 def get_number(prompt):
@@ -369,8 +369,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
@@ -437,12 +437,12 @@ import turtle
 
 
 def draw_poly(length, sides, color):
-    myttl.color("black", color)
-    myttl.begin_fill()
+    my_ttl.color("black", color)
+    my_ttl.begin_fill()
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
-    myttl.end_fill()
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
+    my_ttl.end_fill()
 
 
 def get_number(prompt):
@@ -460,8 +460,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
@@ -479,7 +479,7 @@ PRIMM
 Code breakdown:
 
 - `def draw_poly(length, sides, color):` &rarr; accepts a third argument `color`
-- `myttl.color("black",color)` &rarr; sets the turtle colour
+- `my_ttl.color("black",color)` &rarr; sets the turtle colour
   - line colour &rarr; `"black"`
   - fill colour &rarr; the value in the `color` argument
 
@@ -514,12 +514,12 @@ import turtle
 
 
 def draw_poly(length, sides, color):
-    myttl.color("black", color)
-    myttl.begin_fill()
+    my_ttl.color("black", color)
+    my_ttl.begin_fill()
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
-    myttl.end_fill()
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
+    my_ttl.end_fill()
 
 
 def get_number(prompt):
@@ -550,8 +550,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
@@ -622,11 +622,11 @@ In this course, the exercises are the **make** component of the PRIMM model. So 
 Create a new file and save it in your subject folder calling it **lesson_5_ex_1.py**. Then type the following code into it.
 
 ```python
-# Almyttl's security guard program
+# Almy_ttl's security guard program
 
 #####################################################
 ## Write a program that asks for a person's name   ##
-## and then grants entry of that person is Almyttl ##
+## and then grants entry of that person is Almy_ttl ##
 ## everyone else is told, politely, to go away     ##
 #####################################################
 ```
@@ -638,14 +638,14 @@ Follow the instructions in the comments and use your Python knowledge to create 
 Create a new file and save it in your subject folder calling it **lesson_5_ex_2.py**. Then type the following code into it.
 
 ``` python
-# Almyttl's security guard program
+# Almy_ttl's security guard program
 
 friends = "Bruce"
 
 #####################################################
 ## Write a program that asks for a person's name   ##
-## and then grants entry of that person is Almyttl  ##
-## or a friend of Almyttl.                          ##
+## and then grants entry of that person is Almy_ttl  ##
+## or a friend of Almy_ttl.                          ##
 ## Everyone else is told, politely, to go away     ##
 #####################################################
 ```
@@ -666,12 +666,12 @@ import turtle
 
 
 def draw_poly(length, sides, color):
-    myttl.color("black", color)
-    myttl.begin_fill()
+    my_ttl.color("black", color)
+    my_ttl.begin_fill()
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
-    myttl.end_fill()
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
+    my_ttl.end_fill()
 
 
 def get_number(prompt):
@@ -706,8 +706,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
@@ -1067,12 +1067,12 @@ import turtle
 
 
 def draw_poly(length, sides, color):
-    myttl.color("black", color)
-    myttl.begin_fill()
+    my_ttl.color("black", color)
+    my_ttl.begin_fill()
     for i in range(sides):
-        myttl.forward(length)
-        myttl.right(360 / sides)
-    myttl.end_fill()
+        my_ttl.forward(length)
+        my_ttl.right(360 / sides)
+    my_ttl.end_fill()
 
 
 ############################################
@@ -1112,9 +1112,9 @@ def get_color():
 def move_pen():
     x_val = get_number("x axis position?> ")
     y_val = get_number("y axis position?> ")
-    myttl.penup()
-    myttl.goto(x_val, y_val)
-    myttl.pendown()
+    my_ttl.penup()
+    my_ttl.goto(x_val, y_val)
+    my_ttl.pendown()
 
 
 # setup window
@@ -1123,8 +1123,8 @@ window = turtle.Screen()
 window.setup(screen, screen)
 
 # create instance of turtle
-myttl = turtle.Turtle()
-myttl.shape("turtle")
+my_ttl = turtle.Turtle()
+my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
