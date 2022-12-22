@@ -158,7 +158,7 @@ Before we do, we need to learn about two more flowchart symbols:
 
 <img align="left" src="./assets/flow_charts_symbol_2.png">
 
-Now lets look at the `for` loop flowchart.
+Now let's look at the `for` loop flowchart. The symbols within the dotted box are the `for` loop. Note, the dotted box has been added to help identify the `for` loop structure, and is not a normal flowchart symbol. 
 
 <img align="left" src="./assets/flowcharts_for_loop.png">
 
@@ -349,8 +349,9 @@ my_ttl = turtle.Turtle()
 ##############################
 ```
 
-After line `9`, as the comments says, write code that will create a square but only use 3 lines to do this (hint: try a `for` loop).
+After line `9`, as the comments says, write code that will create a square but only use 3 lines to do this (hint: try a `for` loop). The following flowchart should assist.
 
+<img align="left" src="assets/flowchart_lesson_2_ex_1.png">
 
 ### Exercise 2
 

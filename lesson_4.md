@@ -21,7 +21,11 @@ With functions, we move a block of code outside of the main program sequence, th
 
 To understand this more clearly, we will start with my solution for **lesson_3_ex_4.py**.
 
-Type the code below into a new file and save in as **lesson_4_pt_1.py**.
+Here is the flowchart for the solution:
+
+<img align="left" src="assets/flowchart_lesson_4_1.png">
+
+Here is the code. Type it into a new file and save in as **lesson_4_pt_1.py**.
 
 ```python
 import turtle
@@ -453,6 +457,22 @@ Notice that our line count is down from the original `71` to `63`.
 > - If a function is tested and works, you don't have to testing it again, unless your change the function.
 > - If your program has errors, and your functions have passed their tests, then you know your error is elsewhere in the code.
 
+### Functions in Flowcharts
+
+Flowcharts normally don't represent whole programs, they represent algorithms. 
+
+> **Algorithms**
+>
+> Algorithms are basically a set of rules to be followed to solve a problem. A cake recipe is an algorithm to bake a cake. You follow an algorithm to perform long division in maths. In computers, you code instructions are the algorithms. 
+
+When a program is broken into smaller algorithms (eg. functions) you create a flowchart for each algorithm, and then show when one algorithm calls another algorithm.
+
+We show the name of the function in the terminator symbol, with the first algorithm being called **main**.
+
+Here is the flowchart of the code with the `move_pen` function. The function calls use the procedure symbol (I have coloured them blue to make them stand out).
+
+<img align="left" src="assets/flowchart_lesson_4_2.png">
+
 ### Shape functions
 
 When we first looked for repetition, we also identified the drawing shapes repetition. Lets make a function to draw squares.
@@ -615,6 +635,10 @@ That's our final code:
 - Down from `71` lines to `59` lines.
 - Easier to read.
 - Easier to test and troubleshoot errors.
+
+Maybe the easiest way to see the improvement in our code is to look at the flowchart.
+
+<img align="left" src="assets/flowchart_lesson_4_3.png">
 
 ## Part 1 Exercises
 

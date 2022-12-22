@@ -140,6 +140,10 @@ PRIMM
 - **Run** the code and see if your predictions were correct.
 - `sides`, `length` and `degrees` are all **variables**. Let's **investigate** the code and see how they are used.
 
+First, a flowchart of our adjusted program:
+
+<img align="left" src="assets/flowchart_lesson_3_1.png">
+
 Code breakdown:
 
 - `sides = 3` creates the variable `sides` and assigns the value of `3` to it.
@@ -188,7 +192,7 @@ for index in range(sides):
 
 In creating our hexagon, how did we know that degrees needed to be 60?
 
-You may have worked it out in your head, or you calculated it using a calculator. But both of these approaches are flawed.
+You may have worked it out in your head, or used a calculator. But both of these approaches are flawed.
 
 - head calculations can be incorrect
 - time is wasted in getting a calculator.
@@ -219,9 +223,9 @@ for index in range(sides):
 
 Another good programming practice is to remove unnecessary variables.
 
-Do we need the `degrees` variable? We could simply place the calculation inside the `for` loop.
+Do we need the `degrees` variable? Could we simply place the calculation inside the `for` loop?
 
-If remove line `5` by moving the calculation to line `10`, our code would look like this:
+If we remove line `5` by moving the calculation to line `10`, our code would look like this:
 
 ```python
 import turtle
@@ -256,6 +260,10 @@ for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(DEGREES_IN_CIRCLE / sides)
 ```
+
+The flowchart for this code now looks like:
+
+<img align="left" src="assets/flowchart_lesson_3_2.png">
 
 In line `6` we have created another variable called `DEGREES_IN_CIRCLE` and assigned it `360`. We have capitalised the name because the value of `360` will never change, no matter what shape we wish to draw. We call variables whose values doesn't change **constants**. In Python's naming conventions, constants are capitalised.
 
@@ -470,7 +478,7 @@ length = 100
 my_ttl.goto(0, 125)
 
 # draw shape
-# for i in range(sides):
+# for index in range(sides):
 #    my_ttl.forward(length)
 #    my_ttl.left(360 / sides)
 ```
@@ -516,10 +524,8 @@ my_ttl.goto(0, 0)
 sides = 6
 length = 100
 
-my_ttl.goto(0, 0)
-
 # draw shape
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
@@ -566,15 +572,17 @@ my_ttle.pendown()
 sides = 6
 length = 100
 
-my_ttl.goto(0, 0)
-
 # draw shape
-for i in range(sides):
+for index in range(sides):
     my_ttl.forward(length)
     my_ttl.left(360 / sides)
 ```
 
 **Predict** what you think will happen, then **run** the code.
+
+Here is the flowchart to help with your prediction
+
+<img align="left" src="assets/flowchart_lesson_3_3.png">
 
 ## Part 2 Exercise
 
@@ -596,10 +604,10 @@ window.setup(screen, screen)
 my_ttl = turtle.Turtle()
 my_ttl.shape("dot")
 
-##################################
-## Using the turtle command you ##
-## have learnt, draw a house.   ##
-##################################
+###################################
+## Using the turtle commands you ##
+## have learnt, draw a house.    ##
+###################################
 ```
 
 Follow the instructions in the comments and use your turtle knowledge to draw a house. Remember to apply the DRY principle.
