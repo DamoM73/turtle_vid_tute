@@ -469,7 +469,7 @@ When a program is broken into smaller algorithms (eg. functions) you create a fl
 
 We show the name of the function in the terminator symbol, with the first algorithm being called **main**.
 
-Here is the flowchart of the code with the `move_pen` function. The function calls use the procedure symbol (I have coloured them blue to make them stand out).
+Here is the flowchart of the code with the `move_pen` function. The function calls use the procedure symbol (I have coloured them red to make them stand out).
 
 <img align="left" src="assets/flowchart_lesson_4_2.png">
 
@@ -746,9 +746,7 @@ Follow the instructions in the comments and write a program that draws a car.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HUEgYhYAuB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Respond to users
-
-How can we make the computer respond to the user?
+### Introduction
 
 Copy the code below, save it as **lesson_4_pt_2.py** then run it.
 
@@ -787,7 +785,9 @@ When we run the code the shape is partially off the screen. That's not a big pro
 
 How do we make our programs interactive by getting input from users who cannot code?
 
-The simplest way to do this is to use the `input` command which will ask the user for input in the **Shell**.
+### Making your program interactive
+
+The simplest way to make your program interactive is to use the `input` command which will ask the user for their input in the **Shell**.
 
 To do this change:
 
@@ -911,7 +911,11 @@ There is a great deal more to this, but at the moment this is all you need to kn
 
 So let's change our code so that the strings that are received by the `input` functions are converted into integers.
 
-Make the changes below to lines `17` and `18`.
+Here is the finished code as a flowchart. Note that we use the same symbol for input as we do for output, with different wording.
+
+<img align="left" src="assets/flowchart_lesson_4_4.png">
+
+Below is the finished code, with the changes on lines `19` and `20`.
 
 ```python
 import turtle

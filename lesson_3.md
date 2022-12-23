@@ -250,7 +250,7 @@ import turtle
 screen = 500
 sides = 6
 length = 100
-DEGREES_IN_CIRCLE = 360
+CIRCLE_DEG = 360
 
 window = turtle.Screen()
 window.setup(screen, screen)
@@ -265,7 +265,7 @@ The flowchart for this code now looks like:
 
 <img align="left" src="assets/flowchart_lesson_3_2.png">
 
-In line `6` we have created another variable called `DEGREES_IN_CIRCLE` and assigned it `360`. We have capitalised the name because the value of `360` will never change, no matter what shape we wish to draw. We call variables whose values doesn't change **constants**. In Python's naming conventions, constants are capitalised.
+In line `6` we have created another variable called `CIRCLE_DEG` and assigned it `360`. We have capitalised the name because the value of `360` will never change, no matter what shape we wish to draw. We call variables whose values doesn't change **constants**. In Python's naming conventions, constants are capitalised.
 
 > **Naming conventions**
 >

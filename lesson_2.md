@@ -17,7 +17,11 @@ So far with our programming Python has been executing each line of our code one 
 
 ### Introduction to flowcharts
 
-There is a special diagram that is used to show this flow of the computer program. It's called a **flowchart**. Flowcharts show each process in a program and how the program moves from one process to the next. We use rectangles to symbolise processes and arrows to represent the flow.
+There is a special diagram that is used to show this flow of the computer program. It's called a **flowchart**. Flowcharts show each process in a program and how the program moves from one process to the next. We use:
+
+- rectangles symbolise processes
+- parallelograms symbolise inputs or outputs
+- arrows represent the flow
 
 <img align="left" src="./assets/flow_chart_symbol_1.png">
 
@@ -158,7 +162,9 @@ Before we do, we need to learn about two more flowchart symbols:
 
 <img align="left" src="./assets/flow_charts_symbol_2.png">
 
-Now let's look at the `for` loop flowchart. The symbols within the dotted box are the `for` loop. Note, the dotted box has been added to help identify the `for` loop structure, and is not a normal flowchart symbol. 
+Now let's look at the `for` loop flowchart. The symbols within the dotted box are the `for` loop. 
+
+>  **Note:** the dotted box has been added to help you identify the `for` loop structure. It is not a normal flowchart symbol. 
 
 <img align="left" src="./assets/flowcharts_for_loop.png">
 
