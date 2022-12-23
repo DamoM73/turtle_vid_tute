@@ -13,11 +13,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_qZzz4lSckk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-So far with our programming Python has been executing each line of our code one after another. This is called **sequential** and it is the default way  programs work. They start at the top and move through the code one line after another. The movement is called **the flow** of the program (like water, or electricity).
+So far with our programming Python has been executing each line of our code one after another. This is called **sequential** and is the default way programs work. They start at the top and move through the code one line after another. The movement is called **the flow** of the program (like water, or electricity).
 
 ### Introduction to flowcharts
 
-There is a special diagram that is used to show this flow of the computer program. It's called a **flowchart**. Flowcharts show each process in a program and how the program moves from one process to the next. We use:
+There is a special diagram used to show this flow of the computer program. It's called a **flowchart**. Flowcharts show each process in a program and how the program moves from one process to the next. We use:
 
 - rectangles symbolise processes
 - parallelograms symbolise inputs or outputs
@@ -29,7 +29,7 @@ If we wanted a program to say hello to six people, you would show it in a flowch
 
 <img align="left" src="./assets/flow_chart_1.png">
 
-Create a new file in Thonny and call it **lesson_2_pt_1.py**. Transfer this flowchart code to Python by entering the following code:
+Create a new file in Thonny and call it **lesson_2_pt_1.py**. Transfer this flowchart code to Python by entering the following code.
 
 ```python
 # our itreation program
@@ -44,7 +44,7 @@ print("Hello Ben")
 
 Since the flow is sequential, Python will start at line `1` and work its way down to line `8`. 
 
-Run it and see. The following should be printed to your **Shell**:
+Run it and see. The following should print to your **Shell**.
 
 ```
 Hello Hunter
@@ -68,7 +68,7 @@ print("Hello Jordi")
 print("Hello Adam")
 ```
 
-This code will produce the following results:
+This code will produce the following results.
 
 ```
 Hello Jesse
@@ -79,7 +79,7 @@ Hello Jordi
 Hello Adam
 ```
 
-Sequential programming is ok, but starts to become a problem when you are dealing with bigger programs. You don't want to have to type everything out.
+Sequential programming is ok. It starts to become a problem when you deal with bigger programs. You don't want to have to type everything out.
 
 Imagine if I want to say hello to 500 people, or 1,000 people or more, how tedious will it be to type each line out? There is also other limitations.
 
@@ -89,7 +89,7 @@ This might be ok for a small program, but it starts to become a problem in deali
 
 ### Iteration
 
-If you look closely at the code you will notice that there is a lot of repetition.
+If you look at the code you will notice that there is a lot of repetition.
 
 ```python
 # our itreation program
@@ -102,7 +102,7 @@ print("Hello Jordi")
 print("Hello Adam")
 ```
 
-Lines `3` to `8` is essentially the same line, with only the name changing each time. This clashes with the DRY programming principle.
+Lines `3` to `8` are almost the same, with only the name changing each time. This clashes with the DRY programming principle.
 
 <img align="left" src="./assets/dry.png">
 
@@ -110,9 +110,9 @@ One method for not repeating yourself, is to use **iteration** (often called **l
 
 ### For loops
 
-The first loop we will use is called the `for` loop. This is the first **control structure** we have used. They're called control structures because the control the flow of the program causing it to deviate from the default sequential flow.
+The first loop we will use is the `for` loop. This is the first **control structure** we have used. Control structures cause the program to deviate from the default sequential flow.
 
-Change your code, so it is the same as the code below:
+Change your code, so it is the same as the code below.
 
 ```python
 # our itreation program
@@ -128,13 +128,13 @@ Ok, let's run the code, but don't forget PRIMM, and make sure you **predict** wh
 So let's **investigate** by unpacking the code:
 
 - Line `3` is something we haven't seen before.
-  - Called a **list** and it works just like a real world list.
+  - Called a **list** and it works like a real world list.
     - Consist of a number of items.
     - Items are in a specific order.
-  - The `[` and `]` indicate the beginning and end of the list.
-  - `"Hunter"`, `"Jordi"`, `"Adam"`, `"Jesse"`, `"Bryce"`, `"Ben"` are the items in the list. Items are referred to as **elements**.
-  - The elements are separated with comma (`,`).
-  - A list needs a name (just like our turtle and window). 
+  - The `[` and `]` indicate the beginning and the end of the list.
+  - `"Hunter"`, `"Jordi"`, `"Adam"`, `"Jesse"`, `"Bryce"`, `"Ben"` are the items in the list. Items are called **elements**.
+  - The elements are separated with commas (`,`).
+  - A list needs a name (like our turtle and window). 
     - We use `names =` to call the list `names`.
 - Line `5` is also new, and it is the how we create `for` loops in Python.
   - `for` is a keyword identifying this as the beginning of a `for` loop.
@@ -142,9 +142,9 @@ So let's **investigate** by unpacking the code:
   - `name` refers to the current `names` element in use.
   - `:` tells Python that an indented code block follows.
 - Line `6` is a bit changed as well, it's indented.
-  - The indentation below the `for` loop identifies the code that needs to be repeated.
+  - The indentation below the `for` loop identifies the code that needs to repeat.
     - Indentations can be many lines.
-    - Multiple line indented code is called a **code block**.
+    - Multi-line indented code is called a **code block**.
     - Indents should be four spaces.
       - Note, in Thonny you can use the `tab` key because Thonny inserts four spaces instead of a `tab` character.
   - `print("Hello", name)` tells Python to:
@@ -157,14 +157,14 @@ A bit confusing? Let's try looking at it in a flowchart.
 
 Before we do, we need to learn about two more flowchart symbols:
 
-- **Terminators**: these represent the the beginning and end of your code
-- **Decisions**: these are questions the program need to answer, and will result in the flow splitting into multiple branches.
+- **Terminators**: these represent the beginning and end of your code
+- **Decisions**: these are questions the program need to answer. This will result in the flow splitting into multiple branches.
 
 <img align="left" src="./assets/flow_charts_symbol_2.png">
 
 Now let's look at the `for` loop flowchart. The symbols within the dotted box are the `for` loop. 
 
->  **Note:** the dotted box has been added to help you identify the `for` loop structure. It is not a normal flowchart symbol. 
+>  **Note:** the dotted box has is to help you identify the `for` loop structure. It is not a normal flowchart symbol. 
 
 <img align="left" src="./assets/flowcharts_for_loop.png">
 
@@ -176,15 +176,15 @@ Launch the debugger by clicking the bug beside the play button.
 
 <img align="left" src="./assets/debugger.png">
 
-Now keep pressing **F7** on your keyboard and Thonny will take you step by step through the code. Take note of the values in the **Variables** panel.
+Keep pressing **F7** on your keyboard and Thonny will take you step by step through the code. Take note of the values in the **Variables** panel.
 
 We'll learn more about how to use the debugger later in the course.
 
 ### Code blocks
 
-Earlier we said that multiple lines of indented code is called a code block. Let's have a look at how they work.
+Earlier we said that multi-line indented code is called a code block. Let's have a look at how that works.
 
-Change your code so it is the same as below:
+Change your code so it is the same as below.
 
 ```python
 # our itreation program
@@ -198,7 +198,7 @@ for name in names:
 
 **Predict** what you think the code will do and then **run** it.
 
-In your **Shell** you should have:
+In your **Shell** you should have.
 
 ```
 Hello Hunter
@@ -219,7 +219,7 @@ Notice **all** the code block is repeated. That means all the lines of code, at 
 
 What happens if we remove the indentation?
 
-Change your code by adding `print("Come in and sit down")` to the end. Make sure you remove the indentation, so you code looks like the code below:
+Change your code by adding `print("Come in and sit down")` to the end. Make sure you remove the indentation, so you code looks like the code below.
 
 ``` python
 # our iteration program
@@ -233,9 +233,9 @@ for name in names:
 print("Come in and sit down")
 ```
 
-*Predict* and *run* your code.
+**Predict** and **run** your code.
 
-Your **Shell** should show:
+Your **Shell** should show.
 
 ```
 Hello Hunter
@@ -268,7 +268,7 @@ The flowchart for your latest code would look like:
 
 You can also run loops over lists of numbers.
 
-Create a new file and call it **lesson_2_pt_2a.py** then try the code below:
+Create a new file and call it **lesson_2_pt_2a.py** then try the code below.
 
 ```python
 number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -277,11 +277,11 @@ for number in number_list:
     print(number)
 ```
 
-But what if we want `print` the numbers between 1 and 100? Do you really want to type all those numbers out? 
+But what if we want `print` the numbers between 1 and 100? Do you want to type all those numbers out? 
 
-Luckily Python has a function called `range` which makes list between two given numbers.
+Luckily, Python has a function called `range`. It makes list between two given numbers.
 
-Change your code to the code below:
+Change your code to the code below.
 
 ```python
 number_list = range(1, 101)
@@ -311,7 +311,7 @@ for number in range(1, 101):
 
 ### Use for Turtle
 
-Code blocks can be made up of any code, including Turtle code. So let try it.
+Code blocks can contain any code, including Turtle code. So let try it.
 
 Create a new file called **lesson_2_pt_2b.py** and type in the code below.
 
@@ -427,4 +427,4 @@ my_ttl = turtle.Turtle()
 ######################################################
 ```
 
-After line `9` write some code to draw something cool using `for` loops
+After line `9` write some code to draw something cool using `for` loops.
