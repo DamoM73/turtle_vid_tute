@@ -937,7 +937,7 @@ my_ttl = turtle.Turtle()
 my_ttl.shape("turtle")
 
 sides = int(input("How many sides?> "))
-length = int(input("How long are the sides?> "))
+length = int(input("Length of sides?> "))
 
 draw_poly(length, sides)
 ```

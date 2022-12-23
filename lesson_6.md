@@ -235,10 +235,10 @@ def set_scene():
 ## Reaction to signal (slot) ##
 def draw_dot(x, y):
     print(x, y)
-    dot_colour = "orange"
-    dot_size = 10
+    color = "orange"
+    size = 10
     my_ttl.goto(x, y)
-    my_ttl.dot(dot_size, dot_color)
+    my_ttl.dot(size, color)
 
 
 ## Main Program
@@ -251,7 +251,7 @@ my_ttl.hideturtle()
 - **Run** the code and check your predictions.
 - Let's **Investigate** that code.
 
-The code is in three sections, so let's look at them in the order they are executed:
+We'll do the code breakdown in three sections in the order they are executed:
 
 - Lines `29` to `31`: the main program
   - Line `29`: `my_ttl = turtle.Turtle()` &rarr; create a Turtle object and names it `my_ttl`
@@ -273,11 +273,11 @@ The code is in three sections, so let's look at them in the order they are execu
     - accepts the two arguments `x` and `y` which are passed from line `8`
     - `turtle.onscreenclick()` always passes the `x` and `y` coordinates as arguments
   - Line `21`: prints the `x` and `y` coordinates to the **Shell** (to help you plan your code)
-  - Line `22`: assigns `"orange"` to the variable `dot_colour`
-  - Line `23`: assigns `10` to the variable `dot_size`
+  - Line `22`: assigns `"orange"` to the variable `color`
+  - Line `23`: assigns `10` to the variable `size`
   - Line `24`: sends the turtle to the `x` and `y` coordinates
-  - Line `25`: `my_ttl.dot(dot_size, dot_color)` draws a dot at the turtle position of size `dot_size` and colour `dot_colour`
-  
+  - Line `25`: `my_ttl.dot(size, color)` draws a dot at the turtle position of size `size` and colour `color`
+
 ## Exercises
 
 In this course, the exercises are the **make** component of the PRIMM model. So work through the following exercises and make your own code.
@@ -289,6 +289,10 @@ To do this your will need to use:
 - `if` ... `elif` ... `else` statements
 - Boolean comparisons
 - Boolean operations
+
+You will also need to remember how coordinates work in Turtle.
+
+<img align="left" src="assets/coordinates.png">
 
 ### Exercise 1
 
@@ -316,7 +320,7 @@ def set_scene():
 ## Reaction to signal (slot) ##
 def draw_dot(x, y):
     print(x, y)
-    dot_colour = "orange"
+    color = "orange"
 
     ##################################
     ######## Answer goes here ########
@@ -330,7 +334,7 @@ def draw_dot(x, y):
 
     To change the colour of the dot to red, run the command
 
-    dot_color = 'red'
+    color = 'red'
 
     """
 
@@ -339,8 +343,8 @@ def draw_dot(x, y):
     ##################################
 
     my_ttl.goto(x, y)
-    dot_size = 10
-    my_ttl.dot(dot_size, dot_color)
+    size = 10
+    my_ttl.dot(size, color)
 
 
 my_ttl = turtle.Turtle()
@@ -349,6 +353,10 @@ my_ttl.hideturtle()
 ```
 
 Follow the instructions in the comments from line `24` to line `42`.
+
+To help, here is the flowchart for the `draw_dot` function:
+
+<img align="left" src="assets/flowchart_lesson_6_1.png">
 
 ### Exercise 2
 
@@ -376,7 +384,7 @@ def set_scene():
 ## Reaction to signal (slot) ##
 def draw_dot(x, y):
     print(x, y)
-    dot_color = "orange"
+    color = "orange"
     
     ##################################
     ######## Answer goes here ########
@@ -392,8 +400,8 @@ def draw_dot(x, y):
     ##################################
 
     my_ttl.goto(x, y)
-    dot_size = 10
-    my_ttl.dot(dot_size, dot_color)
+    size = 10
+    my_ttl.dot(size, color)
 
 
 my_ttl = turtle.Turtle()
@@ -429,7 +437,7 @@ def set_scene():
 ## Reaction to signal (slot) ##
 def draw_dot(x, y):
     print(x, y)
-    dot_color = "orange"
+    color = "orange"
 
     ##################################
     ######## Answer goes here ########
@@ -446,8 +454,8 @@ def draw_dot(x, y):
     ##################################
 
     my_ttl.goto(x, y)
-    dot_size = 10
-    my_ttl.dot(dot_size, dot_color)
+    size = 10
+    my_ttl.dot(size, color)
 
 
 my_ttl = turtle.Turtle()

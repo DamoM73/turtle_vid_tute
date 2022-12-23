@@ -40,7 +40,7 @@ my_ttl = turtle.Turtle()
 my_ttl.shape("turtle")
 
 num_sides = int(input("How many sides?> "))
-size = int(input("How long are the sides?> "))
+size = int(input("Length of sides?> "))
 
 draw_poly(size, num_sides)
 ```
@@ -93,7 +93,7 @@ Adjusts your code so it is the same as the code below:
 user_value = input("Enter a number: ")
 
 if user_value.isdigit():
-    print("Yes that is a number")
+    print("That's a number")
 ```
 
 PRIMM
@@ -103,6 +103,14 @@ PRIMM
   - second time enter the value `dog`
 - **Run** the code. Did it follow your prediction?
 - Let's **investigate** that code.
+
+#### Flowcharts
+
+Flowcharts are great at demonstrating how selection works. We have already used the condition symbol (diamond) in our `for` loops. They are also used for the conditions in `if` statements.
+
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_1.png">
 
 Code breakdown:
 
@@ -133,9 +141,9 @@ Adjust your code by adding lines `5` and `6` in the code below:
 user_value = input("Enter a number: ")
 
 if user_value.isdigit():
-    print("Yes that is a number")
+    print("That's a number")
 else:
-    print("Silly, that is not a number")
+    print("That's not a number")
 ```
 
 PRIMM
@@ -145,6 +153,10 @@ PRIMM
   - second time enter the value `dog`
 - **Run** the code. Did it follow your prediction?
 - Let's **investigate** that code.
+
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_2.png">
 
 Code breakdown:
 
@@ -201,7 +213,7 @@ else:
     print("Invalid input")
     quit()
 
-size = input("How long are the sides?> ")
+size = input("Length of sides?> ")
 
 draw_poly(size, num_sides)
 ```
@@ -211,7 +223,7 @@ draw_poly(size, num_sides)
 Then replace line `27` with this code:
 
 ``` python
-size = input("How long are the sides?> ")
+size = input("Length of sides?> ")
 if size.isdigit():
     size = int(size)
 else:
@@ -248,7 +260,7 @@ else:
     print("Invalid input")
     quit()
 
-size = input("How long are the sides?> ")
+size = input("Length of sides?> ")
 if size.isdigit():
     size = int(size)
 else:
@@ -276,6 +288,10 @@ PRIMM
 > - Test `if` statements for both `True` conditions and `False` conditions.
 > - This code had four possible branches so we needed to test all four of them
 
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_3.png">
+
 Code breakdown:
 
 - Line `19`: `# get user input` &rarr; a comment used to structure the code
@@ -286,7 +302,7 @@ Code breakdown:
 - Line `23`: `else:` &rarr; if `num_sides` is not all numbers execute following code block (lines `22` to `23`)
 - Line `24`: `print("Invalid input")` &rarr; informs the user of their mistake
 - Line `25`: `quit()` &rarr; exits the program
-- Line `27`: `size = input("How long are the sides?> ")` &rarr; accepts user input and assigns it to `size`
+- Line `27`: `size = input("Length of sides?> ")` &rarr; accepts user input and assigns it to `size`
 - Line `28`: `if size.isdigit():` &rarr; tests if `size` only contains numbers
   - If `size.isdigit()` is `True` then run the code block from line `27`
 - Line `29`: `size = int(size)` takes the value assigned to `size` converts it to an integer, then reassigns it to `size`
@@ -308,7 +324,7 @@ During all this, the only parts of the code that differs are:
 
 - Line `20` and `27` the `input` prompt is different:
   - Line `20` &rarr; `"How many sides?> "`
-  - Line `27` &rarr; `"How long are the sides?> "`
+  - Line `27` &rarr; `"Length of sides?> "`
 - in their respective sections different variable names are used:
   - Lines `20` to `25` &rarr; `num_sides`
   - Lines `27` to `32` &rarr; `size`
@@ -339,7 +355,7 @@ Then remove the code under `# get user input` from lines `19` to `32`, and repla
 ``` python
 # get user input
 num_sides = get_number("How many sides?> ")
-size = get_number("How long are the sides?> ")
+size = get_number("Length of sides?> ")
 ```
 
 In the end your code should look like the code below:
@@ -374,7 +390,7 @@ my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
-size = get_number("How long are the sides?> ")
+size = get_number("Length of sides?> ")
 
 draw_poly(size, num_sides)
 ```
@@ -386,7 +402,13 @@ It is really important, when you refactor code, to ensure that the code still wo
 - invalid `sides` value and valid `size` value
 - invalid `sides` value and invalid `size` value
 
-If your code still works as it should, lets unpack the code we just added:
+If your code still works as it should, let's **investigate** the code we just added.
+
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_4.png">
+
+Code breakdown:
 
 - The `get_number` function:
   - `def get_number(prompt):` &rarr; defines our new function with one argument `prompt`:
@@ -404,9 +426,9 @@ If your code still works as it should, lets unpack the code we just added:
   - `get_number()` &rarr; calls the function
   - `"How many sides?> "` &rarr; provides the prompt string to the function
   - `num_sides =` takes the value returned by the function and assigns it to `num_sides`
-- `size = get_number("How long are the sides?> ")` &rarr; calls the `get_number` function
+- `size = get_number("Length of sides?> ")` &rarr; calls the `get_number` function
   - `get_number()` &rarr; calls the function
-  - `"How long are the sides?> "` &rarr; provides the prompt string to the function
+  - `"Length of sides?> "` &rarr; provides the prompt string to the function
   - `size =` takes the value returned by the function and assigns it to `size`
 
 ### Playing with colour
@@ -465,7 +487,7 @@ my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
-size = get_number("How long are the sides?> ")
+size = get_number("Length of sides?> ")
 
 draw_poly(size, num_sides, "red")
 ```
@@ -555,7 +577,7 @@ my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
-size = get_number("How long are the sides?> ")
+size = get_number("Length of sides?> ")
 fill = get_color()
 
 draw_poly(size, num_sides, fill)
@@ -591,6 +613,10 @@ There are a few new concepts for us to breakdown:
 - Line `30`: `else:`
   - is only executed if the conditions in line `21`, line `23` and line `24` are all `False`
 - Line `31` and line `32` are the same as the `get_number` function
+
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_5.png">
 
 The `if` ... `elif` ... `else` statement is very useful and flexible. You will use it in various configurations, so let look at it's rules.
 
@@ -711,7 +737,7 @@ my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
-size = get_number("How long are the sides?> ")
+size = get_number("Length of sides?> ")
 fill = get_color()
 
 draw_poly(size, num_sides, fill)
@@ -973,7 +999,7 @@ PRIMM
 - **Run** the code. Did it follow your predictions?
 - Let's **investigating** the new code to see how a `while` loop works.
 
-We'll break-down this code out of order to help our understanding:
+Code breakdown:
 
 - Line `17`: `while guess != number:`
   - `guess != number` &rarr; this is the loop condition
@@ -987,6 +1013,10 @@ We'll break-down this code out of order to help our understanding:
     - The problem is, if the value we assign to `guess` happens to be the same random number assigned to `number`, the `while` loop will not run at all, and the user will not provide input.
     - To solve this, we assign `0` because it is outside the range of `random.randint` (1-100).
     - This way, `guess != number` will always return `True` the first time the condition is tested.
+
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_6.png">
 
 ### Using `while` to enhance our error capture
 
@@ -1051,6 +1081,10 @@ Code breakdown:
   - Since the `while` loop is infinite, the program will keep asking for input until it executes line `8`.
   - In line `8` the value assigned to `num` is converted into an integer and then returned to the main program
   - In this situation the `return` statement ends the function, effectively exiting the `while` loop in the process.
+
+Code flowchart:
+
+<img align="left" src="assets/flowchart_lesson_5_7.png">
 
 The end effect of these changes is the program will endlessly ask the user for a number between 1 and 100, until the user provides an integer.
 
@@ -1128,7 +1162,7 @@ my_ttl.shape("turtle")
 
 # get user input
 num_sides = get_number("How many sides?> ")
-size = get_number("How long are the sides?> ")
+size = get_number("Length of sides?> ")
 fill = get_color()
 
 move_pen()
