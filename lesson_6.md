@@ -23,11 +23,11 @@ In programming Boolean is all about `True` and `False` values:
 
 The values `True` and `False` are special values. If you type them into your IDE the syntax highlighting will indicate that they are special.
 
-In Python testing if something is `True` or `False` is called testing the turthiness. When you compare two values, you are testing it's truthiness.
+In Python testing if something is `True` or `False` is called testing the **turthiness**. When you compare two values, you are testing it's truthiness.
 
 ### Comparison operators
 
-We have tested truthiness in the conditions in our `if` and `while` statements using comparison operators. Let's refresh those.
+The conditions in our `if` and `while` statements test truthiness using comparison operators. Let's refresh those.
 
 There are six comparison operators you can use. Create a new file called `lesson_6_pt_1.py` and enter the code below.
 
@@ -42,7 +42,7 @@ print(-30 <= 3)  # less than or equal to
 
 PRIMM:
 
-- **Predict** the six values that will be printed to the **Shell** (hint, they will be either `True` or `False`)
+- **Predict** the six values the **Shell** will display (hint, they will be either `True` or `False`).
 - **Run** the code and see if your predictions are correct.
 
 It doesn't matter if the values are literals (magic numbers) or if they are stores in a variable. Change your code to the code below.
@@ -69,7 +69,7 @@ There are three Boolean operators:
 
 #### The `not` operator
 
-The simplest operator to understand is the `not` operator. It simply reverses the Boolean value:
+The simplest operator to understand is the `not` operator. It reverses the Boolean value:
 
 - `not True` returns `False`
 - `not False` returns `True`
@@ -175,7 +175,7 @@ Code breakdown:
 
 #### Using Boolean operators
 
-So far we have just been playing around with Boolean values and returning `True` or `False` from other values of `True` and `False`. This really isn't that useful, until you remember that comparison operators return Boolean values. With Boolean operators you can create conditions with multiple comparison operator leading to complex conditions for your `if` and `while` statements.
+So far, we have been returning `True` or `False` from other values of `True` and `False`. This isn't that useful but remember comparison operators return Boolean values. Boolean operators can create conditions with multiple comparison operators. This provides complex conditions for your `if` and `while` statements. 
 
 Consider the following code:
 
@@ -201,13 +201,13 @@ Code breakdown:
 
 > **Combining multiple comparison operations**
 >
-> If you are going to use Boolean operations to create conditions that contain multiple comparisons, you need to have a comparison on both sides of the Boolean operations.
+> Conditions with multiple comparisons need comparisons on both sides of the Boolean operator.
 >
 > `10 > 5 and 10 > 13` is not the same as `10 > 5 and 13`.
 
 ## Part 2: Mouse input in Turtle
 
-To reinforce our understanding of Boolean logic, we are going to do something new with Turtle. So far we have only accepted user input via the **Shell**, but Turtle can also use mouse input (and keys as well).
+To reinforce our understanding of Boolean logic, we are going to do something new with Turtle. So far, we have only accepted user input via the **Shell**, but Turtle can also use mouse input (and keys as well).
 
 We are going to use the code below for our Boolean exercise, but we will have to explore some code first.
 
@@ -280,9 +280,9 @@ We'll do the code breakdown in three sections in the order they are executed:
 
 ## Exercises
 
-In this course, the exercises are the **make** component of the PRIMM model. So work through the following exercises and make your own code.
+In this course, the exercises are the **make** component of the PRIMM model. Work through the following exercises and make your own code.
 
-So far the dot colour is always orange. In these exercises you will change the colour of the dot depending on which quadrant the mouse clicks.
+So far, the dot colour is always orange. In these exercises the quadrant of the mouse click will determine the dot colour.
 
 To do this your will need to use:
 
