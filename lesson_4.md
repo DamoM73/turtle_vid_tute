@@ -15,9 +15,9 @@
 
 ### What are functions?
 
-**Functions** are blocks of code that we can run several times in our program. So far in our programming, all our blocks of code are only run once. Even loop blocks are only run once, although the code inside the block is repeated. But once you have gone past a loop, you can't go back and run it gain.
+**Functions** are blocks of code that we can run several times in our program. So far in our programming, all our blocks of code are only run once. Even loop blocks are only run once. They repeat the code inside the block, but once the program has passed the loop, it won't go back and run it gain.
 
-With functions, we move a block of code outside of the main program sequence, then give it a name. We can then use that block as many times as we like by **calling** the function name from within the main program sequence.
+With functions, we move a block of code outside of the main program sequence, then give it a name. The program can use that block as many times. To use it, the program **calls** the function name from within the main program sequence.
 
 To understand this more clearly, we will start with my solution for **lesson_3_ex_4.py**.
 
@@ -129,7 +129,7 @@ In summary we have two main types of repetition:
 - moving the pen
 - drawing the shape
 
-When I wrote this code, I didn't type it straight out, I copied and pasted a lot of the code and just changed the magic values. Copying and pasting is a clear indicator that you need to use a function. Why? Because functions are one of the main tools we can use to enforce the DRY Principle.
+When I wrote this code, I didn't type it straight out, I copied and pasted a lot of the code and changed the magic number's values. Copying and pasting is a clear indicator that you need to use a function. Why? Because functions are one of the main tools we can use to enforce the DRY Principle.
 
 ### Creating functions
 
@@ -233,23 +233,23 @@ Now lets **investigate** the code by unpacking it:
   - The program reads and bookmarks the code, but does not execute it.
   - `def` is the key word for defining a function.
   - `move_pen` is the name we are giving the function.
-    - This name is how the function is called and follows the same rules as variable names.
+    - This name is how the program calls the function. It follows the same rules as variable names.
     - By using a descriptive name, we also remove the need for comments, as the code explains itself.
   - `()` is where we can put values. We'll deal with this soon.
   - `:` tells Python that an indented code block follows (the same as a `for` loop).
 - Lines `5` to `7` are indented:
-  - This is the code that is executed when the function is called
+  - This is the code that Python executes with a function call
   - The indentation rules are the same as the `for` loop
     - indentations can be many lines
-    - multiple line indented code is called a **block**
+    - multi-line indented code is called a **block**
     - indents should be four spaces
 - Line `24`: `move_pen()` calls the function:
   - At this point the program will go to line `4` run the code in the function.
-  - When the code in the function is finished, the program will return to line `24` and continue with the rest of the code.
+  - When Python finishes the function code, it returns to line `24` and continues with the rest of the code.
 
 ### Passing arguments
 
-This works for our first pen movement, but since the coordinate values are magic numbers, I would have to create a function for each movement of the pen. This defeats the purpose of functions. What we need is a way to send the coordinates to the function when we call it. Well, we can, and they are called **arguments**.
+This works for our first pen movement. Since the coordinates are magic numbers, it won't work for the rest. I would have to create a function for each movement of the pen. This defeats the purpose of functions. What we need is a way to send the coordinates to the function when we call it. We can. Python uses **arguments** to pass values to a function.
 
 Looking back at our `move_pen` function in the code, what we need to do is get rid of those magic numbers.
 
@@ -269,7 +269,7 @@ def move_pen():
     my_ttl.pendown()
 ```
 
-But how do we assign values to `x` and `y`? This is where **arguments** are used.
+But how do we assign values to x and y? We use **arguments.**
 
 1. Change the function definition to `def move_pen(x, y):` so it will **accept** two values.
 2. Change the function call in line `24` to `move_pen(-100,0)` passing two values to the function.
@@ -278,8 +278,8 @@ Let's unpack that:
 
 - `def move_pen(x, y):` says:
   - When you call the `move_pen` function, you need to provide two values.
-  - First value will be assigned to the variable `x`.
-  - Second value will be assigned to the variable `y`.
+  - First value is assigned to the variable `x`.
+  - Second value is assigned to the variable `y`.
 - `move_pen(-100,0)` says:
   - Call the `move_pen` function.
   - Use `-100` as the first value (the `x` value).
@@ -371,6 +371,13 @@ PRIMM
 - **Run** the code to check if your prediction was correct.
 - **Investigate** the code by using the debugger and stepping your way through the program.
 
+> **Arguments and Parameters**
+>
+> In programming discussions the terms **arguments** and **parameters** are often swapped around. It is safe to use either term, but they do have distinct meanings:
+>
+> - arguments are the values the main program passes to a function
+> - parameters are the variables named in the function definition
+
 ---
 
 Go through the code and replace the remaining `# move pen` blocks with a `move_pen()` call.
@@ -443,7 +450,7 @@ my_ttl.circle(5)
 my_ttl.hideturtle()
 ```
 
-**Run** the code to make sure the house is still being drawn.
+**Run** the code to make sure the house is still drawn.
 
 Notice that our line count is down from the original `71` to `63`.
 
@@ -455,19 +462,19 @@ Notice that our line count is down from the original `71` to `63`.
 > - Each time you change your code, test it.
 > - Try not to make too many changes between testing, it makes it harder to identify your errors.
 > - If a function is tested and works, you don't have to testing it again, unless your change the function.
-> - If your program has errors, and your functions have passed their tests, then you know your error is elsewhere in the code.
+> - If your functions have passed their tests, then you know any error is elsewhere in the code.
 
 ### Functions in Flowcharts
 
-Flowcharts normally don't represent whole programs, they represent algorithms. 
+Flowcharts don't represent whole programs, they represent algorithms. 
 
-> **Algorithms**
+> **Algorithms** 
 >
-> Algorithms are basically a set of rules to be followed to solve a problem. A cake recipe is an algorithm to bake a cake. You follow an algorithm to perform long division in maths. In computers, you code instructions are the algorithms. 
+> Algorithms are a set of rules to follow to solve a problem. A cake recipe is an algorithm to bake a cake. You follow an algorithm to perform long division in maths. In computers, you code instructions are the algorithms. 
 
-When a program is broken into smaller algorithms (eg. functions) you create a flowchart for each algorithm, and then show when one algorithm calls another algorithm.
+When a program consists of smaller algorithms (eg. functions), create a flowchart for each algorithm. Then show where algorithms call other algorithms.
 
-We show the name of the function in the terminator symbol, with the first algorithm being called **main**.
+We show the name of the function in the terminator symbol. **Main** is the name of the starting algorithm.
 
 Here is the flowchart of the code with the `move_pen` function. The function calls use the procedure symbol (I have coloured them red to make them stand out).
 
@@ -486,12 +493,13 @@ From the current code:
 
 > **Function location**
 >
-> Normally we put all out function definitions at the top of our code, just under the import statements.
+> Function definitions are place at the top of the code, right after the import statements.
 >
-> This is done for two reasons:
+> This has two reasons:
 >
 > - If the function is not defined before you call it, your code will generate a `NameError`.
-> - Placing all your functions at the start improves you code's maintainability by making it easier to find them.
+>
+> - Placing all your functions at the start improves makes them easier to find them. This improves your code's maintainability
 
 Once you have made `draw_square` function changes, you code should look like:
 
@@ -557,7 +565,7 @@ We are now down to 55 lines of code.
 
 ---
 
-There is no more repetition in the main code, but there is still three code blocks remaining. Notice how the rest of the code is easier to read? Therefore, we are going to transform the `# draw triangle`, `# draw rectangle` and `# draw circle` code blocks into functions.
+There is no more repetition in the main code, but there is still three code blocks remaining. Notice how the rest of the code is easier to read? Therefore, we will transform the `# draw triangle`, `# draw rectangle` and `# draw circle` code blocks into functions.
 
 This will provide two benefits:
 
@@ -781,13 +789,13 @@ PRIMM
 - **Run** the code and see how close your prediction is.
 - **Modify** the code so the shape fits within the window.
 
-When we run the code the shape is partially off the screen. That's not a big problem, you just need to change the length from `100` to `80`. This something quite simple for you, because you have learnt how to code, but what about people who haven't?
+When we run the code part of the shape is off the screen. This is not a big problem. Change the length from `100` to `80`. This is something quite simple for you because you have learnt how to code. What about people who haven't?
 
 How do we make our programs interactive by getting input from users who cannot code?
 
 ### Making your program interactive
 
-The simplest way to make your program interactive is to use the `input` command which will ask the user for their input in the **Shell**.
+The simplest way to make your program interactive is to use the `input` command. It will use the **Shell** to ask the user for their input.
 
 To do this change:
 
@@ -824,7 +832,7 @@ draw_poly(length, sides)
 PRIMM
 
 - **Predict** what you think will happen.
-- **Run** run the code. Did it do what you thought?
+- **Run** the code. Did it do what you thought?
   - Did you predict:
     - a **prompt** appearing in the **Shell** like the image below?
     - the program raising an error.
@@ -852,22 +860,22 @@ Now for the error. This is a `TypeError` and to understand it we need to learn a
 
 ### Data types
 
-Variables in Python can hold different types of data. The four types of data we will be concerned with are:
+Variables in Python can hold different types of data. The four types of data we will use are:
 
 - **integer numbers** (`int`)
   - stores whole numbers
-  - can be identified by a whole whole number
+  - identified by a whole number
 - **floating point numbers** (`float`)
   - stores numbers that have a decimal points
-  - can be identified by having a decimal point with at least one number after it. For example, `1` is and integer, `1.0` is a float
+  - identified by having a decimal point with at least one number after it. For example, `1` is and integer, `1.0` is a float
 - **strings** (`str`)
   - stores characters like letters, numbers and special characters
   - start and end with `"` or `'` (just make sure they are the same the at beginning or end)
   - numbers can be a string. For example, a phone number like `0432 789 367` is a string not and integer or float. It contains spaces and you would never do a calculation with it.
 - **Booleans** (`bool`)
-  - stores either `True` or `False`
+  - store either `True` or `False`
 
-Using data types helps Python work out what kind of operations it can do with the variable. For example, it wouldn't make much sense to divide a string. Python also has special operations called **methods**. Each data type has it's own collection of methods. You will learn more about data types throughout your programming journey.
+Using data types helps Python work out what kind of operations it can do with the variable. For example, it wouldn't make much sense to divide a string. Python also has special operations called **methods**. Each data type has its own collection of methods. You will learn more about data types throughout your programming journey.
 
 Now, lets look at the error again:
 
@@ -886,7 +894,7 @@ Breaking the error down:
 - `Traceback`:
   - When looking at a `Traceback` always check the last line first
   - Error line `3` tells us that the error occurred at line `5` in the code: `for index in range(sides):`
-    - Here we are trying to use the values in `sides` in a `range` function but Python thinks it is a string.
+    - Here we are trying to use the values in `sides` in a `range` function, but Python thinks it is a string.
     - let's look at where we got the value for `sides`
   - Line `19`: `sides = input("How many sides?> ")`
     - We took the value the user entered and assigned it to `sides`.
@@ -895,7 +903,7 @@ Breaking the error down:
 
 When Python accepts a value using the `input` function, it is always accepted it as a string. This is because strings can contain all characters.
 
-How do we fix this? Luckily we can convert a variable's data type.
+How do we fix this? Luckily, we can convert a variable's data type.
 
 ### Converting data types
 
@@ -909,7 +917,7 @@ If we had a variable called `var`:
 
 There is a great deal more to this, but at the moment this is all you need to know.
 
-So let's change our code so that the strings that are received by the `input` functions are converted into integers.
+Let's change our code. Take the strings returned by the `input` function and convert them into integers.
 
 Here is the finished code as a flowchart. Note that we use the same symbol for input as we do for output, with different wording.
 
@@ -954,7 +962,7 @@ PRIMM
 
 ## Part 2 Exercise
 
-In this course, the exercises are the make component of the PRIMM model. So work through the following exercises and make your own code.
+In this course, the exercises are the **make** component of the PRIMM model. Work through the following exercises and make your own code.
 
 ### Exercise 4
 
